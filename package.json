@@ -1,0 +1,30 @@
+{
+  "name": "my1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^1.0.0",
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6",
+    "google-map-react": "^2.1.9",
+    "next": "9.4.4",
+    "next-images": "^1.6.0",
+    "next-redux-wrapper": "^6.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.8.3",
+    "react-redux": "^7.2.0",
+    "react-toastify": "^6.0.9",
+    "reactstrap": "^8.7.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.26.10",
+    "yup": "^0.29.3"
+  }
+}

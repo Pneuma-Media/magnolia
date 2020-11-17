@@ -1,0 +1,32 @@
+@import '../../../assets/styles/variables.scss';
+
+.Heder{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: $white;
+
+    .tab{
+        position: relative;
+        font-size: 22px;
+        padding: 0 15px;
+        font-weight: bold;
+        color: $grey1;
+        cursor: pointer;
+    }
+
+    .active{
+       color:$black;
+
+        &::before{
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            background: $purpure;
+            bottom: -3px;
+            left: 0;
+        }
+    }
+}
