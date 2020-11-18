@@ -10,7 +10,6 @@ const CityMap = ({setIsPopup}) => {
 
 
         slots.forEach(s => {
-            console.log(s);
             const miamiArea = new maps.Polygon({
                 paths: [s.coordinates],
                 strokeColor: "#FF0000",

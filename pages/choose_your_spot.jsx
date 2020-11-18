@@ -13,7 +13,11 @@ const ChooseYourSpot = () => {
                 setIsPopup={setSlotId}
             />
             {
-                isPopup && <SlotPopup id={slotId} />
+                slotId && (
+                    <SlotPopup id={slotId}
+                        setSlotId={setSlotId}
+                    />
+                )
             }
         </Layout>
     );

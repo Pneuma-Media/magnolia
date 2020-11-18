@@ -20,6 +20,7 @@ const HomeTemplate = () => {
                     <Button
                         text='Click here to build your next home'
                         onclick={() => Router.push('/choose_your_spot')}
+                        style={{height:'70px'}}
                     />
                 </div>
             </div>

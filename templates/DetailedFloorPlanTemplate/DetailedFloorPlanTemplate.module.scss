@@ -1,0 +1,20 @@
+@import '../../assets/styles/variables.scss';
+
+
+.DetailedFloorPlanTemplate{
+  
+//    width: 100%;
+//    height: calc(100vh - 70px);
+//    display: grid;
+//    grid-template-columns: max-content auto;
+//    background: $grey2;
+
+//    &__wrapItem{
+//        padding: 0 50px;
+//        border:1px solid grey;
+//    }
+
+   &__wrapSlider{
+    border:1px solid red;
+   }
+}

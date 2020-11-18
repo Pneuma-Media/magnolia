@@ -1,6 +1,6 @@
 const slots = [
     {
-        id: "slot1",
+        id: 1,
         type: "typeA",
         coordinates: [
             { lng: -110.826102, lat: 43.591789 },
@@ -10,7 +10,7 @@ const slots = [
         ],
     },
     {
-        id: "slot2",
+        id: 2,
         type: "typeB",
         coordinates: [
             { lng: -110.826223, lat: 43.591947 },
@@ -21,7 +21,7 @@ const slots = [
         ],
     },
     {
-        id: "slot3",
+        id: 3,
         type: "typeC",
         coordinates: [
             { lng: -110.826445, lat: 43.592137 },
@@ -32,7 +32,7 @@ const slots = [
         ],
     },
     {
-        id: "slot4",
+        id: 4,
         type: "typeD",
         coordinates: [
             { lng: -110.826826, lat: 43.592056 },
@@ -43,7 +43,7 @@ const slots = [
         ],
     },
     {
-        id: "slot5",
+        id: 5,
         type: "typeE",
         coordinates: [
             { lng: -110.826960, lat: 43.592061 },
@@ -54,7 +54,7 @@ const slots = [
         ],
     },
     {
-        id: "slot6",
+        id: 6,
         type: "typeF",
         coordinates: [
             { lng: -110.826960, lat: 43.592061 },
@@ -65,7 +65,7 @@ const slots = [
         ],
     },
     {
-        id: "slot7",
+        id: 7,
         type: "typeJ",
         coordinates: [
             { lng: -110.827390, lat: 43.592015 },
@@ -76,7 +76,7 @@ const slots = [
         ],
     },
     {
-        id: "slot8",
+        id: 8,
         type: "typeH",
         coordinates: [
             { lng: -110.827460, lat: 43.591918 },

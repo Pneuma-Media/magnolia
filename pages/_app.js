@@ -2,6 +2,7 @@ import { createWrapper } from 'next-redux-wrapper';
 import initStore from '../store';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-toastify/dist/ReactToastify.css';
+import "react-multi-carousel/lib/styles.css";
 import '../public/fonts/stylesheet.css'
 import './index.css';
 

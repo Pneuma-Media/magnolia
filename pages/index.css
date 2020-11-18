@@ -11,3 +11,13 @@ ul{
 li{
     list-style-type: none;
 }
+
+.containerMasters_PopupCase{
+    position: relative;
+    border:1px solid green;
+} 
+/* 
+.ReactCarousel_PopupCase{
+    border:1px solid green;
+    width: 200px;
+} */
