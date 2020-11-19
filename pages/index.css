@@ -14,19 +14,24 @@ li{
 
 .containerMasters_PopupCase{
     /* border:1px solid green; */
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     background: white;
     margin-bottom: 30px;
 } 
 
-.ReactCarousel_PopupCase{
-    width: 100%;
-    height: 100%;
+.itemClass{
+    /* width: 100%;
+    height: 100%; */
 }
 .react-multi-carousel-track {
     height: 100%;
 }
+.react-multi-carousel-item{
+    height: 100%; 
+}
+
 
 .dotListClass_PopupCase{
 bottom:25px;

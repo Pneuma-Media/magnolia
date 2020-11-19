@@ -3,30 +3,28 @@
 .DetailedFloorPlanTemplate {
     width: 100%;
     height: calc(100vh - 70px);
-    display: grid;
-    grid-template-columns: 30% 70%;
+    display: flex;
     background: $grey2;
 
     &__wrapItem {
-        //border:1px solid grey;
-        align-self: center;
-        justify-self: center;
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        border: 1px solid red;
+        padding: 50px 15px;
     }
 
     &__wrapSlider {
         display: flex;
         flex-direction: column;
-        //border: 1px solid red;
-        max-width: 1000px;
-        width: 100%;
-        max-height: 630px;
-        height: 100%;
-        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid red;
+        width: 70%;
+        height: calc(100vh - 70px);
         align-items: center;
         justify-content: center;
-        align-self: center;
-        justify-self: flex-end;
-        margin-right: 100px;
         background: $grey2;
+        padding: 50px;
     }
 }

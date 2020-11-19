@@ -55,7 +55,7 @@ const Slider = () => {
             arrows={true}
             customRightArrow={<RightArrow />}
             customLeftArrow={<LeftArrow />}
-            itemClass="ReactCarousel_PopupCase"
+            itemClass="itemClass"
             dotListClass="dotListClass_PopupCase"
             containerClass="containerMasters_PopupCase"
 

@@ -20,6 +20,15 @@ const Heder = () => {
     const [stateTubs, setStateTabs] = useState(tabs);
 
     const selectTab = (id) => {
+        const newState =  [...stateTubs];
+        newState.forEach(element => {
+            element.active = false;
+            if(element.id === id && element.visit) {
+                element.active = true;
+                router.push(element.link);
+            }
+            console.log(element);
+        });
         console.log(id);
     }
 

@@ -13,11 +13,11 @@
         padding: 0 15px;
         font-weight: bold;
         color: $grey1;
-        cursor: pointer;
     }
 
     .active{
        color:$black;
+       cursor: pointer;
 
         &::before{
             position: absolute;
@@ -31,5 +31,6 @@
     }
     .visit{
         color:$black;
+        cursor: pointer;
     }
 }

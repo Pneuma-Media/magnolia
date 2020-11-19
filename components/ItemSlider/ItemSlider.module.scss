@@ -1,7 +1,9 @@
 .imgSlider{
-    width: 100%;
     height: 100%;
     padding: 30px 80px 80px 80px;
+    // border: 1px solid green;
+    display: flex;
+    align-items: center;
 
     img{
         width: 100%;
