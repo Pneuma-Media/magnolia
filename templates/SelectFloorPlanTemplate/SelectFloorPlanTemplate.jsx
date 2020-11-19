@@ -7,14 +7,28 @@ const SelectFloorPlanTemplate = () => {
     return (
         <div className={styles.SelectFloorPlanTemplate}>
             <div className={styles.SelectFloorPlanTemplate__innerContainer}>
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
-                <Item />
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                <div className={styles.SelectFloorPlanTemplate__item}>
+                    <Item />
+                </div>
+                
             </div>
         </div>
     );

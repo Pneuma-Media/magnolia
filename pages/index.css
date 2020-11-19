@@ -13,11 +13,28 @@ li{
 }
 
 .containerMasters_PopupCase{
-    position: relative;
-    border:1px solid green;
+    /* border:1px solid green; */
+    width: 100%;
+    height: 100%;
+    background: white;
+    margin-bottom: 30px;
 } 
-/* 
+
 .ReactCarousel_PopupCase{
-    border:1px solid green;
-    width: 200px;
-} */
+    width: 100%;
+    height: 100%;
+}
+.react-multi-carousel-track {
+    height: 100%;
+}
+
+.dotListClass_PopupCase{
+bottom:25px;
+}
+
+.dotListClass_PopupCase .react-multi-carousel-dot button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin-right: 30px;
+}

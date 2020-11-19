@@ -1,0 +1,59 @@
+@import '../../../assets/styles/variables.scss';
+
+
+.Form{
+    width: 100%;
+    height: 100%;
+    background: $grey1;
+    padding: 50px;
+
+    &__title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    &__block1,  &__block2,  &__block3{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    &__block1{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+
+        .wrap{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__block2, &__block3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    span{
+        font-size: 22px;
+        font-weight: bold;
+        color:$black;
+    }
+
+    input{
+        height: 50px;
+        border:none;
+        outline: none !important;
+        padding-left: 15px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    textarea{
+        height: 100px;
+        margin-bottom: 40px;
+        border:none;
+        outline: none !important;
+        padding-left: 15px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}

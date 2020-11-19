@@ -6,9 +6,12 @@ import Router from 'next/router';
 
 const Item = () => {
     return (
-        <div className={styles.Item}>
-            <div className={styles.Item__Wrap}>
-                <div className={styles.Item__innerWrap}>
+        // <div className={styles.Item}>
+        //     <div className={styles.Item__Wrap}>
+
+
+                
+                <div className={styles.Item}>
                     <div className={styles.Item__wrapImg}>
                         <img src={img} alt="img" />
                     </div>
@@ -32,9 +35,12 @@ const Item = () => {
                         onclick={() => Router.push('/detailed_floorplan')}
                     />
                 </div>
-            </div>
 
-        </div>
+
+
+        //     </div>
+
+        // </div>
     );
 };
 

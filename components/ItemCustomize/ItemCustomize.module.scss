@@ -1,0 +1,13 @@
+@import "../../assets/styles/variables.scss";
+
+.ItemCustomize {
+    padding: 15px;
+    background: $grey2;
+
+    &__title {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+}

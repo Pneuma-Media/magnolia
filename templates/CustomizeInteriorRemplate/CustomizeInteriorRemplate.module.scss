@@ -1,32 +1,40 @@
-@import "../../assets/styles/variables.scss";
+@import '../../assets/styles/variables.scss';
 
-.DetailedFloorPlanTemplate {
+.CustomizeInteriorRemplate{
     width: 100%;
     height: calc(100vh - 70px);
     display: grid;
     grid-template-columns: 30% 70%;
     background: $grey2;
 
-    &__wrapItem {
-        //border:1px solid grey;
+    &__wrapItem{
         align-self: center;
         justify-self: center;
     }
 
-    &__wrapSlider {
+    &__customize{
         display: flex;
         flex-direction: column;
-        //border: 1px solid red;
         max-width: 1000px;
         width: 100%;
         max-height: 630px;
         height: 100%;
-        display: flex;
         align-items: center;
         justify-content: center;
         align-self: center;
         justify-self: flex-end;
         margin-right: 100px;
         background: $grey2;
+    }
+
+    &__block{
+        width: 100%;
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 15px;
+        background: $white;
+        padding: 15px;
+        margin-bottom: 15px;
     }
 }
