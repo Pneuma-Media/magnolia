@@ -12,20 +12,20 @@ const Form = () => {
 
             <div className={styles.Form__block1}>
                 <div className={styles.wrap}> 
-                    <span>First Name</span>
+                    <span className={styles.Form__label}>First Name</span>
                     <input type="text"/>
                 </div>
                 <div className={styles.wrap}>
-                    <span>Last Name</span>
+                    <span className={styles.Form__label}>Last Name</span>
                     <input type="text"/>
                 </div>
             </div>
             <div className={styles.Form__block2}>
-                <span>Email</span>
+                <span className={styles.Form__label}>Email</span>
                 <input type="text"/>
             </div>
             <div className={styles.Form__block3}>
-                <span>Anything you'd like to add?</span>
+                <span className={styles.Form__label}>Anything you'd like to add?</span>
                 <textarea name="" id="" cols="30" rows="10"></textarea>
             </div>
 
