@@ -17,60 +17,12 @@ const Heder = () => {
 
     const router = useRouter();
 
-    // const [stateTubs, setStateTabs] = useState(tabs);
-
-
-    // const applyHandler = (state) => {
-    //     const newState = [...state];
-    //     const apply = newState.find(e => e.name === 'Apply');
-
-    //     if (router.pathname === '/customize_lnterior') { 
-    //         apply.active = true;
-    //         apply.visit = true;
-    //     }else{
-    //         apply.active = false;
-    //         apply.visit = false;
-    //     }
-    //     setStateTabs(newState);
-    // }
-
-    // const selectTab = (id) => {
-    //     const newState = [...stateTubs];
-    //     newState.forEach(element => {
-    //         element.active = false;
-    //         if (element.id === id && element.visit) {
-    //             element.active = true;
-    //             router.replace(element.link);
-    //         }
-           
-    //     });
-    //     applyHandler(newState);
-    // }
-
-    // const handlerTubs = () => {
-    //     const newState = [...stateTubs];
-    //     newState.forEach(element => {
-    //         element.active = false;
-    //         if (element.link === router.pathname) {
-    //             element.active = true;
-    //             element.visit = true;
-    //         }
-    //     });
-       
-    //     applyHandler(newState);
-    //    // setStateTabs(newState);
-    // }
-
-
-    // useEffect(() => {
-    //     handlerTubs();
-    // }, [])
-
     const activeTab = tabs.find(e => e.link === router.pathname);
 
     const navigate = (id) => {
-        if(id < activeTab.id || id === 5) {
-            const { link } = tabs.find(e => e.id === id)
+        console.log(id)
+        if(id < activeTab.id || activeTab.id === 4 && id === 5) {
+            const { link } = tabs.find(e => e.id === id);
             router.replace(link);
         }
     }

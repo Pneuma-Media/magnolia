@@ -16,12 +16,10 @@
     &__customize{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         width: 70%;
         height: calc(100vh - 70px);
         align-items: center;
-        justify-content: center;
         background: $grey2;
         padding: 50px;
     }
