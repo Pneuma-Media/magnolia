@@ -13,7 +13,7 @@ const MyApp = ({ Component, pageProps }) => {
     let content = (
         <>
             <Head>
-            <meta name="viewport" content="viewport-fit=cover" />           
+                <meta name="viewport" content="viewport-fit=cover" />           
              </Head>
             <Component {...pageProps} />
         </>
