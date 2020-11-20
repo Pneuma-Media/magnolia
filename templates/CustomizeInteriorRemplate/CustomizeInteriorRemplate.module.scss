@@ -10,7 +10,6 @@
         display: flex;
         justify-content: center;
         width: 30%;
-        border: 1px solid red;
         padding: 50px 15px;
     }
 
@@ -19,7 +18,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid red;
         width: 70%;
         height: calc(100vh - 70px);
         align-items: center;
@@ -29,15 +27,22 @@
     }
 
     &__block{
+        max-width: 100%;
         flex-grow: 1;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        //align-self: stretch;
         column-gap: 15px;
         background: $white;
         padding: 15px;
         margin-bottom: 15px;
-        border: 1px solid green;
         overflow: auto;
+
+        .itemWrap{
+            background: $grey2;
+        }
+    }
+    &__wrapButton{
+        padding: 0 50px;
+        width: 100%;
     }
 }

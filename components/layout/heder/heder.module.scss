@@ -10,7 +10,7 @@
     .tab{
         position: relative;
         font-size: 22px;
-        padding: 0 15px;
+        padding: 0 30px;
         font-weight: bold;
         color: $grey1;
     }
@@ -32,5 +32,18 @@
     .visit{
         color:$black;
         cursor: pointer;
+    }
+    .apply{
+        color: $white;
+        background: $red2;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &::before{
+           display: none;
+        }
     }
 }

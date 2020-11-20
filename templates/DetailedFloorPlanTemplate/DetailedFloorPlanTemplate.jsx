@@ -9,7 +9,9 @@ const DetailedFloorPlanTemplate = () => {
     return (
         <div className={styles.DetailedFloorPlanTemplate}>
             <div className={styles.DetailedFloorPlanTemplate__wrapItem}>
-                <Item />
+                <Item 
+                    noButton
+                />
             </div>
 
             <div className={styles.DetailedFloorPlanTemplate__wrapSlider}>

@@ -5,8 +5,23 @@
     position: relative;
     background: $grey2;
     box-sizing: border-box;
-    max-width: 350px;
-    width: 100%;
+    width: 350px;
+
+    &__number{
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border-radius: 100px;
+        background: $black;
+        color: $white;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -10px;
+        left: -10px;
+    }
 
     &__wrapImg{
         width: 100%;

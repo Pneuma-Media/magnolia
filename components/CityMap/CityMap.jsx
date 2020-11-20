@@ -12,11 +12,11 @@ const CityMap = ({setIsPopup}) => {
         slots.forEach(s => {
             const miamiArea = new maps.Polygon({
                 paths: [s.coordinates],
-                strokeColor: "#FF0000",
-                strokeOpacity: 0.8,
-                strokeWeight: 2,
-                fillColor: "#0000ff",
-                fillOpacity: 0.6,
+                strokeColor: " #f8bf02",
+                strokeOpacity: 0.1,
+                //strokeWeight: 2,
+                fillColor: " #f8bf02",
+                fillOpacity: 0.7,
                 // mapTypeId: 'satellite'
             });
             miamiArea.addListener("click", () => setIsPopup(s.id));

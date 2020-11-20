@@ -17,45 +17,77 @@ const Heder = () => {
 
     const router = useRouter();
 
-    const [stateTubs, setStateTabs] = useState(tabs);
+    // const [stateTubs, setStateTabs] = useState(tabs);
 
-    const selectTab = (id) => {
-        const newState =  [...stateTubs];
-        newState.forEach(element => {
-            element.active = false;
-            if(element.id === id && element.visit) {
-                element.active = true;
-                router.push(element.link);
-            }
-            console.log(element);
-        });
-        console.log(id);
+
+    // const applyHandler = (state) => {
+    //     const newState = [...state];
+    //     const apply = newState.find(e => e.name === 'Apply');
+
+    //     if (router.pathname === '/customize_lnterior') { 
+    //         apply.active = true;
+    //         apply.visit = true;
+    //     }else{
+    //         apply.active = false;
+    //         apply.visit = false;
+    //     }
+    //     setStateTabs(newState);
+    // }
+
+    // const selectTab = (id) => {
+    //     const newState = [...stateTubs];
+    //     newState.forEach(element => {
+    //         element.active = false;
+    //         if (element.id === id && element.visit) {
+    //             element.active = true;
+    //             router.replace(element.link);
+    //         }
+           
+    //     });
+    //     applyHandler(newState);
+    // }
+
+    // const handlerTubs = () => {
+    //     const newState = [...stateTubs];
+    //     newState.forEach(element => {
+    //         element.active = false;
+    //         if (element.link === router.pathname) {
+    //             element.active = true;
+    //             element.visit = true;
+    //         }
+    //     });
+       
+    //     applyHandler(newState);
+    //    // setStateTabs(newState);
+    // }
+
+
+    // useEffect(() => {
+    //     handlerTubs();
+    // }, [])
+
+    const activeTab = tabs.find(e => e.link === router.pathname);
+
+    const navigate = (id) => {
+        if(id < activeTab.id || id === 5) {
+            const { link } = tabs.find(e => e.id === id)
+            router.replace(link);
+        }
     }
-
-    const handlerTubs = () => {
-        const newState =  [...stateTubs] ;
-        newState.forEach(element => {
-            element.active = false;
-            if(element.link === router.pathname) {
-                element.active = true;
-                element.visit = true;
-            }
-        });
-        setStateTabs(newState);
-    }
-
-    useEffect(() => {
-        handlerTubs();
-    }, [])
 
     return (
         <div className={styles.Heder}>
             {
-                stateTubs.map((data) => {
+                tabs.map((data) => {
+                    console.log(data);
                     return (
                         <span
-                            onClick={() => selectTab(data.id)}
-                            className={cx(styles.tab, { [styles.active]: data.active, [styles.visit]:data.visit })}
+                            onClick={() => navigate(data.id)}
+                            className={cx(styles.tab, {
+                                [styles.active]: data.id === activeTab.id,
+                                [styles.visit]: data.id < activeTab.id,
+                                [styles.apply]:data.link === '/apply' && activeTab.id === 4,
+                            })}
                             key={data.id}>{data.name}
                         </span>
                     )

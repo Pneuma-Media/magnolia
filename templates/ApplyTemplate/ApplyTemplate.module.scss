@@ -10,14 +10,17 @@
 
 
     &__titleBlock{
+       align-self: center;
        position: relative;
        z-index: 1;
        justify-self: center;
-       padding-top:50px;
        padding-left:50px;
+       max-height: 630px;
+       height: 100%;   
     }
 
     &__title{
+        margin-top: -25px;
         font-size: 120px;
         font-weight: bold;
         color: $white;

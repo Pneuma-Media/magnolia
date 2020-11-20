@@ -10,33 +10,46 @@ const CustomizeInteriorRemplate = () => {
     return (
         <div className={styles.CustomizeInteriorRemplate}>
             <div className={styles.CustomizeInteriorRemplate__wrapItem}>
-                <Item />
+                <Item
+                    noButton
+                />
             </div>
             <div className={styles.CustomizeInteriorRemplate__customize} >
                 <div className={styles.CustomizeInteriorRemplate__block}>
-                    <ItemCustomize
-                        title='Exterior Customizations'
-                        block1='Shingles'
-                        block2='Siding'
-                        block3='Shutters'
-                    />
-                    <ItemCustomize
-                        title='Kitchen Customizations'
-                        block1='Countertop'
-                        block2='Backsplash'
-                        block3='Cabinets'
-                    />
-                    <ItemCustomize
-                        title='Other Customizations'
-                        block1='Flooring'
+                    <div className={styles.itemWrap}>
+                        <ItemCustomize
+                            title='Exterior Customizations'
+                            block1='Shingles'
+                            block2='Siding'
+                            block3='Shutters'
+                        />
+                    </div>
+                    <div className={styles.itemWrap}>
+                        <ItemCustomize
+                            title='Kitchen Customizations'
+                            block1='Countertop'
+                            block2='Backsplash'
+                            block3='Cabinets'
+                        />
+                    </div>
+                    <div className={styles.itemWrap}>
+                        <ItemCustomize
+                            title='Other Customizations'
+                            block1='Flooring'
+                        />
+                    </div>
+
+                </div>
+                <div className={styles.CustomizeInteriorRemplate__wrapButton}>
+                    <Button
+                        text='Continue to the application process'
+                        style={{ width: '100%', height: '70px' }}
+                        theme2
+                        onclick={() => Router.push('/apply')}
+
                     />
                 </div>
-                <Button
-                    text='Continue to the application process'
-                    style={{width: '100%', height: '70px'}}
-                    theme2
-                    onclick={() => Router.push('/apply')}
-                />
+
             </div>
         </div>
     );

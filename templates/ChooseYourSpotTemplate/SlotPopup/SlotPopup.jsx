@@ -15,7 +15,7 @@ const SlotPopup = ({ id, setSlotId }) => {
                     <Button
                         text='Select This Lot'
                         style={{ height: '50px' }}
-                        onclick={() => Router.push('/select_floorplan')}
+                        onclick={() => Router.replace('/select_floorplan')}
                     />
                 </div>
                 <p className={styles.popup__blockParam}>Lot Size Goes Here Lot Size Goes Here</p>
