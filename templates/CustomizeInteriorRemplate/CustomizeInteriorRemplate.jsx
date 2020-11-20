@@ -45,7 +45,7 @@ const CustomizeInteriorRemplate = () => {
                         text='Continue to the application process'
                         style={{ width: '100%', height: '70px' }}
                         theme2
-                        onclick={() => Router.push('/apply')}
+                        onclick={() => Router.replace('/apply')}
 
                     />
                 </div>
