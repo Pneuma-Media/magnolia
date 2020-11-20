@@ -19,7 +19,7 @@ const HomeTemplate = () => {
                 <div className={styles.HomeTemplate__wrapButton}>
                     <Button
                         text='Click here to build your next home'
-                        onclick={() => Router.push('/choose_your_spot')}
+                        onclick={() => Router.replace('/choose_your_spot')}
                         style={{height:'70px'}}
                     />
                 </div>

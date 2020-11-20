@@ -19,7 +19,7 @@ const DetailedFloorPlanTemplate = () => {
                 <Button
                     text='Choose this floorplan!'
                     style={{height:'70px', width:'400px'}}
-                    onclick={() => Router.push('/customize_lnterior')}
+                    onclick={() => Router.replace('/customize_lnterior')}
                 />
             </div>
         </div>
