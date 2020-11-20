@@ -5,17 +5,23 @@ import Slider from '../../components/Slider/Slider';
 import Button from '../../components/UI/Button/Button';
 import Router from 'next/router';
 
-const DetailedFloorPlanTemplate = () => {
+const DetailedFloorPlanTemplate = ({selectorPlan}) => {
+
+    console.log(selectorPlan.images);
+
     return (
         <div className={styles.DetailedFloorPlanTemplate}>
             <div className={styles.DetailedFloorPlanTemplate__wrapItem}>
                 <Item 
                     noButton
+                    data={selectorPlan}
                 />
             </div>
 
             <div className={styles.DetailedFloorPlanTemplate__wrapSlider}>
-                <Slider />
+                <Slider 
+                    images={selectorPlan.images}
+                />
                 <Button
                     text='Choose this floorplan!'
                     style={{height:'70px', width:'400px'}}

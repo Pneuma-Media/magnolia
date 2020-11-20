@@ -8,6 +8,9 @@ const slots = [
             { lng: -110.825952, lat: 43.591529 },
             { lng: -110.826107, lat: 43.591548 },
         ],
+        size:40,
+        usp:'circumstances occur in which toil ',
+        plans:[1,2,3],
     },
     {
         id: 2,
@@ -19,6 +22,9 @@ const slots = [
             { lng: -110.826153, lat: 43.591717 },
             { lng: -110.826217, lat: 43.591941 },
         ],
+        size:80,
+        usp:'But I must explain to you',
+        plans:[4,5,6],
     },
     {
         id: 3,
@@ -30,10 +36,13 @@ const slots = [
             { lng: -110.826381, lat: 43.591890 },
             { lng: -110.826443, lat: 43.592139 },
         ],
+        size:68,
+        usp:'mistaken idea of denouncing',
+        plans:[7,8,9,10],
     },
     {
         id: 4,
-        type: "typeD",
+        type: "typeA",
         coordinates: [
             { lng: -110.826826, lat: 43.592056 },
             { lng: -110.826689, lat: 43.592098 },
@@ -41,10 +50,13 @@ const slots = [
             { lng: -110.826686, lat: 43.591830 },
             { lng: -110.826829, lat: 43.592052 },
         ],
+        size:58,
+        usp:'non provident, similique',
+        plans:[1,2,3],
     },
     {
         id: 5,
-        type: "typeE",
+        type: "typeB",
         coordinates: [
             { lng: -110.826960, lat: 43.592061 },
             { lng: -110.827065, lat: 43.591997 },
@@ -52,10 +64,13 @@ const slots = [
             { lng: -110.826738, lat: 43.591883 },
             { lng: -110.826958, lat: 43.592063 },
         ],
+        size:160,
+        usp:'Et harum quidem rerum',
+        plans:[4,5,6],
     },
     {
         id: 6,
-        type: "typeF",
+        type: "typeC",
         coordinates: [
             { lng: -110.826960, lat: 43.592061 },
             { lng: -110.827065, lat: 43.591997 },
@@ -63,10 +78,13 @@ const slots = [
             { lng: -110.826738, lat: 43.591883 },
             { lng: -110.826958, lat: 43.592063 },
         ],
+        size:30,
+        usp:'accusamus et iusto odio dignissimos',
+        plans:[7,8,9,10],
     },
     {
         id: 7,
-        type: "typeJ",
+        type: "typeA",
         coordinates: [
             { lng: -110.827390, lat: 43.592015 },
             { lng: -110.827385, lat: 43.591937 },
@@ -74,10 +92,13 @@ const slots = [
             { lng: -110.827733, lat: 43.592019 },
             { lng: -110.827417, lat: 43.592019 },
         ],
+        size:159,
+        usp:'quidem rerum',
+        plans:[1,2,3],
     },
     {
         id: 8,
-        type: "typeH",
+        type: "typeB",
         coordinates: [
             { lng: -110.827460, lat: 43.591918 },
             { lng: -110.827782, lat: 43.591926 },
@@ -85,6 +106,9 @@ const slots = [
             { lng: -110.827465, lat: 43.591852 },
             { lng: -110.827454, lat: 43.591910 },
         ],
+        size:129,
+        usp:'laborum et dolorum fuga',
+        plans:[4,5,6],
     },
     
 ];

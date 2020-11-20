@@ -9,3 +9,7 @@ export const USER_LOG_OUT = 'USER_LOG_OUT';
 
 export const POPUP_UNIVERSAL_SWITCH = 'POPUP_UNIVERSAL_SWITCH';
 
+
+export const SET_LOT = 'SET_LOT';
+export const SET_PLAN = 'SET_PLAN';
+

@@ -3,8 +3,25 @@ import styles from './SlotPopup.module.scss';
 import Button from '../../../components/UI/Button/Button';
 import homeImg from '../../../assets/img/icons/home-page.svg';
 import Router from 'next/router';
+import slots from '../../../db/slots';
+import plans from '../../../db/plans';
+import { setLot } from '../../../store/actions/lotAction';
+import { useDispatch } from 'react-redux';
 
 const SlotPopup = ({ id, setSlotId }) => {
+
+    const dispatch = useDispatch();
+    const slotData = slots.find(e => e.id === id);
+
+    const prev = plans.filter(e => slotData.plans.some(i => i === e.id)).slice(0, 3);
+
+    console.log(prev, slotData.plans);
+
+    const nextStep = () => {
+        dispatch(setLot(slotData));
+        Router.replace('/select_floorplan');
+    }
+
     return (
         <Popup
             setSlotId={setSlotId}
@@ -15,26 +32,25 @@ const SlotPopup = ({ id, setSlotId }) => {
                     <Button
                         text='Select This Lot'
                         style={{ height: '50px' }}
-                        onclick={() => Router.replace('/select_floorplan')}
+                        onclick={() => nextStep()}
                     />
                 </div>
-                <p className={styles.popup__blockParam}>Lot Size Goes Here Lot Size Goes Here</p>
-                <p className={styles.popup__blockParam}>USP's go here USP's go here USP's go here</p>
+                <p className={styles.popup__blockParam}>Size {slotData.size} m <sup>2</sup></p>
+                <p className={styles.popup__blockParam}>{slotData.usp}</p>
                 <p className={styles.popup__blockParam}>Floorplan Options Below</p>
 
                 <div className={styles.popup__wrapItem}>
-                    <div className={styles.popup__item}>
-                        <span className={styles.popup__itemNum}>1</span>
-                        <img className={styles.popup__itemImg} src={homeImg} alt="homeImg" />
-                    </div>
-                    <div className={styles.popup__item}>
-                        <span className={styles.popup__itemNum}>2</span>
-                        <img className={styles.popup__itemImg} src={homeImg} alt="homeImg" />
-                    </div>
-                    <div className={styles.popup__item}>
-                        <span className={styles.popup__itemNum}>3</span>
-                        <img className={styles.popup__itemImg} src={homeImg} alt="homeImg" />
-                    </div>
+                    {
+                        prev.map((data, i) => {
+                            return (
+                                <div  key={i} className={styles.popup__item}>
+                                    <span className={styles.popup__itemNum}>{i + 1}</span>
+                                    <img className={styles.popup__itemImg} src={data.img} alt="homeImg" />
+                                </div>
+                            )
+                        })
+                    }
+
                 </div>
 
             </div>

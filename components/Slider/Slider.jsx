@@ -12,7 +12,7 @@ const responsive = {
         breakpoint: { max: 3000, min: 1024 },
         items: 1,
         //slidesToSlide: 3 // optional, default to 1.
-      },
+    },
 };
 
 
@@ -25,7 +25,7 @@ const RightArrow = ({ onClick, ...rest }) => {
     return (
         <>
             <button className={styles.PopupCase__arrow} onClick={() => onClick()}>
-               <img src={rightArrow} alt="rightArrow"/>
+                <img src={rightArrow} alt="rightArrow" />
             </button>
         </>
     )
@@ -40,13 +40,13 @@ const LeftArrow = ({ onClick, ...rest }) => {
     return (
         <>
             <button className={styles.leftArrow} onClick={() => onClick()}>
-                <img src={leftArrow} alt="leftArrow"/>
+                <img src={leftArrow} alt="leftArrow" />
             </button>
         </>
     )
 }
 
-const Slider = () => {
+const Slider = ({ images }) => {
     return (
         <Carousel
             responsive={responsive}
@@ -60,17 +60,18 @@ const Slider = () => {
             containerClass="containerMasters_PopupCase"
 
         >
-          
-          <ItemSlider 
-            imgSlider={imgSlider}
-          />
-          <ItemSlider 
-            imgSlider={imgSlider}
-          />
-          <ItemSlider 
-            imgSlider={imgSlider}
-          />
-           
+
+            {
+                images.map((data, i) => {
+                    return (
+                        <ItemSlider
+                            key={i}
+                            imgSlider={data}
+                        />
+                    )
+                })
+            }
+
         </Carousel>
     )
 }

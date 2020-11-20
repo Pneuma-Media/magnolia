@@ -1,11 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Layout from '../components/layout/layout';
 import DetailedFloorPlanTemplate from '../templates/DetailedFloorPlanTemplate/DetailedFloorPlanTemplate';
 
 const DetailedFloorPlan = () => {
+
+    const selectorPlan = useSelector(state => state.lot.planData);
+    
+
     return (
         <Layout>
-            <DetailedFloorPlanTemplate />
+            <DetailedFloorPlanTemplate
+                selectorPlan={selectorPlan}
+            />
         </Layout>
     );
 };

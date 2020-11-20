@@ -7,6 +7,8 @@ const ChooseYourSpot = () => {
 
     const [slotId, setSlotId] = useState(null);
 
+    console.log(slotId);
+
     return (
         <Layout>
             <ChooseYourSpotTemplate
