@@ -6,38 +6,36 @@ import ItemCustomize from '../../components/ItemCustomize/ItemCustomize';
 import Router from 'next/router';
 
 
-const CustomizeInteriorRemplate = () => {
+const CustomizeInteriorRemplate = ({customization, setCustomization, selectorPlan, onSelectCustomization }) => {
+
+   // console.log(customization);
+
     return (
         <div className={styles.CustomizeInteriorRemplate}>
             <div className={styles.CustomizeInteriorRemplate__wrapItem}>
                 <Item
                     noButton
+                    data={selectorPlan}
                 />
             </div>
             <div className={styles.CustomizeInteriorRemplate__customize} >
                 <div className={styles.CustomizeInteriorRemplate__block}>
-                    <div className={styles.itemWrap}>
-                        <ItemCustomize
-                            title='Exterior Customizations'
-                            block1='Shingles'
-                            block2='Siding'
-                            block3='Shutters'
-                        />
-                    </div>
-                    <div className={styles.itemWrap}>
-                        <ItemCustomize
-                            title='Kitchen Customizations'
-                            block1='Countertop'
-                            block2='Backsplash'
-                            block3='Cabinets'
-                        />
-                    </div>
-                    <div className={styles.itemWrap}>
-                        <ItemCustomize
-                            title='Other Customizations'
-                            block1='Flooring'
-                        />
-                    </div>
+
+                    {
+                        customization.map((data, i) => {
+                            return (
+                                <div className={styles.itemWrap} key={i}>
+                                    <ItemCustomize
+                                        title={data.name}
+                                        dataItem={data}
+                                        // setCustomization={setCustomization}
+                                        customization={customization}
+                                        onSelectCustomization={onSelectCustomization}
+                                    />
+                                </div>
+                            )
+                        })
+                    }
 
                 </div>
                 <div className={styles.CustomizeInteriorRemplate__wrapButton}>
@@ -46,7 +44,6 @@ const CustomizeInteriorRemplate = () => {
                         style={{ width: '100%', height: '70px' }}
                         theme2
                         onclick={() => Router.replace('/apply')}
-
                     />
                 </div>
 

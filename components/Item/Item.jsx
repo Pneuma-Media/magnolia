@@ -21,7 +21,7 @@ const Item = ({ noButton, data }) => {
             {
                 data && (
                     <>
-                        <span className={styles.Item__number}>1</span>
+                        <span className={styles.Item__number}>{data.id}</span>
 
                         <div className={styles.Item__wrapImg}>
                             <img src={data.img} alt="img" />

@@ -7,7 +7,6 @@ import Router from 'next/router';
 
 const DetailedFloorPlanTemplate = ({selectorPlan}) => {
 
-    console.log(selectorPlan.images);
 
     return (
         <div className={styles.DetailedFloorPlanTemplate}>

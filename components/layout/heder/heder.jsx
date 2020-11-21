@@ -31,7 +31,6 @@ const Heder = () => {
         <div className={styles.Heder}>
             {
                 tabs.map((data) => {
-                    console.log(data);
                     return (
                         <span
                             onClick={() => navigate(data.id)}

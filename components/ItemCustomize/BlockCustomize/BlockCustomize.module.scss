@@ -16,9 +16,19 @@
         grid-auto-rows: 5vw;
         column-gap: 15px;
         row-gap: 15px;
+        cursor: pointer;
     }
 
     &__icon{
         background: $white;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .active{
+        outline:3px solid $purpure;
     }
 }

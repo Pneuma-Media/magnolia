@@ -42,15 +42,15 @@ const SlotPopup = ({ id, setSlotId }) => {
                 <div className={styles.popup__wrapItem}>
                     {
                         prev.map((data, i) => {
+                            console.log(data)
                             return (
                                 <div  key={i} className={styles.popup__item}>
-                                    <span className={styles.popup__itemNum}>{i + 1}</span>
+                                    <span className={styles.popup__itemNum}>{data.id}</span>
                                     <img className={styles.popup__itemImg} src={data.img} alt="homeImg" />
                                 </div>
                             )
                         })
                     }
-
                 </div>
 
             </div>

@@ -1,24 +1,34 @@
 import React from 'react';
 import styles from './ItemCustomize.module.scss';
 import BlockCustomize from './BlockCustomize/BlockCustomize';
+import customizationGroup from '../../db/custumizationGroups';
 
 
-const ItemCustomize = ({ title, block1, block2, block3 }) => {
+const ItemCustomize = ({ title, dataItem, onSelectCustomization, customization }) => {
+
+    
+
     return (
         <div className={styles.ItemCustomize}>
             <p className={styles.ItemCustomize__title}>
                 {title}
             </p>
 
-            <BlockCustomize
-                block={block1}
-            />
-            <BlockCustomize
-                block={block2}
-            />
-            <BlockCustomize
-                block={block3}
-            />
+            {
+                dataItem.underCategories.map((data, i) => {
+                    return (
+                        <BlockCustomize
+                            key={i}
+                            dataImg={data}
+                            onSelectCustomization={onSelectCustomization}
+                            customization={customization}
+                            underCategoriesID={data.id}
+                            group={data}
+                            category={dataItem}
+                        />
+                    )
+                })
+            }
 
         </div>
     );
