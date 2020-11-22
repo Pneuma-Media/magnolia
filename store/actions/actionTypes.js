@@ -13,3 +13,5 @@ export const POPUP_UNIVERSAL_SWITCH = 'POPUP_UNIVERSAL_SWITCH';
 export const SET_LOT = 'SET_LOT';
 export const SET_PLAN = 'SET_PLAN';
 
+export const IS_POPUP = 'IS_POPUP';
+

@@ -2,17 +2,21 @@ import React from 'react';
 import styles from './Popup.module.scss';
 
 
-const Popup = ({children, setSlotId}) => {
+const Popup = ({ children, setSlotId, TimePopup }) => {
 
     return (
         <div className={styles.popup}>
-          <div onClick={() => setSlotId(null)} className={styles.popup__close}>
-              <span></span>
-              <span></span>
-          </div>
-          
-                {children}
-           
+            {
+                !TimePopup && (
+                    <div onClick={() => setSlotId(null)} className={styles.popup__close}>
+                        <span></span>
+                        <span></span>
+                    </div>
+                )
+            }
+            
+            {children}
+
         </div>
     );
 };

@@ -3,8 +3,11 @@ import { useSelector } from 'react-redux';
 import Layout from '../components/layout/layout';
 import CustomizeInteriorRemplate from '../templates/CustomizeInteriorRemplate/CustomizeInteriorRemplate';
 import customizationGroup from '../db/custumizationGroups';
+import  useTimeout from '../UTILS/useTimeout';
 
 const CustomizeInterior = () => {
+
+    useTimeout();
 
     const selectorPlan = useSelector(state => state.lot.planData);
 
