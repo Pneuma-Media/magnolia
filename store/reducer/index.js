@@ -4,6 +4,7 @@ import userReducer from './user';
 import popupUniversal from './popupUniversal';
 import lot from './lot';
 import popup from './popup';
+import customization from './customization';
 
 const rootReducer = combineReducers({
     counter: counterReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     popupUniversal,
     lot,
     popup,
+    customization,
 });
 
 export default rootReducer;

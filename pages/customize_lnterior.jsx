@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Layout from '../components/layout/layout';
 import CustomizeInteriorRemplate from '../templates/CustomizeInteriorRemplate/CustomizeInteriorRemplate';
 import customizationGroup from '../db/custumizationGroups';
 import  useTimeout from '../UTILS/useTimeout';
+import { customizationAction } from '../store/actions/customization';
 
 const CustomizeInterior = () => {
 
@@ -11,10 +12,12 @@ const CustomizeInterior = () => {
 
     const selectorPlan = useSelector(state => state.lot.planData);
 
+    const dispatch = useDispatch();
+
     const [customization, setCustomization] = useState(customizationGroup);
+   
 
     const selectCustomization = (e) => {
-        const selectedCategory = customization.find(c => c.category === e.categoryId);
         const newCustomizations = customization.map(category => {
             if (category.category !== e.categoryId) return category;
             return {
@@ -28,9 +31,13 @@ const CustomizeInterior = () => {
                 })
             }
         })
-        // console.log(selectedCategory);
+        
         setCustomization(newCustomizations);
     }
+
+    useEffect(() => {
+        dispatch(customizationAction(customization))
+       },[customization]);
 
     return (
         <Layout>

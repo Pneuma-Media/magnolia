@@ -22,7 +22,7 @@ const CustomizeInteriorRemplate = ({customization, setCustomization, selectorPla
                 <div className={styles.CustomizeInteriorRemplate__block}>
 
                     {
-                        customization.map((data, i) => {
+                        customization?.map((data, i) => {
                             return (
                                 <div className={styles.itemWrap} key={i}>
                                     <ItemCustomize

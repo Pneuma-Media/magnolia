@@ -4,7 +4,7 @@ import bgImg from '../../assets/img/homePage/bgHomePage.jpg';
 import Form from './Form/Form';
 
 
-const ApplyTemplate = () => {
+const ApplyTemplate = ({ register, submit }) => {
     return (
         <div className={styles.ApplyTemplate}>
             <div className={styles.ApplyTemplate__filter}></div>
@@ -16,7 +16,10 @@ const ApplyTemplate = () => {
             </div>
 
             <div className={styles.ApplyTemplate__wrapForm}>
-                <Form />
+                <Form
+                    register={register}
+                    submit={submit}
+                />
             </div>
 
         </div>
