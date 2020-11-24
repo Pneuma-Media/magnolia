@@ -1,34 +1,52 @@
-@import '../../../assets/styles/variables.scss';
+@import "../../../assets/styles/variables.scss";
 
-
-.BlockCustomize{
-    margin-bottom: 15px;
-
-    &__title{
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 15px;
-        line-height: 0.8;
-    }
-    &__blockIcon{
+.BlockCustomize {
+    &__blockIcon {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-rows: 5vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        //grid-auto-rows: 4.3vw;
         column-gap: 15px;
         row-gap: 15px;
         cursor: pointer;
     }
 
-    &__icon{
-        background: $white;
-
-        img{
+    &__icon {
+        border-radius: 5px;
+        overflow: hidden;
+        height: 4.2vw;
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-    .active{
-        outline:3px solid $purpure;
+
+    &__nameBlock {
+        display: flex;
+        flex-direction: column;
+
+        :first-child {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: $text;
+        }
+        :last-child {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 100%;
+            color: $text;
+            opacity: .5;
+        }
+
+        .active2{
+            color: $green;
+        }
     }
+    .active {
+        border: 3px solid $green;
+    }
+    
 }

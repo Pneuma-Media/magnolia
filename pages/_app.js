@@ -53,7 +53,7 @@ const MyApp = ({ Component, pageProps }) => {
     return content;
 }
 
-export const wrapper = createWrapper(initStore, { debug: true });
+export const wrapper = createWrapper(initStore, { debug: !true });
 
 
 export default wrapper.withRedux(MyApp);
