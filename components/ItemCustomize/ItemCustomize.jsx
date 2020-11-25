@@ -4,7 +4,7 @@ import BlockCustomize from './BlockCustomize/BlockCustomize';
 import customizationGroup from '../../db/custumizationGroups';
 
 
-const ItemCustomize = ({ title, dataItem, onSelectCustomization, customization }) => {
+const ItemCustomize = ({setActivePrice, title, dataItem, onSelectCustomization, customization }) => {
 
 
 
@@ -13,7 +13,7 @@ const ItemCustomize = ({ title, dataItem, onSelectCustomization, customization }
 
             {
                 dataItem.underCategories.map((data, i) => {
-                    if (data.activeGroup) {
+                    if (dataItem.activeSubCategory === data.id) {
                         return (
                             <BlockCustomize
                                 key={i}
@@ -23,6 +23,7 @@ const ItemCustomize = ({ title, dataItem, onSelectCustomization, customization }
                                 underCategoriesID={data.id}
                                 group={data}
                                 category={dataItem}
+                                setActivePrice={setActivePrice}
                             />
                         )
                     }

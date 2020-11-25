@@ -25,6 +25,22 @@ const CustomizeInterior = () => {
         setCustomization(newState);
     }
 
+    const setUnderTab = (data) => {
+        console.log(data);
+        const newCustomizations = customization.map(c => {
+            return {
+                ...c,
+                activeSubCategory: c.active ? data.id : c.activeSubCategory,
+            }
+        });
+
+        setCustomization(newCustomizations);
+        // customization.map((category) => {
+        //     console.log(category.underCategories.find(e => e.id === data.id))
+
+        // })
+    }
+
     const selectCustomization = (e) => {
         const newCustomizations = customization.map(category => {
             if (category.category !== e.categoryId) return category;
@@ -54,6 +70,7 @@ const CustomizeInterior = () => {
                 customization={customization}
                 onSelectCustomization={selectCustomization}
                 setTab={setTab}
+                setUnderTab={setUnderTab}
             />
         </Layout>
     );

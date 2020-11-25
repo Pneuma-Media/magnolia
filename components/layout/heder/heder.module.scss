@@ -1,39 +1,84 @@
-@import '../../../assets/styles/variables.scss';
+@import "../../../assets/styles/variables.scss";
 
-.Heder{
+.Heder {
     height: 70px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 100px auto auto auto auto auto;
     align-items: center;
-    justify-content: space-around;
     background: $white;
 
-    .tab{
-        position: relative;
-        font-size: 22px;
-        padding: 0 15px;
-        font-weight: bold;
-        color: $grey1;
+    &__back {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: black;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        cursor: pointer;
+
+        img {
+            margin-right: 10px;
+        }
     }
 
-    .active{
-       color:$black;
-       cursor: pointer;
+    .tab {
+        position: relative;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0 15px;
+        color: $text;
+        opacity: 50%;
+        width: max-content;
+        justify-self: center;
+    }
 
-        &::before{
+    .active {
+        cursor: pointer;
+        opacity: 100%;
+
+        &::before {
             position: absolute;
-            content: '';
+            content: "";
             height: 3px;
             width: 100%;
-            background: $purpure;
-            bottom: -3px;
+            background: $text;
+            bottom: -23px;
             left: 0;
         }
     }
-    .visit{
-        color:$black;
+    .visit {
+        color: $green;
         cursor: pointer;
+        opacity: 100%;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            background: $green;
+            bottom: 2px;
+            left: -15px;
+            z-index: 0;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            height: 12px;
+            width: 7px;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+            bottom: 7px;
+            left: -9px;
+            z-index: 1;
+            transform: rotate(50grad);
+        }
     }
-    .apply{
+    .apply {
         color: $white;
         background: $red2;
         height: 100%;
@@ -41,9 +86,10 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        opacity: 100%;
 
-        &::before{
-           display: none;
+        &::before {
+            display: none;
         }
     }
 }

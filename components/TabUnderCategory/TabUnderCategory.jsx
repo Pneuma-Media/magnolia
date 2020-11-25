@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './TabUnderCategory.module.scss';
 import cx from 'classnames';
 
-const TabUnderCategory = ({ customization }) => {
+const TabUnderCategory = ({ setUnderTab, customization }) => {
 
     const category = customization.find(e => e.active);
 
@@ -13,10 +13,12 @@ const TabUnderCategory = ({ customization }) => {
 
             {
                 category.underCategories.map((data, i) => {
+                    console.log(data);
                     return (
                         <li
-                            className={cx({ [styles.active]: data.activeGroup })}
+                            className={cx({ [styles.active]: category.activeSubCategory === data.id })}
                             key={i}
+                            onClick={() => setUnderTab(data)}
                         >
                             {data.name}
                         </li>

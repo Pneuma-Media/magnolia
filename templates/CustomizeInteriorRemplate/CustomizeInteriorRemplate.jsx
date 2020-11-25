@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import styles from './CustomizeInteriorRemplate.module.scss';
 import Item from '../../components/Item/Item';
 import Button from '../../components/UI/Button/Button';
@@ -8,10 +8,11 @@ import { Container, Row, Col } from 'reactstrap';
 import TabsCategory from '../../components/TabsCategory/TabsCategory';
 import TabUnderCategory from '../../components/TabUnderCategory/TabUnderCategory';
 
-const CustomizeInteriorRemplate = ({ setTab, customization, setCustomization, selectorPlan, onSelectCustomization }) => {
+const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCustomization, selectorPlan, onSelectCustomization }) => {
 
+    const [activePrice, setActivePrice] = useState(null);
 
-
+console.log(activePrice)
     return (
         <div className={styles.CustomizeInteriorRemplate}>
 
@@ -40,6 +41,7 @@ const CustomizeInteriorRemplate = ({ setTab, customization, setCustomization, se
 
                                 <TabUnderCategory
                                     customization={customization}
+                                    setUnderTab={setUnderTab}
                                 />
 
                                 {
@@ -53,6 +55,7 @@ const CustomizeInteriorRemplate = ({ setTab, customization, setCustomization, se
                                                         // setCustomization={setCustomization}
                                                         customization={customization}
                                                         onSelectCustomization={onSelectCustomization}
+                                                        setActivePrice={setActivePrice}
                                                     />
                                                 </div>
                                             )
@@ -60,16 +63,26 @@ const CustomizeInteriorRemplate = ({ setTab, customization, setCustomization, se
                                     })
                                 }
                             </div>
-
-
                         </div>
 
-                        <Button
-                            text='Continue to the application process'
-                            style={{ width: '100%', height: '70px' }}
-                            theme2
-                            onclick={() => Router.replace('/apply')}
-                        />
+                        <div className={styles.CustomizeInteriorRemplate__bottomCard}>
+
+                            <span className={styles.cash}>${selectorPlan?.price + activePrice?.price}</span>
+
+                            <div className={styles.block}>
+                            <span>Base price: ${selectorPlan?.price}</span>
+                            <span>Customizations: ${activePrice?.price}</span>
+                            </div>
+                            <div className={styles.button}>
+                                <Button
+                                    text='Continue Application  Proccess'
+                                    style={{height: '100%' }}
+                                    theme2
+                                    onclick={() => Router.replace('/apply')}
+                                />
+                            </div>
+
+                        </div>
 
                     </Col>
 

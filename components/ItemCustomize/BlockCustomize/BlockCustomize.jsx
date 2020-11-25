@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 
 
-const BlockCustomize = ({ dataImg, onSelectCustomization, customization, category, underCategoriesID }) => {
+const BlockCustomize = ({setActivePrice, dataImg, onSelectCustomization, customization, category, underCategoriesID }) => {
 
 
     const select = (id) => {
@@ -23,7 +23,8 @@ const BlockCustomize = ({ dataImg, onSelectCustomization, customization, categor
             <div className={styles.BlockCustomize__blockIcon}>
                 {
                     dataImg.options.map((data, i) => {
-                        console.log(data);
+                       
+                        data.id === dataImg.active &&  setActivePrice(data);
                         return (
                             <div>
                                 <div onClick={() => select(data.id)} key={i} className={cx(styles.BlockCustomize__icon, { [styles.active]: data.id === dataImg.active })}>

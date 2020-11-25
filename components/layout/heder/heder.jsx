@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from './heder.module.scss';
 import cx from 'classnames';
 import { useRouter } from 'next/router';
-
+import backImg from '../../../assets/img/icons/back.svg';
+import Router from 'next/router';
 
 
 const tabs = [
@@ -27,8 +28,21 @@ const Heder = () => {
         }
     }
 
+    const back = () => {
+        const obj = tabs.find(e => e.link === router.pathname);
+        const obj1 = tabs.find(e => e.id === obj.id - 1);
+        if(obj.id === 1){
+            Router.replace('/');
+        }else{
+            Router.replace(`${obj1.link}`);
+        }
+       
+        console.log(obj1);
+    }
+
     return (
         <div className={styles.Heder}>
+            <span onClick={() => back()} className={styles.Heder__back}><img src={backImg} alt="img"/>Back</span>
             {
                 tabs.map((data) => {
                     return (

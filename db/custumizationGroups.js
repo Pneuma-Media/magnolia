@@ -36,6 +36,7 @@ const customizationGroup = [
         category: 1,
         active:true,
         name: 'Exterior',
+        activeSubCategory: 1,
         underCategories: [
             {
                 id: 1,
@@ -76,6 +77,7 @@ const customizationGroup = [
         category: 2,
         active:false,
         name: 'Kitchen',
+        activeSubCategory: 4,
         underCategories: [
             {
                 id: 4,
@@ -116,6 +118,7 @@ const customizationGroup = [
         category: 3,
         active:false,
         name: 'Other',
+        activeSubCategory: 7,
         underCategories: [
             {
                 id: 7,
