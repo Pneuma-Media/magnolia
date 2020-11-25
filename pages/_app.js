@@ -13,6 +13,7 @@ import TimePopup from '../components/TimePopup/TimePopup';
 import { useSelector } from 'react-redux';
 
 
+
 const MyApp = ({ Component, pageProps }) => {
 
     const router = useRouter();
@@ -41,14 +42,14 @@ const MyApp = ({ Component, pageProps }) => {
 
 
 
-    useEffect(() => {
-        if (router.pathname !== '/') router.replace('/');
-        router.prefetch('/choose_your_spot');
-        router.prefetch('/select_floorplan');
-        router.prefetch('/detailed_floorplan');
-        router.prefetch('/customize_lnterior');
-        router.prefetch('/apply');
-    }, []);
+    // useEffect(() => {
+    //     if (router.pathname !== '/') router.replace('/');
+    //     router.prefetch('/choose_your_spot');
+    //     router.prefetch('/select_floorplan');
+    //     router.prefetch('/detailed_floorplan');
+    //     router.prefetch('/customize_lnterior');
+    //     router.prefetch('/apply');
+    // }, []);
 
     return content;
 }
