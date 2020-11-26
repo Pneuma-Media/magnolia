@@ -10,8 +10,7 @@ const SelectFloorPlan = () => {
     //useTimeout();
 
     const selectorLot = useSelector(state => state.lot.lotData);
-    const plansSlot = plans.filter(e => e.type === selectorLot.type)
-    console.log(plansSlot);
+    const plansSlot = plans.filter(e => e.type === selectorLot?.type)
 
     return (
         <Layout>
