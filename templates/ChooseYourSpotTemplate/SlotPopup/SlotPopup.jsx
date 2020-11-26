@@ -14,7 +14,8 @@ const SlotPopup = ({ id, setSlotId }) => {
     const dispatch = useDispatch();
     const slotData = slots.find(e => e.id === id);
 
-    const prev = plans.filter(e => slotData.plans.some(i => i === e.id));
+
+    const prev = plans.filter(e => e.type === slotData.type);
     const price = prev.map(data => data.price);
 
 
@@ -43,9 +44,11 @@ const SlotPopup = ({ id, setSlotId }) => {
                 <p className={styles.popup__title}>{slotData.title}</p>
 
                 <div className={styles.popup__Params}>
-                    <p className={styles.popup__blockParam}><span>Lot size:</span> {slotData.size} m <sup>2</sup></p>
-                    <p className={styles.popup__blockParam}><span>Floorplans availibe:</span> {prev.length} </p>
-                    <p className={styles.popup__blockParam}><span>Price range:</span> ${price[0]} - ${price[price.length - 1]}</p>
+                    <p className={styles.popup__blockParam}><span>Lot area:</span> {slotData.length * slotData.width} feat <sup>2</sup></p>
+                    <p className={styles.popup__blockParam}><span>Lot width:</span> {slotData.width} feat</p>
+                    <p className={styles.popup__blockParam}><span>Lot length:</span> {slotData.length} feat</p>
+                    {/* <p className={styles.popup__blockParam}><span>Floorplans available:</span> {prev.length} </p> */}
+                    <p className={styles.popup__blockParam}><span>Home price range:</span> ${price[0]} - ${price[price.length - 1]}</p>
                 </div>
 
 
@@ -73,7 +76,7 @@ const SlotPopup = ({ id, setSlotId }) => {
 
                 <Button
                     text='Select This Lot'
-                    style={{ height: '50px', width:'100%' }}
+                    style={{ height: '50px', width: '100%' }}
                     onclick={() => nextStep()}
                 />
             </div>

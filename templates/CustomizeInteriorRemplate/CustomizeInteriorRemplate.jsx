@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import styles from './CustomizeInteriorRemplate.module.scss';
 import Item from '../../components/Item/Item';
 import Button from '../../components/UI/Button/Button';
@@ -10,9 +10,20 @@ import TabUnderCategory from '../../components/TabUnderCategory/TabUnderCategory
 
 const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCustomization, selectorPlan, onSelectCustomization }) => {
 
-    const [activePrice, setActivePrice] = useState(null);
+    // console.log(customization);
+    let categories = [];
+    customization.forEach(c => {
+        categories = categories.concat(c.underCategories);
+    });
 
-console.log(activePrice)
+    let customizationPrice = 0;
+    categories.forEach(c => {
+        const activeOption = c.options.find(o => o.id === c.active);
+        customizationPrice += activeOption.price;
+    });
+
+
+
     return (
         <div className={styles.CustomizeInteriorRemplate}>
 
@@ -55,7 +66,7 @@ console.log(activePrice)
                                                         // setCustomization={setCustomization}
                                                         customization={customization}
                                                         onSelectCustomization={onSelectCustomization}
-                                                        setActivePrice={setActivePrice}
+                                                        setActivePrice={() => null}
                                                     />
                                                 </div>
                                             )
@@ -67,16 +78,16 @@ console.log(activePrice)
 
                         <div className={styles.CustomizeInteriorRemplate__bottomCard}>
 
-                            <span className={styles.cash}>${selectorPlan?.price + activePrice?.price}</span>
+                            <span className={styles.cash}>${selectorPlan?.price + customizationPrice}</span>
 
                             <div className={styles.block}>
-                            <span>Base price: ${selectorPlan?.price}</span>
-                            <span>Customizations: ${activePrice?.price}</span>
+                                <span>Base price: ${selectorPlan?.price}</span>
+                                <span>Customizations: ${customizationPrice}</span>
                             </div>
                             <div className={styles.button}>
                                 <Button
                                     text='Continue Application  Proccess'
-                                    style={{height: '100%' }}
+                                    style={{ height: '100%' }}
                                     theme2
                                     onclick={() => Router.replace('/apply')}
                                 />
