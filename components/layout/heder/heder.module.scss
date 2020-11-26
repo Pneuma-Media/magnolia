@@ -30,14 +30,14 @@
         font-size: 16px;
         padding: 0 15px;
         color: $text;
-        opacity: 50%;
+        opacity: 0.5;
         width: max-content;
         justify-self: center;
     }
 
     .active {
         cursor: pointer;
-        opacity: 100%;
+        opacity: 1;
 
         &::before {
             position: absolute;
@@ -52,7 +52,7 @@
     .visit {
         color: $green;
         cursor: pointer;
-        opacity: 100%;
+        opacity: 1;
 
         &::before {
             position: absolute;
@@ -86,7 +86,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        opacity: 100%;
+        opacity: 1;
 
         &::before {
             display: none;
