@@ -4,35 +4,45 @@ import Item from '../../components/Item/Item';
 import Slider from '../../components/Slider/Slider';
 import Button from '../../components/UI/Button/Button';
 import Router from 'next/router';
+import { Container, Row, Col } from 'reactstrap';
 
 const DetailedFloorPlanTemplate = ({ selectorPlan }) => {
 
 
     return (
         <div className={styles.DetailedFloorPlanTemplate}>
-            <div className={styles.DetailedFloorPlanTemplate__wrapItem}>
-                {selectorPlan && (
-                    <Item
-                        noButton
-                        data={selectorPlan}
-                    />
-                )}
 
-            </div>
+            <Container>
 
-            <div className={styles.DetailedFloorPlanTemplate__wrapSlider}>
-                {selectorPlan && (
-                    <Slider
-                        images={selectorPlan.images}
-                    />
-                )}
+                <Row>
+                    {selectorPlan && (
+                        <Col xl='4' lg='4'>
+                            <Item
+                                noButton
+                                data={selectorPlan}
+                            />
+                        </Col>
+                    )}
 
-                <Button
-                    text='Choose this floorplan!'
-                    style={{ height: '70px', width: '400px' }}
-                    onclick={() => Router.replace('/customize_lnterior')}
-                />
-            </div>
+                    <Col xl='8' lg='8'>
+
+                        <div className={styles.wrapSlider}>
+    
+                            {selectorPlan && (
+                                <Slider
+                                    images={selectorPlan.images}
+                                />
+                            )}
+
+                            <Button
+                                text='Choose this floorplan!'
+                                style={{ height: '50px' }}
+                                onclick={() => Router.replace('/customize_lnterior')}
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };

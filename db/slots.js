@@ -2,12 +2,14 @@ const slots = [
     {
         id: 1,
         type: "typeA",
+        title:'Lot with bunch of green treess and awesome USP',
         coordinates: [
             { lng: -85.57526247574891, lat: 39.180835865714386 },
             { lng: -85.57515921070184, lat: 39.1808348261494 },
             { lng: -85.57515921070184, lat: 39.180709038670315 },
             { lng: -85.57526247574891, lat: 39.180710078237176 },
         ],
+
         width: 30,
         length: 48,
         size: 40,
@@ -16,6 +18,7 @@ const slots = [
     {
         id: 2,
         type: "typeB",
+        title:'Lot with bunch of green treess and awesome USP',
         coordinates: [
             { lng: -85.57528152362347, lat: 39.18065044724167 },
             { lng: -85.57518630520345, lat: 39.180682673834205 },
@@ -29,6 +32,7 @@ const slots = [
     },
     {
         id: 3,
+        title:'Lot with bunch of green treess and awesome USP',
         type: "typeB",
         coordinates: [
             { lng: -85.57492744219802, lat: 39.18067913842191 },
@@ -44,6 +48,7 @@ const slots = [
     {
         id: 4,
         type: "typeA",
+        title:'Lot with bunch of green treess and awesome USP',
         coordinates: [
             { lng: -85.57495560539267, lat: 39.18083091508607 },
             { lng: -85.5748523403456, lat: 39.18082883595589 },
@@ -57,6 +62,7 @@ const slots = [
     },
     {
         id: 5,
+        title:'Lot with bunch of green treess and awesome USP',
         type: "typeA",
         coordinates: [
             { lng: -85.57479199064277, lat: 39.180823638130185 },
@@ -71,7 +77,9 @@ const slots = [
     },
     {
         id: 6,
+        title:'Lot with bunch of green treess and awesome USP',
         type: "typeB",
+
         coordinates: [
             { lng: -85.57481368017348, lat: 39.180646014364086 },
             { lng: -85.57471846175345, lat: 39.180679280525986 },
@@ -85,6 +93,7 @@ const slots = [
     },
     {
         id: 7,
+        title:'Lot with bunch of green treess and awesome USP',
         type: "typeB",
         coordinates: [
             { lng: -85.57444889974745, lat: 39.1806751222566 },
@@ -184,6 +193,7 @@ const slots = [
     {
         id: 14,
         type: "typeB",
+        title:'Lot with bunch of green treess and awesome USP',
         coordinates: [
             { lng: -85.57387270912987, lat: 39.18063765179953 },
             { lng: -85.57377749070984, lat: 39.180669878397936 },

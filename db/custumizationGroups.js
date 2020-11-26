@@ -34,11 +34,14 @@ import c3_1_5 from '../assets/img/groupCollections/category3/Flooring/5.jpg';
 const customizationGroup = [
     {
         category: 1,
-        name: 'Exterior Customizations',
+        active:true,
+        name: 'Exterior',
+        activeSubCategory: 1,
         underCategories: [
             {
                 id: 1,
                 name: 'Shingles',
+                activeGroup:true,
                 active: 1,
                 options: [
                     { id: 1, name: 'name 1', img: c1_1_1, price: 20 },
@@ -49,6 +52,7 @@ const customizationGroup = [
             {
                 id: 2,
                 name: 'Siding',
+                activeGroup:false,
                 active: 4,
                 options: [
                     { id: 4, name: 'name 4', img: c1_2_1, price: 240 },
@@ -59,6 +63,7 @@ const customizationGroup = [
             {
                 id: 3,
                 name: 'Shutters',
+                activeGroup:false,
                 active: 7,
                 options: [
                     { id: 7, name: 'name 7', img: c1_3_1, price: 89 },
@@ -70,11 +75,14 @@ const customizationGroup = [
     },
     {
         category: 2,
-        name: 'Kitchen Customizations',
+        active:false,
+        name: 'Kitchen',
+        activeSubCategory: 4,
         underCategories: [
             {
                 id: 4,
                 name: 'Countertop',
+                activeGroup:true,
                 active: 10,
                 options: [
                     { id: 10, name: 'name 1', img: c2_1_1, price: 11 },
@@ -85,6 +93,7 @@ const customizationGroup = [
             {
                 id: 5,
                 name: 'Backsplash',
+                activeGroup:false,
                 active: 13,
                 options: [
                     { id: 13, name: 'name 4', img: c2_2_1, price: 859 },
@@ -95,6 +104,7 @@ const customizationGroup = [
             {
                 id: 6,
                 name: 'Cabinets',
+                activeGroup:false,
                 active: 17,
                 options: [
                     { id: 17, name: 'name 7', img: c2_3_1, price: 829 },
@@ -105,12 +115,15 @@ const customizationGroup = [
         ]
     },
     {
-        category: 7,
-        name: 'Other Customizations',
+        category: 3,
+        active:false,
+        name: 'Other',
+        activeSubCategory: 7,
         underCategories: [
             {
                 id: 7,
                 name: 'Flooring',
+                activeGroup:true,
                 active: 20,
                 options: [
                     { id: 20, name: 'name 1', img: c3_1_1, price: 11 },

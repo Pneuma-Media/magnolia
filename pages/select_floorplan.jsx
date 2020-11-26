@@ -7,7 +7,7 @@ import  useTimeout from '../UTILS/useTimeout';
 
 const SelectFloorPlan = () => {
 
-    useTimeout();
+    //useTimeout();
 
     const selectorLot = useSelector(state => state.lot.lotData);
     const plansSlot = plans.filter(e => selectorLot?.plans.some(i => e.id === i))

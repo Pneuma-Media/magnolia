@@ -3,28 +3,13 @@
 .DetailedFloorPlanTemplate {
     width: 100%;
     height: calc(100vh - 70px);
-    display: flex;
     background: $grey2;
+    padding: 30px 0;
 
-    &__wrapItem {
-        display: flex;
-        justify-content: center;
-        width: 30%;
-       // border: 1px solid red;
-        padding: 50px 15px;
-    }
-
-    &__wrapSlider {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-       // border: 1px solid red;
-        width: 70%;
-        height: calc(100vh - 70px);
-        align-items: center;
-        justify-content: center;
-        background: $grey2;
-        padding: 50px;
+    .wrapSlider{
+        max-height: 665px;
+        height: 100%;
+        border-radius: 5px;
+        overflow: hidden;
     }
 }

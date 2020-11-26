@@ -8,7 +8,7 @@ import { customizationAction } from '../store/actions/customization';
 
 const CustomizeInterior = () => {
 
-    useTimeout();
+   // useTimeout();
 
     const selectorPlan = useSelector(state => state.lot.planData);
 
@@ -16,6 +16,30 @@ const CustomizeInterior = () => {
 
     const [customization, setCustomization] = useState(customizationGroup);
    
+    const setTab = (id) => {
+        const newState = [...customization];
+        newState.map((data) => {
+            data.active = false;
+            if(data.category === id)data.active = true;
+        })
+        setCustomization(newState);
+    }
+
+    const setUnderTab = (data) => {
+        console.log(data);
+        const newCustomizations = customization.map(c => {
+            return {
+                ...c,
+                activeSubCategory: c.active ? data.id : c.activeSubCategory,
+            }
+        });
+
+        setCustomization(newCustomizations);
+        // customization.map((category) => {
+        //     console.log(category.underCategories.find(e => e.id === data.id))
+
+        // })
+    }
 
     const selectCustomization = (e) => {
         const newCustomizations = customization.map(category => {
@@ -45,6 +69,8 @@ const CustomizeInterior = () => {
                 selectorPlan={selectorPlan}
                 customization={customization}
                 onSelectCustomization={selectCustomization}
+                setTab={setTab}
+                setUnderTab={setUnderTab}
             />
         </Layout>
     );

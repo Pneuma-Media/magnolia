@@ -9,16 +9,10 @@
     overflow: hidden;
 
     &__innerContainer {
-        position: relative;
         padding: 30px 15px 30px 15px;
         width: 100%;
         height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-rows: auto;
-        column-gap: 15px;
-        row-gap: 50px;
-        overflow: auto;  
+        overflow: auto;
     }
     &__item{
         justify-self: center;

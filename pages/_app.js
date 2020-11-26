@@ -42,19 +42,20 @@ const MyApp = ({ Component, pageProps }) => {
 
 
 
-    // useEffect(() => {
-    //     if (router.pathname !== '/') router.replace('/');
-    //     router.prefetch('/choose_your_spot');
-    //     router.prefetch('/select_floorplan');
-    //     router.prefetch('/detailed_floorplan');
-    //     router.prefetch('/customize_lnterior');
-    //     router.prefetch('/apply');
-    // }, []);
+    useEffect(() => {
+        //if (router.pathname !== '/') router.replace('/');
+        router.prefetch('/choose_your_spot');
+        router.prefetch('/select_floorplan');
+        router.prefetch('/detailed_floorplan');
+        router.prefetch('/customize_lnterior');
+        router.prefetch('/apply');
+    }, []);
+
 
     return content;
 }
 
-export const wrapper = createWrapper(initStore, { debug: true });
+export const wrapper = createWrapper(initStore, { debug: !true });
 
 
 export default wrapper.withRedux(MyApp);
