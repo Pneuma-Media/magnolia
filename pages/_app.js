@@ -13,6 +13,7 @@ import TimePopup from '../components/TimePopup/TimePopup';
 import { useSelector } from 'react-redux';
 
 
+
 const MyApp = ({ Component, pageProps }) => {
 
     const router = useRouter();
@@ -49,6 +50,7 @@ const MyApp = ({ Component, pageProps }) => {
         router.prefetch('/customize_lnterior');
         router.prefetch('/apply');
     }, []);
+
 
     return content;
 }

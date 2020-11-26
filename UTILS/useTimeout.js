@@ -7,7 +7,7 @@ import { isPopup } from '../store/actions/popup';
 const useTimeout = () => {
 
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         const timeoutBody = () => {
             console.log('timer');
@@ -20,7 +20,6 @@ const useTimeout = () => {
         const mouseListener = () => {
             clearTimeout(timer);
             timer = setTimeout(timeoutBody, 60000);
-            console.log('mouse move');
         }
 
         window.addEventListener('mousemove', mouseListener);

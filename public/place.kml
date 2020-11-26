@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>My Places</name>
+	<open>1</open>
+	<Style>
+		<ListStyle>
+			<listItemType>check</listItemType>
+			<ItemIcon>
+				<state>open</state>
+				<href>:/mysavedplaces_open.png</href>
+			</ItemIcon>
+			<ItemIcon>
+				<state>closed</state>
+				<href>:/mysavedplaces_closed.png</href>
+			</ItemIcon>
+			<bgColor>00ffffff</bgColor>
+			<maxSnippetLines>2</maxSnippetLines>
+		</ListStyle>
+	</Style>
+	<GroundOverlay>
+		<name>Untitled Image Overlay</name>
+		<LookAt>
+			<gx:TimeStamp><when>2016-09-21</when>
+</gx:TimeStamp>
+			<gx:ViewerOptions>
+				<gx:option name="historicalimagery"></gx:option>
+				<gx:option enabled="0" name="sunlight"></gx:option>
+				<gx:option enabled="0" name="streetview"></gx:option>
+			</gx:ViewerOptions>
+			<longitude>-85.57454190669689</longitude>
+			<latitude>39.18168132820545</latitude>
+			<altitude>0</altitude>
+			<heading>35.26745961405091</heading>
+			<tilt>25.30685780912841</tilt>
+			<range>738.0895456976646</range>
+			<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+		</LookAt>
+		<color>82ffffff</color>
+		<Icon>
+			<href>https://i.ibb.co/cb5kKP8/2020-Westport-Mobile-Home-Park-lot-layout-page-0001-1.jpg</href>
+			<viewBoundScale>0.75</viewBoundScale>
+		</Icon>
+		<LatLonBox>
+			<north>39.1815335975796</north>
+			<south>39.18037443581315</south>
+			<east>-85.57239297142786</east>
+			<west>-85.5756373925328</west>
+		</LatLonBox>
+	</GroundOverlay>
+</Folder>
+</kml>
