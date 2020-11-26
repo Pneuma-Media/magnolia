@@ -8,7 +8,7 @@ import  useTimeout from '../UTILS/useTimeout';
 const DetailedFloorPlan = () => {
 
     const selectorPlan = useSelector(state => state.lot.planData);
-    //useTimeout();
+    useTimeout();
 
     return (
         <Layout>

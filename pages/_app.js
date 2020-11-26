@@ -43,7 +43,7 @@ const MyApp = ({ Component, pageProps }) => {
 
 
     useEffect(() => {
-        //if (router.pathname !== '/') router.replace('/');
+        if (router.pathname !== '/') router.replace('/');
         router.prefetch('/choose_your_spot');
         router.prefetch('/select_floorplan');
         router.prefetch('/detailed_floorplan');

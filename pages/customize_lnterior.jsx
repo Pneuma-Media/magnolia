@@ -8,7 +8,7 @@ import { customizationAction } from '../store/actions/customization';
 
 const CustomizeInterior = () => {
 
-   // useTimeout();
+    useTimeout();
 
     const selectorPlan = useSelector(state => state.lot.planData);
 
