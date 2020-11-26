@@ -2,7 +2,7 @@
 
 
 .Button{
-    border-radius: 100px;
+    border-radius: 5px;
     border:none;
     outline: none !important;
     background: $red1;
@@ -25,4 +25,16 @@
 .theme2{
     background: $red2;
     color: $white;
+}
+
+.theme3{
+    background: $bg;
+
+    &:hover{
+        border:1px solid $red1;
+    }
+
+    span{
+        color: $red1;
+    }
 }

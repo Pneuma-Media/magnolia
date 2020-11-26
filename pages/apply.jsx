@@ -29,7 +29,7 @@ const Apply = () => {
     const Plan = selectorLot.planData?.id;
 
 
-    useTimeout();
+  //  useTimeout();
 
 
 

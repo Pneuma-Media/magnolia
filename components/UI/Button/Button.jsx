@@ -3,11 +3,21 @@ import styles from './Button.module.scss';
 import arrow from '../../../assets/img/icons/arrow.svg';
 import cx from 'classnames';
 
-const Button = ({style, text, onclick, theme2 }) => {
+const Button = ({style, text, onclick, theme2, theme3 }) => {
+
+    const themes = [
+        {[styles.theme2]:theme2},
+        {[styles.theme3]:theme3}
+    ]
+      
+    
+
     return (
-        <button style={style} onClick={() => onclick()} className={cx(styles.Button , {[styles.theme2]:theme2})}>
+        <button style={style} onClick={() => onclick()} className={cx(styles.Button , themes)}>
             <span>{text}</span>
-            <img src={arrow} alt="img"/>
+          {
+              !theme3 && <img src={arrow} alt="img"/>
+          }  
         </button>
     );
 };

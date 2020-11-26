@@ -1,58 +1,74 @@
 import React from 'react';
 import styles from './Form.module.scss';
 import Button from '../../../components/UI/Button/Button';
+import Router from 'next/router';
 
 
 const Form = ({ register, submit }) => {
     return (
         <div className={styles.Form}>
-            <p className={styles.Form__title}>
-                Please Fill Out The Form Below To Apply
+
+            <div className={styles.Form__wrapForm}>
+                <p className={styles.Form__title}>
+                    Please Fill Out The Form Below To Apply
             </p>
 
-            <div className={styles.Form__block1}>
+
                 <div className={styles.wrap}>
-                    <span className={styles.Form__label}>First Name</span>
+                    <span className={styles.label}>First Name</span>
                     <input
                         type="text"
                         name='FirstName'
                         ref={register}
                     />
                 </div>
+
                 <div className={styles.wrap}>
-                    <span className={styles.Form__label}>Last Name</span>
+                    <span className={styles.label}>Last Name</span>
                     <input
                         type="text"
                         name='LastName'
                         ref={register}
                     />
                 </div>
-            </div>
-            <div className={styles.Form__block2}>
-                <span className={styles.Form__label}>Email</span>
-                <input
-                    type="Email"
-                    name='Email'
-                    ref={register}
+
+                <div className={styles.wrap}>
+                    <span className={styles.label}>Email</span>
+                    <input
+                        type="Email"
+                        name='Email'
+                        ref={register}
+                    />
+                </div>
+                <div className={styles.wrap}>
+                    <span className={styles.label}>Anything you'd like to add?</span>
+                    <textarea
+                        name="Description"
+                        ref={register}
+                        id=""
+                        cols="30"
+                        rows="10"
+                    ></textarea>
+                </div>
+
+                <Button
+                    text='Click here to apply for new home'
+                    style={{ height: '50px', width: '100%', marginBottom:'20px' }}
+                    //theme2
+                    onclick={submit}
                 />
-            </div>
-            <div className={styles.Form__block3}>
-                <span className={styles.Form__label}>Anything you'd like to add?</span>
-                <textarea 
-                name="Description" 
-                ref={register}
-                id="" 
-                cols="30" 
-                rows="10"
-                ></textarea>
+
+                <Button
+                    text='Back'
+                    style={{ height: '50px', width: '100%' }}
+                    theme3
+                    onclick={() => Router.replace('/customize_lnterior')}
+                />
+
+
             </div>
 
-            <Button
-                text='Click here to apply for new home'
-                style={{ height: '70px', width: '100%' }}
-                theme2
-                onclick={submit}
-            />
+
 
         </div>
     );

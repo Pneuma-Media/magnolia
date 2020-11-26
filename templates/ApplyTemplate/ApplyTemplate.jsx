@@ -7,12 +7,16 @@ import Form from './Form/Form';
 const ApplyTemplate = ({ register, submit }) => {
     return (
         <div className={styles.ApplyTemplate}>
-            <div className={styles.ApplyTemplate__filter}></div>
-            <img className={styles.ApplyTemplate__bgImg} src={bgImg} alt="bgImg" />
+
 
             <div className={styles.ApplyTemplate__titleBlock}>
-                <p className={styles.ApplyTemplate__title}>Time To Apply</p>
-                <p className={styles.ApplyTemplate__subTitle}>to gs countyard communities</p>
+                <div className={styles.filter}></div>
+                <img className={styles.bgImg} src={bgImg} alt="bgImg" />
+                <div className={styles.wrapTitle}>
+                    <p className={styles.title}>Time To Apply</p>
+                    <p className={styles.subTitle}>to gs countyard communities</p>
+                </div>
+
             </div>
 
             <div className={styles.ApplyTemplate__wrapForm}>
