@@ -6,6 +6,12 @@
     background: $grey2;
     padding: 30px 0;
 
+    .wrapItem{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
     .wrapSlider{
         border-radius: 5px;
     }

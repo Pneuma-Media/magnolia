@@ -17,17 +17,19 @@ const DetailedFloorPlanTemplate = ({ selectorPlan }) => {
                 <Row>
                     {selectorPlan && (
                         <Col xl='4' lg='4'>
-                            <Item
-                                noButton
-                                data={selectorPlan}
-                            />
+                            <div className={styles.wrapItem}>
+                                <Item
+                                    noButton
+                                    data={selectorPlan}
+                                />
+                            </div>
                         </Col>
                     )}
 
                     <Col xl='8' lg='8'>
 
                         <div className={styles.wrapSlider}>
-    
+
                             {selectorPlan && (
                                 <Slider
                                     images={selectorPlan.images}

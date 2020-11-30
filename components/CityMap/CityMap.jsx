@@ -18,7 +18,7 @@ const CityMap = ({ setIsPopup }) => {
                 strokeWeight: 2,
                 fillColor: " #f8bf02",
                 fillOpacity: 0.7,
-                // mapTypeId: 'satellite'
+                //mapTypeId: 'satellite'
             });
             miamiArea.addListener("click", () => setIsPopup(s.id));
             miamiArea.setMap(map);
@@ -87,7 +87,7 @@ const CityMap = ({ setIsPopup }) => {
 
         // });
 
-        map.setMapTypeId('satellite');
+        map.setMapTypeId('terrain');
     };
 
 
@@ -100,7 +100,6 @@ const CityMap = ({ setIsPopup }) => {
                 <GoogleMapReact
                     defaultCenter={{ lat: 39.180891, lng: -85.574046 }}
                     // defaultCenter={{ lat: 62.323907, lng: -150.109291 }}
-                    // options={{r}}
                     defaultZoom={19}
                     options={{
                         restriction: {
@@ -111,7 +110,8 @@ const CityMap = ({ setIsPopup }) => {
                                 east: -85.572400,
                             },
                             strictBounds: true,
-                        }
+                        },
+                       
                     }
                     }
                     // restriction={{

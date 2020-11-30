@@ -7,7 +7,7 @@ import Router from 'next/router';
 
 
 const tabs = [
-    { id: 1, name: 'Choose your spot', active: false, visit: false, link: '/choose_your_spot' },
+    { id: 1, name: 'Choose Your Spot', active: false, visit: false, link: '/choose_your_spot' },
     { id: 2, name: 'Select Floorplan', active: false, visit: false, link: '/select_floorplan' },
     { id: 3, name: 'Detailed Floorplan', active: false, visit: false, link: '/detailed_floorplan' },
     { id: 4, name: 'Customize Interior', active: false, visit: false, link: '/customize_lnterior' },
