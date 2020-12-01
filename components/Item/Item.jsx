@@ -18,7 +18,6 @@ const Item = ({ noButton, data }) => {
         Router.replace('/detailed_floorplan')
     }
 
-    console.log(data);
 
     return (
 

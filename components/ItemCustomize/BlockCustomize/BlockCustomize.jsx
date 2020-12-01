@@ -26,8 +26,8 @@ const BlockCustomize = ({setActivePrice, dataImg, onSelectCustomization, customi
                        
                         data.id === dataImg.active &&  setActivePrice(data);
                         return (
-                            <div>
-                                <div onClick={() => select(data.id)} key={i} className={cx(styles.BlockCustomize__icon, { [styles.active]: data.id === dataImg.active })}>
+                            <div key={i}>
+                                <div onClick={() => select(data.id)} className={cx(styles.BlockCustomize__icon, { [styles.active]: data.id === dataImg.active })}>
                                     <img src={data.img} alt="img" />
                                 </div>
                                 <div className={styles.BlockCustomize__nameBlock}>

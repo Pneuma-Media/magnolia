@@ -6,14 +6,11 @@ const TabUnderCategory = ({ setUnderTab, customization }) => {
 
     const category = customization.find(e => e.active);
 
-    console.log(category);
-
     return (
         <ul className={styles.TabUnderCategory}>
 
             {
                 category.underCategories.map((data, i) => {
-                    console.log(data);
                     return (
                         <li
                             className={cx({ [styles.active]: category.activeSubCategory === data.id })}

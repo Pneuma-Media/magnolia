@@ -37,13 +37,14 @@ const MyApp = ({ Component, pageProps }) => {
             }
 
             <Component {...pageProps} />
+            {/* <script src="https://cdn.jsdelivr.net/gh/geocodezip/v3-utility-library@master/archive/maplabel/src/maplabel.js"/> */}
         </>
     );
 
 
 
     useEffect(() => {
-        if (router.pathname !== '/') router.replace('/');
+        // if (router.pathname !== '/') router.replace('/');
         router.prefetch('/choose_your_spot');
         router.prefetch('/select_floorplan');
         router.prefetch('/detailed_floorplan');

@@ -4,7 +4,7 @@ import Button from '../../../components/UI/Button/Button';
 import Router from 'next/router';
 
 
-const Form = ({ register, submit }) => {
+const Form = ({ errors, register, submit }) => {
     return (
         <div className={styles.Form}>
 
@@ -21,6 +21,7 @@ const Form = ({ register, submit }) => {
                         name='FirstName'
                         ref={register}
                     />
+                    <span className={styles.errors}>{errors.FirstName?.message}</span>
                 </div>
 
                 <div className={styles.wrap}>
@@ -30,6 +31,7 @@ const Form = ({ register, submit }) => {
                         name='LastName'
                         ref={register}
                     />
+                    <span className={styles.errors}>{errors.LastName?.message}</span>
                 </div>
 
                 <div className={styles.wrap}>
@@ -39,6 +41,7 @@ const Form = ({ register, submit }) => {
                         name='Email'
                         ref={register}
                     />
+                    <span className={styles.errors}>{errors.Email?.message}</span>
                 </div>
                 <div className={styles.wrap}>
                     <span className={styles.label}>Anything you'd like to add?</span>
@@ -53,7 +56,7 @@ const Form = ({ register, submit }) => {
 
                 <Button
                     text='Click here to apply for new home'
-                    style={{ height: '50px', width: '100%', marginBottom:'20px' }}
+                    style={{ height: '50px', width: '100%', marginBottom: '20px' }}
                     //theme2
                     onclick={submit}
                 />

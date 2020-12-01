@@ -10,7 +10,6 @@ const useTimeout = () => {
 
     useEffect(() => {
         const timeoutBody = () => {
-            console.log('timer');
             dispatch(isPopup(true));
         }
 

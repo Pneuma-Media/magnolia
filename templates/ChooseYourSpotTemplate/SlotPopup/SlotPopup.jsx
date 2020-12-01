@@ -23,8 +23,6 @@ const SlotPopup = ({ id, setSlotId }) => {
         return a - b;
     })
 
-    console.log(prev, slotData.plans, price);
-
     const nextStep = () => {
         dispatch(setLot(slotData));
         Router.replace('/select_floorplan');
@@ -58,7 +56,7 @@ const SlotPopup = ({ id, setSlotId }) => {
                         {
                             prev.slice(0, 3).map((data, i) => {
                                 return (
-                                    <img className={styles.popup__itemImg} src={data.img} alt="homeImg" />
+                                    <img key={i} className={styles.popup__itemImg} src={data.img} alt="homeImg" />
                                 )
                             })
                         }

@@ -21,7 +21,6 @@ const Heder = () => {
     const activeTab = tabs.find(e => e.link === router.pathname);
 
     const navigate = (id) => {
-        console.log(id)
         if(id < activeTab.id || activeTab.id === 4 && id === 5) {
             const { link } = tabs.find(e => e.id === id);
             router.replace(link);
@@ -36,8 +35,6 @@ const Heder = () => {
         }else{
             Router.replace(`${obj1.link}`);
         }
-       
-        console.log(obj1);
     }
 
     return (

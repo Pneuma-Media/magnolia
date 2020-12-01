@@ -26,7 +26,6 @@ const CustomizeInterior = () => {
     }
 
     const setUnderTab = (data) => {
-        console.log(data);
         const newCustomizations = customization.map(c => {
             return {
                 ...c,

@@ -44,7 +44,7 @@
         border-radius: 5px;
         display: grid;
         grid-template-columns: max-content auto max-content;
-        column-gap: 50px;
+        column-gap: 25px;
         padding: 20px;
 
         .cash {
@@ -63,7 +63,8 @@
             span {
                 font-style: normal;
                 font-weight: normal;
-                font-size: 16px;
+                font-size: 18px;
+                font-weight: 500;
                 color: $text;
             }
         }

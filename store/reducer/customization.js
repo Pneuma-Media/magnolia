@@ -7,9 +7,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     
     if(action.type === actionTypes.CUSTOMIZATION){
-
-        console.log(action);
-
         const newState = {...state};
         newState.customization = action.payload;
         return newState;
