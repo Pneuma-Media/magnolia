@@ -48,14 +48,16 @@ const Apply = () => {
 
 
 
-    function sendEmail(e) {
+    async function sendEmail(e) {
         let html = ``;
+        let price = 0;
         сustomizations?.forEach(c => {
-            html += `<h2>${c.name}</h2>`
+            html += `<h3>${c.name}</h3>`
             html += '<ul>';
             c.underCategories.forEach(cc => {
                 console.log(cc);
                 const option = cc.options.find(o => o.id === cc.active);
+                price += option.price
                 html += '<li>';
                 html += `<span>${cc.name}</span>: <span><b>${option.name}($${option.price})</b></span>`;
                 html += '</li>';
@@ -74,19 +76,34 @@ const Apply = () => {
         //     action: 'Send Email'
         // });
 
+        console.log(lot);
+        console.log(Plan);
 
-        emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z')
-            .then((result) => {
-                reset({
-                    FirstName: '',
-                    LastName: '',
-                    Email: '',
-                    Description: '',
-                });
-                console.log('sdf');
-            }, (error) => {
+        await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
 
-            });
+        await emailjs.send("gmail", "user_report", {
+            first_name: e.FirstName,
+            lot_id: lot.id,
+            lot_area: lot.length * lot.width,
+            lot_width: lot.width,
+            lot_length: lot.length,
+            floorplan_name: Plan.title,
+            floorplan_area: Plan.s,
+            floorplan_bedrooms: Plan.bedrooms,
+            floorplan_bathrooms: Plan.bathrooms,
+            floorplan_price: Plan.price,
+            customizations_price: price,
+            total_price: Plan.price + price,
+            customizatoins: html,
+            to: e.Email,
+        }, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
+
+        reset({
+            FirstName: '',
+            LastName: '',
+            Email: '',
+            Description: '',
+        });
     }
 
     return (
