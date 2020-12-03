@@ -12,6 +12,12 @@ import Popup from '../components/UI/Popup/Popup';
 import TimePopup from '../components/TimePopup/TimePopup';
 import { useSelector } from 'react-redux';
 
+import TagManager from 'react-gtm-module'
+
+const tagManagerArgs = {
+    gtmId: 'GTM-NNW6Q6X'
+}
+
 
 
 const MyApp = ({ Component, pageProps }) => {
@@ -19,13 +25,16 @@ const MyApp = ({ Component, pageProps }) => {
     const router = useRouter();
     const selectorPopup = useSelector(state => state.popup.popup);
 
+    useEffect(() => {
+        TagManager.initialize(tagManagerArgs)
 
+    }, []);
 
     let content = (
         <>
-            {/* <Head>
-                <meta name="viewport" content="viewport-fit=cover" />           
-             </Head> */}
+            <Head>
+                <title>Build your home | Red Roof Capital</title>
+            </Head>
             {
                 selectorPopup && (
                     <Popup
@@ -44,7 +53,7 @@ const MyApp = ({ Component, pageProps }) => {
 
 
     useEffect(() => {
-         if (router.pathname !== '/') router.replace('/');
+        if (router.pathname !== '/') router.replace('/');
         router.prefetch('/choose_your_spot');
         router.prefetch('/select_floorplan');
         router.prefetch('/detailed_floorplan');
