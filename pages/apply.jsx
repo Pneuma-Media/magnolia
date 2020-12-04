@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import ReactGA from 'react-ga';
 import emailjs from 'emailjs-com';
 import { useSelector } from 'react-redux';
+import { format } from 'number-currency-format';
 
 const formatPrice = (price) => {
     return format(price, {
