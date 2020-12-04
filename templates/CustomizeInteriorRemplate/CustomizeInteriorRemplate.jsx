@@ -7,6 +7,13 @@ import Router from 'next/router';
 import { Container, Row, Col } from 'reactstrap';
 import TabsCategory from '../../components/TabsCategory/TabsCategory';
 import TabUnderCategory from '../../components/TabUnderCategory/TabUnderCategory';
+import { format } from 'number-currency-format';
+
+const formatPrice = (price) => {
+    return format(price, {
+        showDecimals: 'NEVER',
+    })
+};
 
 const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCustomization, selectorPlan, onSelectCustomization }) => {
 
@@ -21,7 +28,6 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
         const activeOption = c.options.find(o => o.id === c.active);
         customizationPrice += activeOption.price;
     });
-
 
 
     return (
@@ -78,11 +84,11 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
 
                         <div className={styles.CustomizeInteriorRemplate__bottomCard}>
 
-                            <span className={styles.cash}>${selectorPlan?.price + customizationPrice}</span>
+                            <span className={styles.cash}>${formatPrice(selectorPlan?.price + customizationPrice)}</span>
 
                             <div className={styles.block}>
-                                <span>Base price: ${selectorPlan?.price}</span>
-                                <span>Customizations: ${customizationPrice}</span>
+                                <span>Base price: ${formatPrice(selectorPlan?.price)}</span>
+                                <span>Customizations: ${formatPrice(customizationPrice)}</span>
                             </div>
                             <div className={styles.button}>
                                 <Button

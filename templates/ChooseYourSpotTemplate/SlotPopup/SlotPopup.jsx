@@ -8,6 +8,8 @@ import plans from '../../../db/plans';
 import { setLot } from '../../../store/actions/lotAction';
 import { useDispatch } from 'react-redux';
 import closeImg from '../../../assets/img/icons/close.svg';
+import { format } from 'number-currency-format';
+
 
 const SlotPopup = ({ id, setSlotId }) => {
 
@@ -28,6 +30,15 @@ const SlotPopup = ({ id, setSlotId }) => {
         Router.replace('/select_floorplan');
     }
 
+    let priceFrom = format(price[0], {
+        spacing: true,
+        showDecimals: 'NEVER',
+    });
+    let priceTo = format(price[price.length - 1], {
+        spacing: true,
+        showDecimals: 'NEVER',
+    });
+
     return (
         <Popup
             setSlotId={setSlotId}
@@ -42,11 +53,11 @@ const SlotPopup = ({ id, setSlotId }) => {
                 <p className={styles.popup__title}>{slotData.title}</p>
 
                 <div className={styles.popup__Params}>
-                    <p className={styles.popup__blockParam}><span>Lot area:</span> {slotData.length * slotData.width} feat <sup>2</sup></p>
-                    <p className={styles.popup__blockParam}><span>Lot width:</span> {slotData.width} feat</p>
-                    <p className={styles.popup__blockParam}><span>Lot length:</span> {slotData.length} feat</p>
+                    <p className={styles.popup__blockParam}><span>Lot area:</span> {slotData.length * slotData.width} feet <sup>2</sup></p>
+                    <p className={styles.popup__blockParam}><span>Lot width:</span> {slotData.width} feet</p>
+                    <p className={styles.popup__blockParam}><span>Lot length:</span> {slotData.length} feet</p>
                     {/* <p className={styles.popup__blockParam}><span>Floorplans available:</span> {prev.length} </p> */}
-                    <p className={styles.popup__blockParam}><span>Home price range:</span> ${price[0]} - ${price[price.length - 1]}</p>
+                    <p className={styles.popup__blockParam}><span>Home price range:</span> ${priceFrom} - ${priceTo}</p>
                 </div>
 
 

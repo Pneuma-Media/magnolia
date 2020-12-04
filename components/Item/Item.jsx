@@ -8,6 +8,7 @@ import badroomsImg from '../../assets/img/icons/badrooms.svg';
 import bathImg from '../../assets/img/icons/bath.svg';
 import PlanImg from '../../assets/img/icons/blueprint.svg';
 import cx from 'classnames';
+import { format } from 'number-currency-format';
 
 const Item = ({ noButton, data }) => {
 
@@ -27,7 +28,10 @@ const Item = ({ noButton, data }) => {
                 data && (
                     <>
 
-                        <span className={styles.Item__price}>${data.price}</span>
+                        <span className={styles.Item__price}>${format(data.price, {
+                            spacing: true,
+                            showDecimals: 'NEVER',
+                        })}</span>
 
                         <div className={styles.Item__wrapImg}>
                             <img src={data.img} alt="img" />
@@ -36,7 +40,7 @@ const Item = ({ noButton, data }) => {
                         <div className={styles.Item__wrapData}>
                             <p className={styles.Item__title}>{data.title}</p>
 
-                            <div className={cx(styles.Item__params ,{[styles.Item__noButton]:noButton})}>
+                            <div className={cx(styles.Item__params, { [styles.Item__noButton]: noButton })}>
 
                                 <div className={styles.Item__paramsLabel}>
                                     <img src={badroomsImg} alt="badroomsImg" />
@@ -53,7 +57,7 @@ const Item = ({ noButton, data }) => {
                                 <div className={styles.Item__paramsLabel}>
                                     <img src={PlanImg} alt="badroomsImg" />
                                     <span>{data.s}</span>
-                                    <span className={styles.Item__LabeName}>Bedrooms</span>
+                                    <span className={styles.Item__LabeName}>Area</span>
                                 </div>
 
                             </div>

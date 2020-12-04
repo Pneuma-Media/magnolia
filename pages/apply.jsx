@@ -8,6 +8,11 @@ import ReactGA from 'react-ga';
 import emailjs from 'emailjs-com';
 import { useSelector } from 'react-redux';
 
+const formatPrice = (price) => {
+    return format(price, {
+        showDecimals: 'NEVER',
+    })
+};
 
 const schema = yup.object().shape({
     FirstName: yup.string().required('Please enter your first name'),
@@ -59,7 +64,7 @@ const Apply = () => {
                 const option = cc.options.find(o => o.id === cc.active);
                 price += option.price
                 html += '<li>';
-                html += `<span>${cc.name}</span>: <span><b>${option.name}($${option.price})</b></span>`;
+                html += `<span>${cc.name}</span>: <span><b>${option.name}($${formatPrice(option.price)})</b></span>`;
                 html += '</li>';
             });
             html += '</ul>';
@@ -91,9 +96,9 @@ const Apply = () => {
             floorplan_area: Plan.s,
             floorplan_bedrooms: Plan.bedrooms,
             floorplan_bathrooms: Plan.bathrooms,
-            floorplan_price: Plan.price,
-            customizations_price: price,
-            total_price: Plan.price + price,
+            floorplan_price: formatPrice(Plan.price),
+            customizations_price: formatPrice(price),
+            total_price: formatPrice(Plan.price + price),
             customizatoins: html,
             to: e.Email,
         }, 'user_2Bq5Rvgr1IGkLbUwbjy7z');

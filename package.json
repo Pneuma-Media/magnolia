@@ -18,6 +18,7 @@
     "next": "9.4.4",
     "next-images": "^1.6.0",
     "next-redux-wrapper": "^6.0.2",
+    "number-currency-format": "^1.0.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^3.3.0",
