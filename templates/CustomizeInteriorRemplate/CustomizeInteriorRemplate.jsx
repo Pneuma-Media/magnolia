@@ -94,7 +94,7 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
                                 <Button
                                     text='Continue Application  Proccess'
                                     style={{ height: '100%' }}
-                                    theme2
+                                    // theme2
                                     onclick={() => Router.replace('/apply')}
                                 />
                             </div>
