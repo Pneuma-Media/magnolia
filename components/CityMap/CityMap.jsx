@@ -6,18 +6,19 @@ import InitMap from '../../UTILS/MapLabel';
 import PlanImg from '../../assets/plan.png';
 
 
-const CityMap = ({ setIsPopup }) => {
+const CityMap = ({ activeSlots, setIsPopup }) => {
 
     const onGoogleApiLoaded = (map, maps) => {
 
         const MapLabel = InitMap();
         slots.forEach(s => {
+            console.log(s.id)
             const miamiArea = new maps.Polygon({
                 paths: [s.coordinates],
                 strokeColor: "#a3a0a0",
                 // strokeOpacity: 0.1,
                 strokeWeight: 2,
-                fillColor: "#eeeeee",
+                fillColor: activeSlots.some(e => e === s.id) ?  "#eeeeee" : "#aaaaaa",
                 fillOpacity: 1,
                 geodesic: true,
                 zIndex: 50,
@@ -34,7 +35,7 @@ const CityMap = ({ setIsPopup }) => {
                 zIndex: 100,
             });
 
-            miamiArea.addListener("click", () => setIsPopup(s.id));
+            miamiArea.addListener("click", () => activeSlots.some(e => e === s.id) &&  setIsPopup(s.id));
             // miamiArea.addListener("mouseover", () => {
             //     marker.setPosition(event.latLng);
             //     marker.setVisible(true);

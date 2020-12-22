@@ -57,7 +57,7 @@ const Item = ({ noButton, data }) => {
                                 <div className={styles.Item__paramsLabel}>
                                     <img src={PlanImg} alt="badroomsImg" />
                                     <span>{data.s}</span>
-                                    <span className={styles.Item__LabeName}>Area</span>
+                                    <span className={styles.Item__LabeName}>Sq.Ft</span>
                                 </div>
 
                             </div>

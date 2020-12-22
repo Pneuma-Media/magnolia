@@ -16,7 +16,7 @@ const slots = [
     },
     {
         id: 2,
-        type: "typeB",
+        type: "typeA",
         title: 'Lot with bunch of green treess and awesome USP',
         coordinates: [
             { lng: -85.57528152362347, lat: 39.18065044724167 },
@@ -32,7 +32,7 @@ const slots = [
     {
         id: 3,
         title: 'Lot with bunch of green treess and awesome USP',
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57492744219802, lat: 39.18067913842191 },
             { lng: -85.574834905987, lat: 39.18064067442074 },
@@ -77,7 +77,7 @@ const slots = [
     {
         id: 6,
         title: 'Lot with bunch of green treess and awesome USP',
-        type: "typeB",
+        type: "typeA",
 
         coordinates: [
             { lng: -85.57481368017348, lat: 39.180646014364086 },
@@ -93,7 +93,7 @@ const slots = [
     {
         id: 7,
         title: 'Lot with bunch of green treess and awesome USP',
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57444889974745, lat: 39.1806751222566 },
             { lng: -85.57436172795447, lat: 39.18063561868529 },
@@ -135,7 +135,7 @@ const slots = [
     },
     {
         id: 10,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57434027028235, lat: 39.18063977695698 },
             { lng: -85.57424639296683, lat: 39.18067408268923 },
@@ -149,7 +149,7 @@ const slots = [
     },
     {
         id: 11,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.573986703013, lat: 39.180670917965365 },
             { lng: -85.5738955079065, lat: 39.1806293352556 },
@@ -191,7 +191,7 @@ const slots = [
     },
     {
         id: 14,
-        type: "typeB",
+        type: "typeA",
         title: 'Lot with bunch of green treess and awesome USP',
         coordinates: [
             { lng: -85.57387270912987, lat: 39.18063765179953 },
@@ -206,7 +206,7 @@ const slots = [
     },
     {
         id: 15,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57350524649483, lat: 39.180665720128 },
             { lng: -85.57341673359734, lat: 39.18062413741516 },
@@ -262,7 +262,7 @@ const slots = [
     },
     {
         id: 19,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57301774191461, lat: 39.1812607147941 },
             { lng: -85.57291313576303, lat: 39.18126175435279 },
@@ -276,7 +276,7 @@ const slots = [
     },
     {
         id: 20,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57313575911127, lat: 39.181370907931495 },
             { lng: -85.57293057012163, lat: 39.181370907931495 },
@@ -290,7 +290,7 @@ const slots = [
     },
     {
         id: 21,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57336374687753, lat: 39.18136882881728 },
             { lng: -85.57315587567888, lat: 39.181369868374404 },
@@ -304,7 +304,7 @@ const slots = [
     },
     {
         id: 22,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57337179350458, lat: 39.18125551700032 },
             { lng: -85.57327121066652, lat: 39.18125759611787 },
@@ -318,7 +318,7 @@ const slots = [
     },
     {
         id: 23,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57362079193541, lat: 39.18127838729001 },
             { lng: -85.57355641891905, lat: 39.18121809287386 },
@@ -332,7 +332,7 @@ const slots = [
     },
     {
         id: 24,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57372897439296, lat: 39.18109542476413 },
             { lng: -85.57365119033153, lat: 39.181146363242455 },
@@ -346,7 +346,7 @@ const slots = [
     },
     {
         id: 25,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57391941123302, lat: 39.18105800055244 },
             { lng: -85.57371422224338, lat: 39.18105384230545 },
@@ -360,7 +360,7 @@ const slots = [
     },
     {
         id: 26,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57406236378718, lat: 39.181114289976115 },
             { lng: -85.5739577576356, lat: 39.181114289976115 },
@@ -374,7 +374,7 @@ const slots = [
     },
     {
         id: 27,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57389348916874, lat: 39.18124866376622 },
             { lng: -85.57381570510731, lat: 39.1812975230172 },
@@ -388,7 +388,7 @@ const slots = [
     },
     {
         id: 28,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57412704839415, lat: 39.181333955828016 },
             { lng: -85.57403317107863, lat: 39.18136514255005 },
@@ -402,7 +402,7 @@ const slots = [
     },
     {
         id: 29,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57428663983053, lat: 39.18119049672845 },
             { lng: -85.57417935146994, lat: 39.181326678924215 },
@@ -416,7 +416,7 @@ const slots = [
     },
     {
         id: 30,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57436844720549, lat: 39.181123964872754 },
             { lng: -85.57426115884489, lat: 39.18112188575126 },
@@ -430,7 +430,7 @@ const slots = [
     },
     {
         id: 31,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57453161494784, lat: 39.18112292531202 },
             { lng: -85.57442834990077, lat: 39.181118767068874 },
@@ -444,7 +444,7 @@ const slots = [
     },
     {
         id: 32,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57459330575519, lat: 39.181328758039676 },
             { lng: -85.57449406402164, lat: 39.181358905206764 },
@@ -458,7 +458,7 @@ const slots = [
     },
     {
         id: 33,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.574839621977, lat: 39.18122688131042 },
             { lng: -85.57475110907951, lat: 39.18118425936966 },
@@ -472,7 +472,7 @@ const slots = [
     },
     {
         id: 34,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57483693976799, lat: 39.18113643960051 },
             { lng: -85.5747309925119, lat: 39.18113332091879 },
@@ -486,7 +486,7 @@ const slots = [
     },
     {
         id: 35,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.5750018956224, lat: 39.1811385187216 },
             { lng: -85.57489997167984, lat: 39.181135400039956 },
@@ -500,7 +500,7 @@ const slots = [
     },
     {
         id: 36,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57506760974327, lat: 39.18132563936648 },
             { lng: -85.57496836800972, lat: 39.18135474697758 },
@@ -514,7 +514,7 @@ const slots = [
     },
     {
         id: 37,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57531593042839, lat: 39.18122034070785 },
             { lng: -85.57520730096329, lat: 39.18135652284581 },
@@ -528,7 +528,7 @@ const slots = [
     },
     {
         id: 38,
-        type: "typeB",
+        type: "typeA",
         coordinates: [
             { lng: -85.57530765930186, lat: 39.18115389773444 },
             { lng: -85.57520573535929, lat: 39.18114973949313 },
