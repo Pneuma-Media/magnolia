@@ -9,6 +9,9 @@ import bathImg from '../../assets/img/icons/bath.svg';
 import PlanImg from '../../assets/img/icons/blueprint.svg';
 import cx from 'classnames';
 import { format } from 'number-currency-format';
+import { customizationAction } from '../../store/actions/customization';
+import customizationGroup from '../../db/custumizationGroups';
+
 
 const Item = ({ noButton, data }) => {
 
@@ -16,6 +19,7 @@ const Item = ({ noButton, data }) => {
 
     const selectPlan = () => {
         dispatch(setPlan(data));
+        dispatch(customizationAction(customizationGroup))
         Router.replace('/detailed_floorplan')
     }
 

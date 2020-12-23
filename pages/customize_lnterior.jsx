@@ -3,24 +3,28 @@ import { useDispatch, useSelector } from 'react-redux';
 import Layout from '../components/layout/layout';
 import CustomizeInteriorRemplate from '../templates/CustomizeInteriorRemplate/CustomizeInteriorRemplate';
 import customizationGroup from '../db/custumizationGroups';
-import  useTimeout from '../UTILS/useTimeout';
+import useTimeout from '../UTILS/useTimeout';
 import { customizationAction } from '../store/actions/customization';
 
 const CustomizeInterior = () => {
 
     useTimeout();
 
-    const selectorPlan = useSelector(state => state.lot.planData);
+    const selectedPlan = useSelector(state => state.lot.planData);
 
     const dispatch = useDispatch();
+    const customizations = useSelector(state => state.customization.customization);
+    const activeCustomizationCategory = customizations.find(c => c.active);
+    const activeCategoryIndex = customizations.findIndex(c => c.active);
 
-    const [customization, setCustomization] = useState(customizationGroup);
-   
+
+    // const [customization, setCustomization] = useState(customizationGroup);
+
     const setTab = (id) => {
         const newState = [...customization];
         newState.map((data) => {
             data.active = false;
-            if(data.category === id)data.active = true;
+            if (data.category === id) data.active = true;
         })
         setCustomization(newState);
     }
@@ -41,36 +45,64 @@ const CustomizeInterior = () => {
         // })
     }
 
-    const selectCustomization = (e) => {
-        const newCustomizations = customization.map(category => {
-            if (category.category !== e.categoryId) return category;
+    const handleCustomizationChange = ({groupId, optionId}) => {
+        const newCustomizations = customizations.map(category => {
+            if (category.category !== activeCustomizationCategory.category) return category;
             return {
                 ...category,
                 underCategories: category.underCategories.map(uc => {
-                    if (uc.id !== e.groupId) return uc;
+                    if (uc.id !== groupId) return uc;
                     return {
                         ...uc,
-                        active: e.optionId
+                        active: optionId
                     }
                 })
             }
         })
-        
-        setCustomization(newCustomizations);
-    }
+
+        dispatch(customizationAction(newCustomizations))
+    };
+
+    const handleNextCategory = () => {
+        if (activeCategoryIndex >= customizations.length - 1) return;
+        changeActiveCategory(activeCategoryIndex + 1);
+    };
+
+    const handleBackCategory = () => {
+        if (activeCategoryIndex <= 0) return;
+        changeActiveCategory(activeCategoryIndex - 1);
+    };
+
+    const changeActiveCategory = (categoryIndex) => {
+        const newCustomizations = customizations.map((c, i) => {
+            if (i !== categoryIndex) return {...c, active: false};
+            return {
+                ...c,
+                active: true,
+            }
+        });
+        dispatch(customizationAction(newCustomizations))
+    };
+
 
     useEffect(() => {
-        dispatch(customizationAction(customization))
-       },[customization]);
+    }, []);
 
     return (
         <Layout>
             <CustomizeInteriorRemplate
-                selectorPlan={selectorPlan}
-                customization={customization}
-                onSelectCustomization={selectCustomization}
-                setTab={setTab}
-                setUnderTab={setUnderTab}
+                activeCustomizationCategory={activeCustomizationCategory}
+                onCustomizationChange={handleCustomizationChange}
+                onNext={handleNextCategory}
+                onBack={handleBackCategory}
+                totalCategories={customizations.length}
+                currentCategory={activeCategoryIndex + 1}
+                selectedPlan={selectedPlan}
+            // selectorPlan={selectorPlan}
+            // customization={customization}
+            // onSelectCustomization={selectCustomization}
+            // setTab={setTab}
+            // setUnderTab={setUnderTab}
             />
         </Layout>
     );

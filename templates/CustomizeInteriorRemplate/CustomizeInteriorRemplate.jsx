@@ -16,35 +16,42 @@ const formatPrice = (price) => {
     })
 };
 
-const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCustomization, selectorPlan, onSelectCustomization }) => {
+const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizationChange, onNext, onBack, totalCategories, currentCategory, customization, setCustomization, selectedPlan, onSelectCustomization }) => {
 
-    let categories = [];
-    customization.forEach(c => {
-        categories = categories.concat(c.underCategories);
-    });
+    // let categories = [];
+    // customization.forEach(c => {
+    //     categories = categories.concat(c.underCategories);
+    // });
 
-    let customizationPrice = 0;
-    categories.forEach(c => {
-        const activeOption = c.options.find(o => o.id === c.active);
-        customizationPrice += activeOption.price;
-    });
+    // let customizationPrice = 0;
+    // categories.forEach(c => {
+    //     const activeOption = c.options.find(o => o.id === c.active);
+    //     customizationPrice += activeOption.price;
+    // });
 
 
     return (
         <div className={styles.CustomizeInteriorRemplate}>
-
             <Container>
                 <Row>
                     <Col xl='4'>
                         <Item
                             noButton
-                            data={selectorPlan}
+                            data={selectedPlan}
                         />
                     </Col>
                     <Col xl='8'>
 
                         <div className={styles.CustomizeInteriorRemplate__block}>
-                            <CustomizationUnit />
+                            <CustomizationUnit 
+                                categoryName={activeCustomizationCategory.name}
+                                optionGroups={activeCustomizationCategory.underCategories}
+                                onChange={updatedGroup => onCustomizationChange(updatedGroup)}
+                                totalCategories={totalCategories}
+                                currentCategory={currentCategory}
+                                onNext={onNext}
+                                onBack={onBack}
+                            />
                             {/* <TabsCategory
                                 customization={customization}
                                 setTab={setTab}
@@ -79,7 +86,7 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
                         </div>
 
                         <div className={styles.CustomizeInteriorRemplate__bottomCard}>
-
+{/* 
                             <span className={styles.cash}>${formatPrice(selectorPlan?.price + customizationPrice)}</span>
 
                             <div className={styles.block}>
@@ -93,7 +100,7 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
                                     // theme2
                                     onclick={() => Router.replace('/apply')}
                                 />
-                            </div>
+                            </div> */}
 
                         </div>
 

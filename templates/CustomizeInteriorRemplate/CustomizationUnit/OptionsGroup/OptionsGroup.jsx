@@ -1,28 +1,37 @@
+import { useState } from 'react';
 import styles from './OptionsGroup.module.scss';
-import { Checkbox } from 'react-input-checkbox';
+import Checkbox from '../../../../components/UI/Checkbox/Checkbox'
 
-
-const OptionsGroup = () => {
+const OptionsGroup = ({ groupName, options, activeOptionId, onChange }) => {
     return (
         <div className={styles.group}>
             <div className={styles.group__name}>
-                Singles
+                {groupName}
             </div>
             <div className={styles.group__options}>
-                <div className={styles.option}>
-                    <div className={styles.option__label}>
-                        <Checkbox
-                            theme={styles.checkbox}
-                            size={2}
-                            onChange={() => null}
-                        >
-                            Onyx Black
-                        </Checkbox>
-                    </div>
-                    <div className={styles.option__price}>
-                        +$0
-                    </div>
-                </div>
+                {
+                    options.map(o => {
+                        const optionClasses = [styles.option];
+                        if (activeOptionId == o.id) optionClasses.push(styles.option_active);
+
+                        return (
+                            <div className={optionClasses.join(' ')} onClick={() => onChange(o.id)}>
+                                <div className={styles.option__label}>
+                                    <Checkbox
+                                        checked={activeOptionId == o.id}
+                                    />
+                                    <span>
+                                        {o.name}
+                                    </span>
+                                </div>
+                                <div className={styles.option__price}>
+                                    +${o.price}
+                                </div>
+                            </div>
+                        );
+                    })
+                }
+
 
             </div>
         </div>
