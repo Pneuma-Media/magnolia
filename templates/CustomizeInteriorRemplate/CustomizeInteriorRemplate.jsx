@@ -8,6 +8,7 @@ import { Container, Row, Col } from 'reactstrap';
 import TabsCategory from '../../components/TabsCategory/TabsCategory';
 import TabUnderCategory from '../../components/TabUnderCategory/TabUnderCategory';
 import { format } from 'number-currency-format';
+import CustomizationUnit from './CustomizationUnit/CustomizationUnit';
 
 const formatPrice = (price) => {
     return format(price, {
@@ -17,7 +18,6 @@ const formatPrice = (price) => {
 
 const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCustomization, selectorPlan, onSelectCustomization }) => {
 
-    // console.log(customization);
     let categories = [];
     customization.forEach(c => {
         categories = categories.concat(c.underCategories);
@@ -35,21 +35,17 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
 
             <Container>
                 <Row>
-
-
                     <Col xl='4'>
                         <Item
                             noButton
                             data={selectorPlan}
                         />
                     </Col>
-
-
                     <Col xl='8'>
 
                         <div className={styles.CustomizeInteriorRemplate__block}>
-
-                            <TabsCategory
+                            <CustomizationUnit />
+                            {/* <TabsCategory
                                 customization={customization}
                                 setTab={setTab}
                             />
@@ -79,7 +75,7 @@ const CustomizeInteriorRemplate = ({ setUnderTab, setTab, customization, setCust
                                         }
                                     })
                                 }
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className={styles.CustomizeInteriorRemplate__bottomCard}>

@@ -1,9 +1,8 @@
 @import '../../../assets/styles/variables.scss';
 
-
-.Button{
+.Button {
     border-radius: 5px;
-    border:none;
+    border: none;
     outline: none !important;
     background: $red1;
     display: flex;
@@ -12,30 +11,40 @@
     padding: 0 20px;
     cursor: pointer;
 
-    span{
+    span {
         font-size: 18px;
         font-weight: 500;
         color: $white;
-        margin-right: 15px;
     }
 
-    img{
+    img {
+        margin-left: 15px;
         height: 24px;
     }
 }
-.theme2{
+.theme2 {
     background: $red2;
     color: $white;
 }
 
-.theme3{
+.theme3 {
     background: $bg;
 
-    &:hover{
-        border:1px solid $red1;
+    &:hover {
+        border: 1px solid $red1;
     }
 
-    span{
+    span {
         color: $red1;
+    }
+}
+
+.theme4 {
+    background: transparent;
+    border: 1px solid $red1;
+
+    span {
+        color: $red1;
+        margin-right: 0;
     }
 }
