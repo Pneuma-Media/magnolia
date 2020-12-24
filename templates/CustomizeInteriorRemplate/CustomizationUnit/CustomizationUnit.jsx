@@ -30,7 +30,7 @@ const CustomizationUnit = ({ categoryName, optionGroups, onChange, onNext, onBac
                 <div className={styles.body__categoryDivider}></div>
             </div>
             <div className={styles.body__list}>
-                {optionGroups.map(og => {
+                {optionGroups?.map(og => {
                     return (
                         <OptionGroup
                             groupName={og.name}

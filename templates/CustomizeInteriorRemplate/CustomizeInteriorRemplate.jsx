@@ -54,8 +54,8 @@ const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizatio
 
                         <div className={styles.CustomizeInteriorRemplate__block}>
                             <CustomizationUnit
-                                categoryName={activeCustomizationCategory.name}
-                                optionGroups={activeCustomizationCategory.underCategories}
+                                categoryName={activeCustomizationCategory?.name}
+                                optionGroups={activeCustomizationCategory?.underCategories}
                                 onChange={updatedGroup => onCustomizationChange(updatedGroup)}
                                 totalCategories={totalCategories}
                                 currentCategory={currentCategory}

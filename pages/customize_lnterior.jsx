@@ -86,8 +86,8 @@ const CustomizeInterior = () => {
     useEffect(() => {
     }, []);
 
-    const numberGroupsInStep = activeCustomizationCategory.underCategories.length;
-    const numberCompletedGroupsInStep = activeCustomizationCategory.underCategories.filter(uc => uc.active !== null).length;
+    const numberGroupsInStep = activeCustomizationCategory?.underCategories?.length;
+    const numberCompletedGroupsInStep = activeCustomizationCategory?.underCategories.filter(uc => uc.active !== null).length;
 
     return (
         <Layout>
