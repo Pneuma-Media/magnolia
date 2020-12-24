@@ -11,7 +11,7 @@ import Router, { useRouter } from 'next/router';
 import Popup from '../components/UI/Popup/Popup';
 import TimePopup from '../components/TimePopup/TimePopup';
 import { useSelector } from 'react-redux';
-import { GTMPageView } from '../utils/gtm';
+import { GTMPageView } from '../UTILS/gtm';
 
 
 import TagManager from 'react-gtm-module'
