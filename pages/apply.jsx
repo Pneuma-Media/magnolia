@@ -110,6 +110,8 @@ const Apply = () => {
             Email: '',
             Description: '',
         });
+
+        window && window.dataLayer && window.dataLayer.push({ event: 'ApplyFormSubmitted' });
     }
 
     return (
