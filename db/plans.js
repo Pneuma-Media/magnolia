@@ -71,6 +71,7 @@ const plans = [
         images: [v1_1, v1_2, v1_3],
         price: 66335.10,
         title: 'Barton - MHE',
+        manufacturer: 'MHE',
         type: 'typeA',
     },
     {
@@ -86,6 +87,7 @@ const plans = [
         images: [v2_1, v2_2, v2_3],
         price: 66335.10,
         title: 'Barton II - MHE',
+        manufacturer: 'MHE',
         type: 'typeA',
     },
     {
@@ -101,6 +103,7 @@ const plans = [
         images: [v3_1, v3_2, v3_3],
         price: 78061.10,
         title: 'Glenn Creek - MHE',
+        manufacturer: 'MHE',
         type: 'typeA',
     },
     {
@@ -116,6 +119,7 @@ const plans = [
         images: [v4_1, v4_2, v4_3, v4_4],
         price: 77736.10,
         title: 'Hazlenut -  MHE',
+        manufacturer: 'MHE',
         type: 'typeA',
     },
     {
@@ -131,6 +135,7 @@ const plans = [
         images: [v5_1, v5_2, v5_3, v5_4],
         price: 66214.20,
         title: 'Dyson - Fairmont',
+        manufacturer: 'Fairmont',
         type: 'typeA',
     },
     {
@@ -146,6 +151,7 @@ const plans = [
         images: [v6_1, v6_2, v6_3],
         price: 64322.70,
         title: 'Davinci - Fairmont',
+        manufacturer: 'Fairmont',
         type: "typeA",
     },
     {
@@ -161,6 +167,7 @@ const plans = [
         images: [v7_1, v7_2, v7_3, v7_4],
         price: 68178.50,
         title: 'Edison - Fairmont',
+        manufacturer: 'Fairmont',
         type: "typeA",
     },
     {
@@ -176,6 +183,7 @@ const plans = [
         images: [v8_1, v8_2, v8_3, v8_4],
         price: 70358.60,
         title: 'The Franklin - Fairmont',
+        manufacturer: 'Fairmont',
         type: "typeA",
     },
     {
@@ -191,6 +199,7 @@ const plans = [
         images: [v9_1, v9_2, v9_3, v9_4],
         price: 78880.10,
         title: 'Leonardo - Fairmont',
+        manufacturer: 'Fairmont',
         type: "typeA",
     },
 ]

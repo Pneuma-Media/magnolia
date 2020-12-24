@@ -10,7 +10,8 @@ import PlanImg from '../../assets/img/icons/blueprint.svg';
 import cx from 'classnames';
 import { format } from 'number-currency-format';
 import { customizationAction } from '../../store/actions/customization';
-import customizationGroup from '../../db/custumizationGroups';
+import customizationGroupFairmont from '../../db/custumizationGroupsFairmont';
+import customizationGroupMHE from '../../db/custumizationGroupsMHE';
 
 
 const Item = ({ noButton, data }) => {
@@ -19,7 +20,8 @@ const Item = ({ noButton, data }) => {
 
     const selectPlan = () => {
         dispatch(setPlan(data));
-        dispatch(customizationAction(customizationGroup))
+        if (data.manufacturer === 'MHE') dispatch(customizationAction(customizationGroupMHE));
+        if (data.manufacturer === 'Fairmont') dispatch(customizationAction(customizationGroupFairmont));
         Router.replace('/detailed_floorplan')
     }
 

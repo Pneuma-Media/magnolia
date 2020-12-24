@@ -7,10 +7,12 @@ import "react-multi-carousel/lib/styles.css";
 import '../public/fonts/stylesheet.css'
 import './index.css';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Router, { useRouter } from 'next/router';
 import Popup from '../components/UI/Popup/Popup';
 import TimePopup from '../components/TimePopup/TimePopup';
 import { useSelector } from 'react-redux';
+import { GTMPageView } from '../utils/gtm';
+
 
 import TagManager from 'react-gtm-module'
 
@@ -27,8 +29,14 @@ const MyApp = ({ Component, pageProps }) => {
 
     useEffect(() => {
         TagManager.initialize(tagManagerArgs)
-
+        const handleRouteChange = (url) => GTMPageView(url);
+        Router.events.on('routeChangeComplete', handleRouteChange);
+        return () => {
+            Router.events.off('routeChangeComplete', handleRouteChange);
+        };
     }, []);
+
+
 
     let content = (
         <>

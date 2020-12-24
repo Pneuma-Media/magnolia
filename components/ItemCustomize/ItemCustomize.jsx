@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './ItemCustomize.module.scss';
 import BlockCustomize from './BlockCustomize/BlockCustomize';
-import customizationGroup from '../../db/custumizationGroups';
 
 
-const ItemCustomize = ({setActivePrice, title, dataItem, onSelectCustomization, customization }) => {
+const ItemCustomize = ({ setActivePrice, title, dataItem, onSelectCustomization, customization }) => {
 
 
 

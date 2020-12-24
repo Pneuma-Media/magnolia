@@ -16,7 +16,7 @@ const formatPrice = (price) => {
     })
 };
 
-const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizationChange, onNext, onBack, totalCategories, currentCategory, customization, setCustomization, selectedPlan, onSelectCustomization }) => {
+const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizationChange, onNext, onBack, totalCategories, currentCategory, totalCustomizationPrice, isCurrentStepCompleted, selectedPlan, isAllStepsCompleted }) => {
 
     // let categories = [];
     // customization.forEach(c => {
@@ -39,11 +39,21 @@ const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizatio
                             noButton
                             data={selectedPlan}
                         />
+                        {/* <div className={styles.summary}>
+                            <div className={styles.summary__total}>${formatPrice(selectedPlan.price + totalCustomizationPrice + 21000)}</div>
+                            <div className={styles.summary__item}>Base price:  ${formatPrice(selectedPlan.price)}</div>
+                            <div className={styles.summary__item}>Customizations: ${formatPrice(totalCustomizationPrice)}</div>
+                            <div className={styles.summary__item}>Site preparation: $21,000</div>
+                            <div className={styles.summary__action}>
+                                <Button text="Continue Application" disabled={currentCategory !== totalCategories} style={{ width: "100%", height: 50 }} />
+                            </div>
+                        </div> */}
+
                     </Col>
                     <Col xl='8'>
 
                         <div className={styles.CustomizeInteriorRemplate__block}>
-                            <CustomizationUnit 
+                            <CustomizationUnit
                                 categoryName={activeCustomizationCategory.name}
                                 optionGroups={activeCustomizationCategory.underCategories}
                                 onChange={updatedGroup => onCustomizationChange(updatedGroup)}
@@ -51,6 +61,10 @@ const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizatio
                                 currentCategory={currentCategory}
                                 onNext={onNext}
                                 onBack={onBack}
+                                totalCustomizationPrice={totalCustomizationPrice}
+                                isCurrentStepCompleted={isCurrentStepCompleted}
+                                isAllStepsCompleted={isAllStepsCompleted}
+                                selectedPlan={selectedPlan}
                             />
                             {/* <TabsCategory
                                 customization={customization}
@@ -86,7 +100,7 @@ const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizatio
                         </div>
 
                         <div className={styles.CustomizeInteriorRemplate__bottomCard}>
-{/* 
+                            {/* 
                             <span className={styles.cash}>${formatPrice(selectorPlan?.price + customizationPrice)}</span>
 
                             <div className={styles.block}>

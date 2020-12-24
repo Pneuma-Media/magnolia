@@ -21,7 +21,7 @@ const Heder = () => {
     const activeTab = tabs.find(e => e.link === router.pathname);
 
     const navigate = (id) => {
-        if(id < activeTab.id || activeTab.id === 4 && id === 5) {
+        if (id < activeTab.id || activeTab.id === 4 && id === 5) {
             const { link } = tabs.find(e => e.id === id);
             router.replace(link);
         }
@@ -30,16 +30,16 @@ const Heder = () => {
     const back = () => {
         const obj = tabs.find(e => e.link === router.pathname);
         const obj1 = tabs.find(e => e.id === obj.id - 1);
-        if(obj.id === 1){
+        if (obj.id === 1) {
             Router.replace('/');
-        }else{
+        } else {
             Router.replace(`${obj1.link}`);
         }
     }
 
     return (
         <div className={styles.Heder}>
-            <span onClick={() => back()} className={styles.Heder__back}><img src={backImg} alt="img"/>Back</span>
+            <span onClick={() => back()} className={styles.Heder__back}><img src={backImg} alt="img" />Back</span>
             {
                 tabs.map((data) => {
                     return (
@@ -48,7 +48,7 @@ const Heder = () => {
                             className={cx(styles.tab, {
                                 [styles.active]: data.id === activeTab.id,
                                 [styles.visit]: data.id < activeTab.id,
-                                [styles.apply]:data.link === '/apply' && activeTab.id === 4,
+                                // [styles.apply]:data.link === '/apply' && activeTab.id === 4,
                             })}
                             key={data.id}>{data.name}
                         </span>
