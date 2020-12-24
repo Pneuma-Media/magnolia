@@ -15,10 +15,10 @@ const CityMap = ({ activeSlots, setIsPopup }) => {
             console.log(s.id)
             const miamiArea = new maps.Polygon({
                 paths: [s.coordinates],
-                strokeColor: "#a3a0a0",
+                strokeColor: activeSlots.some(e => e === s.id) ? "#d1253d" : "#a3a0a0",
                 // strokeOpacity: 0.1,
                 strokeWeight: 2,
-                fillColor: activeSlots.some(e => e === s.id) ?  "#eeeeee" : "#aaaaaa",
+                fillColor: activeSlots.some(e => e === s.id) ? "#ffffff" : "#aaaaaa",
                 fillOpacity: 1,
                 geodesic: true,
                 zIndex: 50,
@@ -35,7 +35,7 @@ const CityMap = ({ activeSlots, setIsPopup }) => {
                 zIndex: 100,
             });
 
-            miamiArea.addListener("click", () => activeSlots.some(e => e === s.id) &&  setIsPopup(s.id));
+            miamiArea.addListener("click", () => activeSlots.some(e => e === s.id) && setIsPopup(s.id));
             // miamiArea.addListener("mouseover", () => {
             //     marker.setPosition(event.latLng);
             //     marker.setVisible(true);

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import ApplyTemplate from '../templates/ApplyTemplate/ApplyTemplate';
 import useTimeout from '../UTILS/useTimeout';
 import * as yup from 'yup';
@@ -26,7 +26,7 @@ const Apply = () => {
 
 
 
-
+    const [isCompleted, setCompleted] = useState(false);
     const { handleSubmit, register, errors, reset } = useForm({
         resolver: yupResolver(schema)
     });
@@ -36,14 +36,6 @@ const Apply = () => {
     const сustomizations = useSelector(state => state.customization.customization);
 
 
-    // const underCategories = selectorCustomization?.map((data1, i) => {
-    //     const obj = { categoryName: data1.name };
-
-    //     const fullObj = data1.underCategories.map((data2) => {
-    //         return ({ ...obj, ...{ underCategory: data2.name }, ...{ active_Und_Cat: data2.active } });
-    //     })
-    //     return (fullObj);
-    // });
 
 
     const lot = selectorLot.lotData;
@@ -110,7 +102,7 @@ const Apply = () => {
             Email: '',
             Description: '',
         });
-
+        setCompleted(true);
         window && window.dataLayer && window.dataLayer.push({ event: 'ApplyFormSubmitted' });
     }
 
@@ -120,6 +112,7 @@ const Apply = () => {
                 register={register}
                 submit={handleSubmit(sendEmail)}
                 errors={errors}
+                isCompleted={isCompleted}
             />
         </>
     );
