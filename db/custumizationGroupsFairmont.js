@@ -326,7 +326,7 @@ const customizationGroup = [
                 ],
             },
             {
-                id: 6,
+                id: 8,
                 name: `Trim`,
                 active: null,
                 options: [

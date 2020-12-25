@@ -50,17 +50,12 @@ import v9_2 from '../assets/img/imgToPlans/9/2.jpg';
 import v9_3 from '../assets/img/imgToPlans/9/3.jpg';
 import v9_4 from '../assets/img/imgToPlans/9/4.jpg';
 
-import v10_1 from '../assets/img/imgToPlans/10/1.jpg';
-import v10_2 from '../assets/img/imgToPlans/10/2.jpg';
-import v10_3 from '../assets/img/imgToPlans/10/3.jpg';
-import v10_4 from '../assets/img/imgToPlans/10/4.jpg';
-import v10_5 from '../assets/img/imgToPlans/10/4.jpg';
-
+import NoPhoto from '../assets/img/nophotoavailable.png';
 
 const plans = [
     {
         id: 1,
-        img: p1,
+        img: NoPhoto,
         rums: 4,
         toilet: 1,
         kitchenSize: 9,
@@ -68,7 +63,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.4,
         s: 1200,
-        images: [v1_1, v1_2, v1_3],
+        images: [NoPhoto],
         price: 66335.10,
         title: 'Barton - MHE',
         manufacturer: 'MHE',
@@ -76,7 +71,7 @@ const plans = [
     },
     {
         id: 2,
-        img: p2,
+        img: NoPhoto,
         rums: 5,
         toilet: 1,
         kitchenSize: 9,
@@ -84,7 +79,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.4,
         s: 1200,
-        images: [v2_1, v2_2, v2_3],
+        images: [NoPhoto],
         price: 66335.10,
         title: 'Barton II - MHE',
         manufacturer: 'MHE',
@@ -92,7 +87,7 @@ const plans = [
     },
     {
         id: 3,
-        img: p3,
+        img: NoPhoto,
         rums: 2,
         toilet: 2,
         kitchenSize: 8,
@@ -100,7 +95,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.8,
         s: 1500,
-        images: [v3_1, v3_2, v3_3],
+        images: [NoPhoto],
         price: 78061.10,
         title: 'Glenn Creek - MHE',
         manufacturer: 'MHE',
@@ -108,7 +103,7 @@ const plans = [
     },
     {
         id: 4,
-        img: p4,
+        img: NoPhoto,
         rums: 8,
         toilet: 4,
         kitchenSize: 3,
@@ -116,7 +111,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.6,
         s: 1600,
-        images: [v4_1, v4_2, v4_3, v4_4],
+        images: [NoPhoto],
         price: 77736.10,
         title: 'Hazlenut -  MHE',
         manufacturer: 'MHE',
@@ -124,7 +119,7 @@ const plans = [
     },
     {
         id: 5,
-        img: p5,
+        img: NoPhoto,
         rums: 5,
         toilet: 5,
         kitchenSize: 7,
@@ -132,7 +127,7 @@ const plans = [
         bathrooms: 2,
         ceil: 3,
         s: 1100,
-        images: [v5_1, v5_2, v5_3, v5_4],
+        images: [NoPhoto],
         price: 66214.20,
         title: 'Dyson - Fairmont',
         manufacturer: 'Fairmont',
@@ -140,7 +135,7 @@ const plans = [
     },
     {
         id: 6,
-        img: p6,
+        img: NoPhoto,
         rums: 9,
         toilet: 5,
         kitchenSize: 5,
@@ -148,7 +143,7 @@ const plans = [
         bathrooms: 2,
         ceil: 4,
         s: 1100,
-        images: [v6_1, v6_2, v6_3],
+        images: [NoPhoto],
         price: 64322.70,
         title: 'Davinci - Fairmont',
         manufacturer: 'Fairmont',
@@ -156,7 +151,7 @@ const plans = [
     },
     {
         id: 7,
-        img: p7,
+        img: NoPhoto,
         rums: 6,
         toilet: 3,
         kitchenSize: 12,
@@ -164,7 +159,7 @@ const plans = [
         bathrooms: 2,
         ceil: 4,
         s: 1300,
-        images: [v7_1, v7_2, v7_3, v7_4],
+        images: [NoPhoto],
         price: 68178.50,
         title: 'Edison - Fairmont',
         manufacturer: 'Fairmont',
@@ -172,7 +167,7 @@ const plans = [
     },
     {
         id: 8,
-        img: p8,
+        img: NoPhoto,
         rums: 7,
         toilet: 2,
         kitchenSize: 5,
@@ -180,7 +175,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.6,
         s: 1400,
-        images: [v8_1, v8_2, v8_3, v8_4],
+        images: [NoPhoto],
         price: 70358.60,
         title: 'The Franklin - Fairmont',
         manufacturer: 'Fairmont',
@@ -188,7 +183,7 @@ const plans = [
     },
     {
         id: 9,
-        img: p9,
+        img: NoPhoto,
         rums: 7,
         toilet: 1,
         kitchenSize: 4,
@@ -196,7 +191,7 @@ const plans = [
         bathrooms: 2,
         ceil: 3,
         s: 1500,
-        images: [v9_1, v9_2, v9_3, v9_4],
+        images: [NoPhoto],
         price: 78880.10,
         title: 'Leonardo - Fairmont',
         manufacturer: 'Fairmont',

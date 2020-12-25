@@ -91,7 +91,8 @@ const Apply = () => {
             floorplan_bathrooms: Plan.bathrooms,
             floorplan_price: formatPrice(Plan.price),
             customizations_price: formatPrice(price),
-            total_price: formatPrice(Plan.price + price),
+            site_prep_price: formatPrice(21000),
+            total_price: formatPrice(Plan.price + price + 21000),
             customizatoins: html,
             to: e.Email,
         }, 'user_2Bq5Rvgr1IGkLbUwbjy7z');

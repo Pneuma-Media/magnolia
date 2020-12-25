@@ -22,7 +22,7 @@ const Item = ({ noButton, data }) => {
         dispatch(setPlan(data));
         if (data.manufacturer === 'MHE') dispatch(customizationAction(customizationGroupMHE));
         if (data.manufacturer === 'Fairmont') dispatch(customizationAction(customizationGroupFairmont));
-        Router.replace('/detailed_floorplan')
+        Router.replace('/customize_lnterior')
     }
 
 
