@@ -1,41 +1,40 @@
-body, h1, h2{
-    margin:0;
-    padding:0;
-    font-family:'Avenir Next Cyr';
+body,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next Cyr';
 }
 
-ul{
+ul {
     padding: 0;
     margin: 0;
 }
-li{
+li {
     list-style-type: none;
 }
 
-.containerMasters_PopupCase{
+.containerMasters_PopupCase {
     box-sizing: border-box;
     width: 100%;
-    max-height: 65vh;
-    background: white;
-    margin-bottom: 30px;
-} 
+    height: 100%;
+    /* padding: 15px; */
+}
 
-.itemClass{
+.itemClass {
     /* width: 100%;
     height: 100%; */
 }
 .react-multi-carousel-track {
-    height: 65vh;
+    /* height: 65vh; */
 }
-.react-multi-carousel-item{
+.react-multi-carousel-item {
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
-
-.dotListClass_PopupCase{
-bottom:19px;
+.dotListClass_PopupCase {
+    bottom: 19px;
 }
 
 .dotListClass_PopupCase .react-multi-carousel-dot button {

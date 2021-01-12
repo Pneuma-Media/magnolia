@@ -28,12 +28,12 @@ const CustomizeInterior = () => {
 
     const selectedPlan = useSelector(state => state.lot.planData);
     const customizations = useSelector(state => state.customization.customization);
-    const [isAllStepsCompleted, setAllStepsCompleted] = useState(false);
     const dispatch = useDispatch();
 
     const activeCustomizationCategory = customizations.find(c => c.active);
     const activeCategoryIndex = customizations.findIndex(c => c.active);
     const totalCustomizationPrice = getTotalCustomizationPrice(customizations);
+    const [isAllStepsCompleted, setAllStepsCompleted] = useState(activeCategoryIndex === customizations.length - 1);
 
 
 
@@ -65,8 +65,11 @@ const CustomizeInterior = () => {
 
     const handleBackCategory = () => {
         if (activeCategoryIndex <= 0) return;
+        if (activeCategoryIndex == customizations.length - 1 && isAllStepsCompleted) {
+            setAllStepsCompleted(false);
+            return;
+        }
         changeActiveCategory(activeCategoryIndex - 1);
-        setAllStepsCompleted(false);
     };
 
     const changeActiveCategory = (categoryIndex) => {

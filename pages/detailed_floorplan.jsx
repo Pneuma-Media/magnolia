@@ -7,16 +7,15 @@ import useTimeout from '../UTILS/useTimeout';
 
 const DetailedFloorPlan = () => {
 
-    // const selectorPlan = useSelector(state => state.lot.planData);
-    // useTimeout();
+    const selectorPlan = useSelector(state => state.lot.planData);
+    useTimeout();
 
     return (
-        null
-        // <Layout>
-        //     <DetailedFloorPlanTemplate
-        //         selectorPlan={selectorPlan}
-        //     />
-        // </Layout>
+        <Layout>
+            <DetailedFloorPlanTemplate
+                selectorPlan={selectorPlan}
+            />
+        </Layout>
     );
 };
 

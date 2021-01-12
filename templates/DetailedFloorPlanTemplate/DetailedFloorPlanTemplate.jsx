@@ -29,12 +29,14 @@ const DetailedFloorPlanTemplate = ({ selectorPlan }) => {
                     <Col xl='8' lg='8'>
 
                         <div className={styles.wrapSlider}>
+                            <div className={styles.slider}>
 
-                            {selectorPlan && (
-                                <Slider
-                                    images={selectorPlan.images}
-                                />
-                            )}
+                                {selectorPlan && (
+                                    <Slider
+                                        images={selectorPlan.images}
+                                    />
+                                )}
+                            </div>
 
                             <Button
                                 text='Choose this floorplan!'

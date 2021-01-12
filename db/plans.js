@@ -1,61 +1,35 @@
-import p1 from '../assets/img/plans/p1.jpeg';
-import p2 from '../assets/img/plans/p2.jpeg';
-import p3 from '../assets/img/plans/p3.jpeg';
-import p4 from '../assets/img/plans/p4.jpeg';
-import p5 from '../assets/img/plans/p5.png';
-import p6 from '../assets/img/plans/p6.jpeg';
-import p7 from '../assets/img/plans/p7.jpeg';
-import p8 from '../assets/img/plans/p8.jpeg';
-import p9 from '../assets/img/plans/p9.jpeg';
-import p10 from '../assets/img/plans/p10.png';
 
-import v1_1 from '../assets/img/imgToPlans/1/1.jpg';
-import v1_2 from '../assets/img/imgToPlans/1/2.jpg';
-import v1_3 from '../assets/img/imgToPlans/1/3.jpg';
-
-import v2_1 from '../assets/img/imgToPlans/2/1.jpg';
-import v2_2 from '../assets/img/imgToPlans/2/2.jpg';
-import v2_3 from '../assets/img/imgToPlans/3/3.jpg';
-
-import v3_1 from '../assets/img/imgToPlans/3/1.jpg';
-import v3_2 from '../assets/img/imgToPlans/3/2.jpg';
-import v3_3 from '../assets/img/imgToPlans/3/3.jpg';
-
-import v4_1 from '../assets/img/imgToPlans/4/1.jpg';
-import v4_2 from '../assets/img/imgToPlans/4/2.jpg';
-import v4_3 from '../assets/img/imgToPlans/4/3.jpg';
-import v4_4 from '../assets/img/imgToPlans/4/4.jpg';
-
-import v5_1 from '../assets/img/imgToPlans/5/1.jpg';
-import v5_2 from '../assets/img/imgToPlans/5/2.jpg';
-import v5_3 from '../assets/img/imgToPlans/5/3.jpg';
-import v5_4 from '../assets/img/imgToPlans/5/4.jpg';
-
-import v6_1 from '../assets/img/imgToPlans/6/1.jpg';
-import v6_2 from '../assets/img/imgToPlans/6/2.jpg';
-import v6_3 from '../assets/img/imgToPlans/6/3.jpg';
-
-import v7_1 from '../assets/img/imgToPlans/7/1.jpg';
-import v7_2 from '../assets/img/imgToPlans/7/2.jpg';
-import v7_3 from '../assets/img/imgToPlans/7/3.jpg';
-import v7_4 from '../assets/img/imgToPlans/7/4.jpg';
-
-import v8_1 from '../assets/img/imgToPlans/8/1.jpg';
-import v8_2 from '../assets/img/imgToPlans/8/2.jpg';
-import v8_3 from '../assets/img/imgToPlans/8/3.jpg';
-import v8_4 from '../assets/img/imgToPlans/8/4.jpg';
-
-import v9_1 from '../assets/img/imgToPlans/9/1.jpg';
-import v9_2 from '../assets/img/imgToPlans/9/2.jpg';
-import v9_3 from '../assets/img/imgToPlans/9/3.jpg';
-import v9_4 from '../assets/img/imgToPlans/9/4.jpg';
 
 import NoPhoto from '../assets/img/nophotoavailable.png';
+
+import BartonMhe1 from '../assets/img/plans/barton-mhe/img1.webp';
+import BartonMhe2 from '../assets/img/plans/barton-mhe/img2.webp';
+
+import Barton2Mhe1 from '../assets/img/plans/barton2-mhe/img1.webp';
+import Barton2Mhe2 from '../assets/img/plans/barton2-mhe/img2.webp';
+
+import GlennCreekMhe2 from '../assets/img/plans/glenn-creek-mhe/img2.webp';
+
+import HazlenutMhe2 from '../assets/img/plans/hazlenut-mhe/img2.webp';
+
+import DsyonFairmont2 from '../assets/img/plans/dyson-fairmont/img2.webp';
+
+import DavinciFairmont1 from '../assets/img/plans/davinci-fairmont/img1.webp';
+import DavinciFairmont2 from '../assets/img/plans/davinci-fairmont/img2.webp';
+
+import EdisonFarimont2 from '../assets/img/plans/edison-fairmont/img2.webp';
+
+import FranklinFairmont1 from '../assets/img/plans/franklin-fairmont/img1.webp';
+import FranklinFairmont2 from '../assets/img/plans/franklin-fairmont/img2.webp';
+
+import LearondaroFairmont2 from '../assets/img/plans/leonardo-fairmont/img2.webp';
+
+
 
 const plans = [
     {
         id: 1,
-        img: NoPhoto,
+        img: BartonMhe1,
         rums: 4,
         toilet: 1,
         kitchenSize: 9,
@@ -63,7 +37,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.4,
         s: 1200,
-        images: [NoPhoto],
+        images: [BartonMhe2, BartonMhe1],
         price: 66335.10,
         title: 'Barton - MHE',
         manufacturer: 'MHE',
@@ -71,7 +45,7 @@ const plans = [
     },
     {
         id: 2,
-        img: NoPhoto,
+        img: Barton2Mhe1,
         rums: 5,
         toilet: 1,
         kitchenSize: 9,
@@ -79,7 +53,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.4,
         s: 1200,
-        images: [NoPhoto],
+        images: [Barton2Mhe2, Barton2Mhe1],
         price: 66335.10,
         title: 'Barton II - MHE',
         manufacturer: 'MHE',
@@ -87,7 +61,7 @@ const plans = [
     },
     {
         id: 3,
-        img: NoPhoto,
+        img: GlennCreekMhe2,
         rums: 2,
         toilet: 2,
         kitchenSize: 8,
@@ -95,7 +69,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.8,
         s: 1500,
-        images: [NoPhoto],
+        images: [GlennCreekMhe2],
         price: 78061.10,
         title: 'Glenn Creek - MHE',
         manufacturer: 'MHE',
@@ -103,7 +77,7 @@ const plans = [
     },
     {
         id: 4,
-        img: NoPhoto,
+        img: HazlenutMhe2,
         rums: 8,
         toilet: 4,
         kitchenSize: 3,
@@ -111,7 +85,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.6,
         s: 1600,
-        images: [NoPhoto],
+        images: [HazlenutMhe2],
         price: 77736.10,
         title: 'Hazlenut -  MHE',
         manufacturer: 'MHE',
@@ -119,7 +93,7 @@ const plans = [
     },
     {
         id: 5,
-        img: NoPhoto,
+        img: DsyonFairmont2,
         rums: 5,
         toilet: 5,
         kitchenSize: 7,
@@ -127,7 +101,7 @@ const plans = [
         bathrooms: 2,
         ceil: 3,
         s: 1100,
-        images: [NoPhoto],
+        images: [DsyonFairmont2],
         price: 66214.20,
         title: 'Dyson - Fairmont',
         manufacturer: 'Fairmont',
@@ -135,7 +109,7 @@ const plans = [
     },
     {
         id: 6,
-        img: NoPhoto,
+        img: DavinciFairmont1,
         rums: 9,
         toilet: 5,
         kitchenSize: 5,
@@ -143,7 +117,7 @@ const plans = [
         bathrooms: 2,
         ceil: 4,
         s: 1100,
-        images: [NoPhoto],
+        images: [DavinciFairmont2, DavinciFairmont1],
         price: 64322.70,
         title: 'Davinci - Fairmont',
         manufacturer: 'Fairmont',
@@ -151,7 +125,7 @@ const plans = [
     },
     {
         id: 7,
-        img: NoPhoto,
+        img: EdisonFarimont2,
         rums: 6,
         toilet: 3,
         kitchenSize: 12,
@@ -159,7 +133,7 @@ const plans = [
         bathrooms: 2,
         ceil: 4,
         s: 1300,
-        images: [NoPhoto],
+        images: [EdisonFarimont2],
         price: 68178.50,
         title: 'Edison - Fairmont',
         manufacturer: 'Fairmont',
@@ -167,7 +141,7 @@ const plans = [
     },
     {
         id: 8,
-        img: NoPhoto,
+        img: FranklinFairmont1,
         rums: 7,
         toilet: 2,
         kitchenSize: 5,
@@ -175,7 +149,7 @@ const plans = [
         bathrooms: 2,
         ceil: 2.6,
         s: 1400,
-        images: [NoPhoto],
+        images: [FranklinFairmont2, FranklinFairmont1],
         price: 70358.60,
         title: 'The Franklin - Fairmont',
         manufacturer: 'Fairmont',
@@ -183,7 +157,7 @@ const plans = [
     },
     {
         id: 9,
-        img: NoPhoto,
+        img: LearondaroFairmont2,
         rums: 7,
         toilet: 1,
         kitchenSize: 4,
@@ -191,7 +165,7 @@ const plans = [
         bathrooms: 2,
         ceil: 3,
         s: 1500,
-        images: [NoPhoto],
+        images: [LearondaroFairmont2],
         price: 78880.10,
         title: 'Leonardo - Fairmont',
         manufacturer: 'Fairmont',
