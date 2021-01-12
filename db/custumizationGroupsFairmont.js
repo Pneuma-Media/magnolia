@@ -89,7 +89,7 @@ const customizationGroup = [
                 active: null,
                 options: [
                     { id: 1, name: `Arch Top *may require engineering fee`, price: 600 },
-                    { id: 2, name: `additional 30"x60" window (per)`, price: 250 },
+                    { id: 2, name: `Additional 30"x60" window (per)`, price: 250 },
                     { id: 3, name: `72"x14" transom`, price: 750 },
                 ],
             },
@@ -179,7 +179,7 @@ const customizationGroup = [
                     { id: 1, name: `No upgrade`, price: 0 },
                     { id: 2, name: `Farm sink w moen facuet`, price: 500 },
                     { id: 3, name: `9" deep steel sink`, price: 500 },
-                    { id: 4, name: `moen kitchen faucet with sprayer`, price: 500 },
+                    { id: 4, name: `Moen kitchen faucet with sprayer`, price: 500 },
                 ],
             },
 
@@ -198,11 +198,11 @@ const customizationGroup = [
                     { id: 1, name: `1 pc tub w shower`, price: 0 },
                     { id: 2, name: `Bench shower`, price: 1200 },
                     { id: 3, name: `48" 2 seat shower`, price: 400 },
-                    { id: 4, name: `corner shower`, price: 250 },
-                    { id: 5, name: `ceramic tile shower`, price: 3000 },
+                    { id: 4, name: `Corner shower`, price: 250 },
+                    { id: 5, name: `Ceramic tile shower`, price: 3000 },
                     { id: 6, name: `1 pc corner tub`, price: 750 },
-                    { id: 7, name: `whirpool tub`, price: 1000 },
-                    { id: 8, name: `stand alone tub`, price: 350 },
+                    { id: 7, name: `Whirpool tub`, price: 1000 },
+                    { id: 8, name: `Stand alone tub`, price: 350 },
                 ],
             },
             {
@@ -246,7 +246,7 @@ const customizationGroup = [
                 name: `Flooring carpet`,
                 active: null,
                 options: [
-                    { id: 1, name: `quarry cabinet 16 oz`, price: 0 },
+                    { id: 1, name: `Quarry cabinet 16 oz`, price: 0 },
                     { id: 2, name: `Wood Smoke 18oz`, price: 600 },
                     { id: 3, name: `Spanish Grey 18oz`, price: 600 },
                     { id: 4, name: `Russet 18 oz`, price: 600 },
