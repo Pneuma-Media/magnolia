@@ -51,7 +51,7 @@ const CustomizationUnit = ({ categoryName, optionGroups, onChange, onNext, onBac
             <div className={styles.summary__item}>Customizations: ${formatPrice(totalCustomizationPrice)}</div>
             <div className={styles.summary__item}>Site preparation: $21,000</div>
             <div className={styles.summary__action}>
-                <Button text="Continue Application" disabled={currentCategory !== totalCategories} style={{ width: "100%", height: 50 }} onclick={() => Router.replace('/apply')} />
+                <Button text="Apply" disabled={currentCategory !== totalCategories} style={{ width: "100%", height: 50 }} onclick={() => Router.replace('/apply')} />
             </div>
         </div>
     );
