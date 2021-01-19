@@ -13,7 +13,7 @@ const SelectFloorPlan = () => {
     const plansSlot = plans.filter(e => e.type === selectorLot?.type)
 
     return (
-        <Layout>
+        <Layout showDisclaimer>
             <SelectFloorPlanTemplate
                 plansSlot={plansSlot}
             />

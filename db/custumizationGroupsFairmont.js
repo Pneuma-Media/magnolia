@@ -64,6 +64,7 @@ const customizationGroup = [
                 name: 'Shutters',
                 active: null,
                 options: [
+                    { id: 5, name: `None`, price: 0 },
                     { id: 1, name: `Berry`, price: 100 },
                     { id: 2, name: `Royal`, price: 100 },
                     { id: 3, name: `Black`, price: 100 },
@@ -83,16 +84,16 @@ const customizationGroup = [
                     { id: 6, name: `75.5"x82" swing french doors`, price: 2500 },
                 ],
             },
-            {
-                id: 6,
-                name: 'Windows',
-                active: null,
-                options: [
-                    { id: 1, name: `Arch Top *may require engineering fee`, price: 600 },
-                    { id: 2, name: `Additional 30"x60" window (per)`, price: 250 },
-                    { id: 3, name: `72"x14" transom`, price: 750 },
-                ],
-            },
+            // {
+            //     id: 6,
+            //     name: 'Windows',
+            //     active: null,
+            //     options: [
+            //         { id: 1, name: `Arch Top *may require engineering fee`, price: 600 },
+            //         { id: 2, name: `Additional 30"x60" window (per)`, price: 250 },
+            //         { id: 3, name: `72"x14" transom`, price: 750 },
+            //     ],
+            // },
             {
                 id: 7,
                 name: 'Lights',
@@ -166,6 +167,7 @@ const customizationGroup = [
                 name: `Island`,
                 active: null,
                 options: [
+                    { id: 4, name: `None`, price: 0 },
                     { id: 1, name: `38 x 59 CE-1374`, price: 500 },
                     { id: 2, name: `36 x 96 CE-1277`, price: 800 },
                     { id: 3, name: `28 x 40 CE 1248`, price: 300 },
@@ -210,6 +212,7 @@ const customizationGroup = [
                 name: `Utility Sink`,
                 active: null,
                 options: [
+                    { id: 5, name: `None`, price: 0 },
                     { id: 1, name: `Deep sink SB-30`, price: 1100 },
                     { id: 2, name: `51" deep sink CB-790`, price: 1300 },
                     { id: 3, name: `60" deep sink CB-772`, price: 1500 },

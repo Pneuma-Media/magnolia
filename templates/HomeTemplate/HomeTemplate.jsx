@@ -6,7 +6,7 @@ import Router from 'next/router';
 
 
 const HomeTemplate = () => {
-    
+
 
     return (
         <div className={styles.HomeTemplate}>
@@ -20,11 +20,13 @@ const HomeTemplate = () => {
                     <Button
                         text='Click here to build your next home'
                         onclick={() => Router.replace('/choose_your_spot')}
-                        style={{height:'70px'}}
+                        style={{ height: '70px' }}
                     />
                 </div>
             </div>
-
+            <div className={styles.disclaimer}>
+                Please note: This application is still in early development and may be subject to bugs. Your feedback and understanding is appreciated!
+            </div>
         </div>
     );
 };

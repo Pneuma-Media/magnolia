@@ -48,6 +48,7 @@ const customizationGroup = [
                 name: `Shutters`,
                 active: null,
                 options: [
+                    { id: 9, name: `None`, price: 0 },
                     { id: 1, name: `White`, price: 150 },
                     { id: 2, name: `Clay`, price: 150 },
                     { id: 3, name: `Red`, price: 150 },
@@ -68,19 +69,19 @@ const customizationGroup = [
                     { id: 4, name: `Patio slider`, price: 1200 },
                 ],
             },
-            {
-                id: 6,
-                name: `Window`,
-                active: null,
-                options: [
-                    { id: 1, name: `30x60`, price: 325 },
-                    { id: 2, name: `36x60`, price: 350 },
-                    { id: 3, name: `60x36 double arch`, price: 125 },
-                    { id: 4, name: `Octagon`, price: 125 },
-                    { id: 5, name: `14x22 bathroom`, price: 125 },
-                    { id: 6, name: `80x14 transom`, price: 350 },
-                ],
-            },
+            // {
+            //     id: 6,
+            //     name: `Windows`,
+            //     active: null,
+            //     options: [
+            //         { id: 1, name: `30x60`, price: 325 },
+            //         { id: 2, name: `36x60`, price: 350 },
+            //         { id: 3, name: `60x36 double arch`, price: 125 },
+            //         { id: 4, name: `Octagon`, price: 125 },
+            //         { id: 5, name: `14x22 bathroom`, price: 125 },
+            //         { id: 6, name: `80x14 transom`, price: 350 },
+            //     ],
+            // },
             {
                 id: 7,
                 name: `Light`,
@@ -143,7 +144,7 @@ const customizationGroup = [
                 name: `Island`,
                 active: null,
                 options: [
-                    { id: 1, name: `No`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `Chefs island 4'x7'`, price: 450 },
                     { id: 3, name: `Ultimate table 84x42`, price: 500 },
                     { id: 4, name: `Grand island with pull out shelves`, price: 700 },
@@ -187,7 +188,7 @@ const customizationGroup = [
                 options: [
                     { id: 1, name: `Std vanity w cubbies`, price: 0 },
                     { id: 2, name: `Single vanity w drawers`, price: 450 },
-                    { id: 3, name: `Doulbe bowl vanity w drawers`, price: 1000 },
+                    { id: 3, name: `DoubLe bowl vanity w drawers`, price: 1000 },
                 ],
             },
             {
@@ -195,7 +196,7 @@ const customizationGroup = [
                 name: `Utility sink`,
                 active: null,
                 options: [
-                    { id: 1, name: `Standard`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `Chrome 4" laundry sink `, price: 400 },
                 ],
             },
