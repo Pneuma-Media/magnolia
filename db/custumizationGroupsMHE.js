@@ -260,7 +260,7 @@ const customizationGroup = [
                 name: `Fireplace`,
                 active: null,
                 options: [
-                    { id: 1, name: `No`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `Half stone gas`, price: 2800 },
                     { id: 3, name: `Half stonne wood burning`, price: 1900 },
                     { id: 4, name: `Full stone gas`, price: 3000 },
@@ -281,7 +281,7 @@ const customizationGroup = [
                 name: `Washer/Dryer`,
                 active: null,
                 options: [
-                    { id: 2, name: `No`, price: 0 },
+                    { id: 2, name: `None`, price: 0 },
                     { id: 1, name: `Std washer/dryer`, price: 895 },
                 ],
             },

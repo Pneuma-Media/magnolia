@@ -93,7 +93,7 @@ const CustomizeInterior = () => {
     const numberCompletedGroupsInStep = activeCustomizationCategory?.underCategories.filter(uc => uc.active !== null).length;
 
     return (
-        <Layout>
+        <Layout showDisclaimer={!isAllStepsCompleted}>
             <CustomizeInteriorRemplate
                 activeCustomizationCategory={activeCustomizationCategory}
                 onCustomizationChange={handleCustomizationChange}

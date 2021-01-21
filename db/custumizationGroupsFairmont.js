@@ -233,7 +233,7 @@ const customizationGroup = [
                 name: `Washer/dryer`,
                 active: null,
                 options: [
-                    { id: 1, name: `No`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `Include`, price: 1200 },
                 ],
             },
@@ -279,7 +279,7 @@ const customizationGroup = [
                 name: `Doors additional`,
                 active: null,
                 options: [
-                    { id: 1, name: `No`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `36" 6 panel white`, price: 150 },
                     { id: 3, name: `White sliding barn door`, price: 1500 },
                 ],
@@ -299,7 +299,7 @@ const customizationGroup = [
                 name: `Fireplace`,
                 active: null,
                 options: [
-                    { id: 1, name: `No`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `charleston stack full stone gas`, price: 1600 },
                     { id: 3, name: `charleston stack half stone gas`, price: 1200 },
                     { id: 4, name: `charleston stack half stone electric`, price: 1600 },
@@ -311,7 +311,7 @@ const customizationGroup = [
                 name: `Home Entertainment System`,
                 active: null,
                 options: [
-                    { id: 5, name: `No`, price: 0 },
+                    { id: 5, name: `None`, price: 0 },
                     { id: 1, name: `90" Floating FEC901616 (no bookcase)`, price: 1200 },
                     { id: 2, name: `90" Floating BC429418 w bookcase`, price: 1700 },
                     { id: 3, name: `48x42 CE - 2006`, price: 500 },
@@ -323,7 +323,7 @@ const customizationGroup = [
                 name: `Drop Zones`,
                 active: null,
                 options: [
-                    { id: 1, name: `No`, price: 0 },
+                    { id: 1, name: `None`, price: 0 },
                     { id: 2, name: `2 hooks, bench, shoe storage CG-355`, price: 500 },
                     { id: 3, name: `3 hooks, bench, overhead cab and shoe storage CG-411`, price: 600 },
                 ],
