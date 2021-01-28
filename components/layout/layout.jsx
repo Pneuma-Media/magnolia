@@ -7,7 +7,7 @@ import { Container } from 'reactstrap';
 import InformationIcon from '../../assets/img/information.svg';
 
 
-const Layout = ({ showDisclaimer, ...props }) => {
+const Layout = ({ showDisclaimer, noPadding, ...props }) => {
     let disclaimer = null;
     if (showDisclaimer) disclaimer = (
         <Container>
@@ -20,10 +20,13 @@ const Layout = ({ showDisclaimer, ...props }) => {
         </Container>
     );
 
+    const contentStyles = [styles.content];
+    if (noPadding) contentStyles.push(styles.content_nopadding);
+
     return (
         <div>
             <Heder />
-            <main className={styles.content}>
+            <main className={contentStyles.join(' ')}>
                 {disclaimer}
                 {props.children}
             </main>

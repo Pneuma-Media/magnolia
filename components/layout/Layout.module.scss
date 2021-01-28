@@ -22,4 +22,8 @@
     overflow: auto;
     background: $grey2;
     padding: 30px 0;
+
+    &_nopadding {
+        padding: 0;
+    }
 }
