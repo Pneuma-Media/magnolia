@@ -96,7 +96,7 @@ const plans = [
   },
   {
     id: 5,
-    img: DsyonFairmont2,
+    img: DsyonFairmont3,
     rums: 5,
     toilet: 5,
     kitchenSize: 7,
@@ -128,7 +128,7 @@ const plans = [
   },
   {
     id: 7,
-    img: EdisonFarimont2,
+    img: EdisonFarimont3,
     rums: 6,
     toilet: 3,
     kitchenSize: 12,
@@ -160,7 +160,7 @@ const plans = [
   },
   {
     id: 9,
-    img: LearondaroFairmont2,
+    img: LearondaroFairmont3,
     rums: 7,
     toilet: 1,
     kitchenSize: 4,

@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { format } from 'number-currency-format';
+
 import styles from './OptionsGroup.module.scss';
 import Checkbox from '../../../../components/UI/Checkbox/Checkbox'
+
 
 const OptionsGroup = ({ groupName, options, activeOptionId, onChange }) => {
 
@@ -16,16 +19,7 @@ const OptionsGroup = ({ groupName, options, activeOptionId, onChange }) => {
                         const optionClasses = [styles.option];
                         if (activeOptionId == o.id) optionClasses.push(styles.option_active);
 
-                        let price = o.price;
-
-                        if (price > 1000) {
-                            price = price.toString();
-                            price = `${price.slice(0,1)},${price.slice(1,4)}`
-                        } else if (price > 10000) {
-                            price = price.toString();
-                            price = `${price.slice(0,2)},${price.slice(2,5)}`
-                        }
-
+                        
                         return (
                             <div className={optionClasses.join(' ')} onClick={() => onChange(o.id)}>
                                 <div className={styles.option__label}>
@@ -37,7 +31,10 @@ const OptionsGroup = ({ groupName, options, activeOptionId, onChange }) => {
                                     </span>
                                 </div>
                                 <div className={styles.option__price}>
-                                    +${price}
+                                   ${format(o.price, {
+                            spacing: true,
+                            showDecimals: 'NEVER',
+                        })}
                                 </div>
                             </div>
                         );
