@@ -12,7 +12,19 @@ const formatPrice = (price) => {
     })
 };
 
-const CustomizationUnit = ({ categoryName, optionGroups, onChange, onNext, onBack, totalCategories, currentCategory, totalCustomizationPrice, isCurrentStepCompleted, isAllStepsCompleted, selectedPlan }) => {
+const CustomizationUnit = ({
+    categoryName,
+    optionGroups,
+    onChange,
+    onNext,
+    onBack,
+    totalCategories,
+    currentCategory,
+    totalCustomizationPrice,
+    isCurrentStepCompleted,
+    isAllStepsCompleted,
+    selectedPlan
+}) => {
     const customizations = useSelector(state => state.customization.customization);
 
 
@@ -23,6 +35,7 @@ const CustomizationUnit = ({ categoryName, optionGroups, onChange, onNext, onBac
     if (isAllStepsCompleted) totalCompleted = currentCategory;
 
     let body = null;
+
     if (!isAllStepsCompleted) body = (
         <>
             <div className={styles.body__category}>
@@ -30,7 +43,18 @@ const CustomizationUnit = ({ categoryName, optionGroups, onChange, onNext, onBac
                 <div className={styles.body__categoryDivider}></div>
             </div>
             <div className={styles.body__list}>
-                {optionGroups?.map(og => {
+                {categoryName === "Flooring" && <div className={styles.body__card}>
+                    <p className={styles.body__card_text}>Feel free to note any carpet or vinyl flooring selections you’re interested in within the text box below</p>
+                        
+                    <textarea
+                        className={styles.body__card_textArea}
+                        name="flooring"
+                        onChange={(event) => onChange({ inputAnswer: event.target.value })}
+                    />
+                    
+                
+                </div> }
+                {categoryName !== "Flooring" && optionGroups?.map(og => {
                     return (
                         <OptionGroup
                             groupName={og.name}
@@ -78,6 +102,16 @@ const CustomizationUnit = ({ categoryName, optionGroups, onChange, onNext, onBac
 
                 {body}
             </div>
+            {!isAllStepsCompleted && <div className={styles.customization__bottomAction}>
+                <Button
+                    style={{fon: "40"}}
+                text="Next"
+                noArrow onclick={onNext}
+                disabled={totalCategories === currentCategory - 1 || !isCurrentStepCompleted}
+            />
+            </div>
+            }
+
         </div>
     );
 };

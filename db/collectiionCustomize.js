@@ -11,6 +11,10 @@ const collectionCustomize = [
         category:3,
         name:'Other Customizations',
     },
+    {
+        category:4,
+        name:'Flooring',
+    },
 ];
 
 export default collectionCustomize;

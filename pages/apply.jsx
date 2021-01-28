@@ -55,9 +55,9 @@ const Apply = () => {
             c.underCategories.forEach(cc => {
                 console.log(cc);
                 const option = cc.options.find(o => o.id === cc.active);
-                price += option.price
+                price += option?.price
                 html += '<li>';
-                html += `<span>${cc.name}</span>: <span><b>${option.name}($${formatPrice(option.price)})</b></span>`;
+                html += `<span>${cc.name}</span>: <span><b>${option?.name}($${formatPrice(option?.price)})</b></span>`;
                 html += '</li>';
             });
             html += '</ul>';

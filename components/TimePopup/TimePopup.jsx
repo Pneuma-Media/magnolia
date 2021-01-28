@@ -18,11 +18,13 @@ const TimePopup = () => {
 
 
     useEffect(() => {
+        console.log(timer, 'timer')
         let sec = 60;
         const bodyInterval = () => {
 
             if (sec > 0) {
                 setTimer(sec--);
+                console.log(sec, 'sec')
             } else {
                 dispatch(isPopup(false));
                 Router.replace('/');
@@ -43,7 +45,7 @@ const TimePopup = () => {
                 {timer}
             </p>
             <Button
-                text='yes, continue'
+                text='Continue customizing'
                 style={{ height: '70px' }}
                 onclick={() => dispatch(isPopup(false))}
             />

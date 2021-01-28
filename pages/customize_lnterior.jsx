@@ -37,12 +37,34 @@ const CustomizeInterior = () => {
 
 
 
-    const handleCustomizationChange = ({ groupId, optionId }) => {
+    const handleCustomizationChange = ({ groupId, optionId, inputAnswer }) => {
         const newCustomizations = customizations.map(category => {
+            
             if (category.category !== activeCustomizationCategory.category) return category;
+
             return {
                 ...category,
                 underCategories: category.underCategories.map(uc => {
+                    if (uc.name === 'flooring selections') {
+                        return {
+                            ...uc,
+                            active : optionId,
+                            options: [
+                                // ...uc.options,
+                                ...uc.options.map(el => {
+                                    
+                                    if (el.name === `inputName`) {
+                                        return {
+                                            ...el,
+                                            price: inputAnswer
+                                        }
+                                        
+                                    }
+                                })
+                            ]
+                        }
+                    }
+                    
                     if (uc.id !== groupId) return uc;
                     return {
                         ...uc,
@@ -51,7 +73,6 @@ const CustomizeInterior = () => {
                 })
             }
         })
-
         dispatch(customizationAction(newCustomizations))
     };
 

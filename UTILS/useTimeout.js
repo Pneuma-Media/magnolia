@@ -18,7 +18,7 @@ const useTimeout = () => {
 
         const mouseListener = () => {
             clearTimeout(timer);
-            timer = setTimeout(timeoutBody, 60000);
+            timer = setTimeout(timeoutBody, 180000);
         }
 
         window.addEventListener('mousemove', mouseListener);
