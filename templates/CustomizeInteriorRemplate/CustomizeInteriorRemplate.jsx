@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './CustomizeInteriorRemplate.module.scss';
 import Item from '../../components/Item/Item';
 import Button from '../../components/UI/Button/Button';
@@ -28,10 +28,10 @@ const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizatio
     //     const activeOption = c.options.find(o => o.id === c.active);
     //     customizationPrice += activeOption.price;
     // });
-
+    const refForTheScrollToTop = useRef()
 
     return (
-        <div className={styles.CustomizeInteriorRemplate}>
+        <div ref={refForTheScrollToTop} className={styles.CustomizeInteriorRemplate}>
             <Container>
                 <Row>
                     <Col xl='4'>
@@ -65,6 +65,7 @@ const CustomizeInteriorRemplate = ({ activeCustomizationCategory, onCustomizatio
                                 isCurrentStepCompleted={isCurrentStepCompleted}
                                 isAllStepsCompleted={isAllStepsCompleted}
                                 selectedPlan={selectedPlan}
+                                refForTheScrollToTop={refForTheScrollToTop}
                             />
                             {/* <TabsCategory
                                 customization={customization}

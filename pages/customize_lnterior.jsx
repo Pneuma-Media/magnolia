@@ -48,7 +48,7 @@ const CustomizeInterior = () => {
                     if (uc.name === 'flooring selections') {
                         return {
                             ...uc,
-                            active : optionId,
+                            active : 1,
                             options: [
                                 // ...uc.options,
                                 ...uc.options.map(el => {
@@ -56,7 +56,7 @@ const CustomizeInterior = () => {
                                     if (el.name === `inputName`) {
                                         return {
                                             ...el,
-                                            price: inputAnswer
+                                            answer: inputAnswer
                                         }
                                         
                                     }

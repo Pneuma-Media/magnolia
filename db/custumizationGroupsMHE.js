@@ -304,7 +304,7 @@ const customizationGroup = [
         id: 1,
         name: `flooring selections`,
         active: null,
-        options: [{ id: 1, name: `inputName`, price: "" }],
+        options: [{ id: 1, name: `inputName`, price: 0 }],
       },
     ],
   },

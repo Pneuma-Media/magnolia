@@ -50,19 +50,28 @@ const Apply = () => {
         let html = ``;
         let price = 0;
         сustomizations?.forEach(c => {
+        console.log("🚀 ~ file: apply.jsx ~ line 53 ~ sendEmail ~ c", c)
+        console.log("🚀 ~ file: apply.jsx ~ line 53 ~ sendEmail ~ сustomizations", сustomizations)
+
             html += `<h3>${c.name}</h3>`
             html += '<ul>';
             c.underCategories.forEach(cc => {
                 console.log(cc);
                 const option = cc.options.find(o => o.id === cc.active);
-                price += option?.price
+
+                price += typeof option?.price !== 'string' ? '' : option?.price
+
+                let shownFieldToUser = `<span><b>${option?.name}($${formatPrice(option?.price)})</b></span>`
+                if (option?.answer) shownFieldToUser = `<span>${option.answer}</span>`;
+                
                 html += '<li>';
-                html += `<span>${cc.name}</span>: <span><b>${option?.name}($${formatPrice(option?.price)})</b></span>`;
+                html += `<span>${cc.name}</span>: ${shownFieldToUser}`;
                 html += '</li>';
+
             });
             html += '</ul>';
         })
-        console.log('html >>', html);
+        // console.log('html >>', html);
 
         let lotName = `№${lot.id} ${lot.usp} (${lot.width}x${lot.length})`;
         let planName = `${Plan.title}`;
@@ -74,8 +83,8 @@ const Apply = () => {
         //     action: 'Send Email'
         // });
 
-        console.log(lot);
-        console.log(Plan);
+        // console.log(lot);
+        // console.log(Plan);
 
         await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
 

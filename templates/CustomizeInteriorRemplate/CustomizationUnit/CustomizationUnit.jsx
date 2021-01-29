@@ -1,3 +1,4 @@
+import react , {useRef} from 'react'
 import styles from './CustomizationUntit.module.scss';
 import Button from '../../../components/UI/Button/Button';
 import { format } from 'number-currency-format';
@@ -23,10 +24,12 @@ const CustomizationUnit = ({
     totalCustomizationPrice,
     isCurrentStepCompleted,
     isAllStepsCompleted,
-    selectedPlan
+    selectedPlan,
+    refForTheScrollToTop
 }) => {
     const customizations = useSelector(state => state.customization.customization);
 
+    // const topRef = useRef(null)
 
     let progressWidth = `${100 * (currentCategory - 1) / totalCategories}%`;
     if (isAllStepsCompleted) progressWidth = '100%';
@@ -44,15 +47,13 @@ const CustomizationUnit = ({
             </div>
             <div className={styles.body__list}>
                 {categoryName === "Flooring" && <div className={styles.body__card}>
+
                     <p className={styles.body__card_text}>Feel free to note any carpet or vinyl flooring selections you’re interested in within the text box below</p>
-                        
                     <textarea
                         className={styles.body__card_textArea}
                         name="flooring"
                         onChange={(event) => onChange({ inputAnswer: event.target.value })}
                     />
-                    
-                
                 </div> }
                 {categoryName !== "Flooring" && optionGroups?.map(og => {
                     return (
@@ -80,6 +81,15 @@ const CustomizationUnit = ({
         </div>
     );
 
+    // const ref = useRef(null)
+
+    const handleBottomBtnClick = () => {
+        onNext();
+        refForTheScrollToTop.current.scrollIntoView({
+             behavior: "smooth"
+        })
+    }
+
     return (
         <div className={styles.customization}>
             <div className={[styles.customization__header, styles.header].join(' ')}>
@@ -90,7 +100,7 @@ const CustomizationUnit = ({
                     </div>
                     <div className={styles.header__actions}>
                         {currentCategory > 1 && <Button text="Back" noArrow theme4 onclick={onBack} />}
-                        {!isAllStepsCompleted && <Button text="Next" noArrow onclick={onNext} disabled={totalCategories === currentCategory - 1 || !isCurrentStepCompleted} />}
+                        {!isAllStepsCompleted && <Button  text="Next" noArrow onclick={onNext} disabled={totalCategories === currentCategory - 1 || !isCurrentStepCompleted} />}
                         {isAllStepsCompleted && <Button text="Apply" noArrow onclick={() => Router.replace('/apply')} />}
                     </div>
                 </div>
@@ -104,9 +114,10 @@ const CustomizationUnit = ({
             </div>
             {!isAllStepsCompleted && <div className={styles.customization__bottomAction}>
                 <Button
-                    style={{fon: "40"}}
+                style={{fon: "40"}}
                 text="Next"
-                noArrow onclick={onNext}
+                    noArrow
+                    onclick={handleBottomBtnClick}
                 disabled={totalCategories === currentCategory - 1 || !isCurrentStepCompleted}
             />
             </div>
