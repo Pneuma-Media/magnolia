@@ -50,9 +50,6 @@ const Apply = () => {
         let html = ``;
         let price = 0;
         сustomizations?.forEach(c => {
-        console.log("🚀 ~ file: apply.jsx ~ line 53 ~ sendEmail ~ c", c)
-        console.log("🚀 ~ file: apply.jsx ~ line 53 ~ sendEmail ~ сustomizations", сustomizations)
-
             html += `<h3>${c.name}</h3>`
             html += '<ul>';
             c.underCategories.forEach(cc => {
@@ -62,8 +59,8 @@ const Apply = () => {
                 price += typeof option?.price !== 'string' ? '' : option?.price
 
                 let shownFieldToUser = `<span><b>${option?.name}($${formatPrice(option?.price)})</b></span>`
-                if (option?.answer) shownFieldToUser = `<span>${option.answer}</span>`;
-                
+                if (option?.value) shownFieldToUser = `<span>${option.value}</span>`;
+
                 html += '<li>';
                 html += `<span>${cc.name}</span>: ${shownFieldToUser}`;
                 html += '</li>';

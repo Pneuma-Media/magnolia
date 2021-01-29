@@ -39,32 +39,32 @@ const CustomizeInterior = () => {
 
     const handleCustomizationChange = ({ groupId, optionId, inputAnswer }) => {
         const newCustomizations = customizations.map(category => {
-            
+
             if (category.category !== activeCustomizationCategory.category) return category;
 
             return {
                 ...category,
                 underCategories: category.underCategories.map(uc => {
-                    if (uc.name === 'flooring selections') {
+                    if (uc.name === 'Flooring') {
                         return {
                             ...uc,
-                            active : 1,
+                            active: 1,
                             options: [
                                 // ...uc.options,
                                 ...uc.options.map(el => {
-                                    
+
                                     if (el.name === `inputName`) {
                                         return {
                                             ...el,
-                                            answer: inputAnswer
+                                            value: inputAnswer
                                         }
-                                        
+
                                     }
                                 })
                             ]
                         }
                     }
-                    
+
                     if (uc.id !== groupId) return uc;
                     return {
                         ...uc,

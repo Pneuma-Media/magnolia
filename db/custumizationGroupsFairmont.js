@@ -381,9 +381,9 @@ const customizationGroup = [
     underCategories: [
       {
         id: 1,
-        name: `flooring selections`,
+        name: `Flooring`,
         active: null,
-        options: [{ id: 1, name: `inputName`, value: "" }],
+        options: [{ id: 1, name: `inputName`, price: 0, value: "" }],
       },
     ],
   },
