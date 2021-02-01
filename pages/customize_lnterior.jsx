@@ -96,6 +96,30 @@ const CustomizeInterior = () => {
     const changeActiveCategory = (categoryIndex) => {
         const newCustomizations = customizations.map((c, i) => {
             if (i !== categoryIndex) return { ...c, active: false };
+            // console.log(c, 'ccccccccccccccccccc')
+            // console.log('categoryIndex' , categoryIndex)
+            if (i === categoryIndex) {
+                console.log(c, 'c')
+                return {
+                    ...c,
+                    active : true,
+                    underCategories: [
+                        ...c.underCategories.map(el => {
+                                if (el.name === `Flooring`) {
+                                    return {
+                                        ...el,
+                                        active: 1
+                                    }
+                                }
+                            return {
+                                ...el
+                            }
+                            })
+                        ]
+                    }
+                }
+            
+
             return {
                 ...c,
                 active: true,

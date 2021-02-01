@@ -1,6 +1,3 @@
-
-
-
 const customizationGroup = [
   {
     category: 1,
@@ -21,11 +18,11 @@ const customizationGroup = [
         name: `Shingles`,
         active: null,
         options: [
-          { id: 1, name: `Onyx black`, price: 0 },
+          { id: 1, name: `Onyx Black`, price: 0 },
           { id: 2, name: `Teak`, price: 0 },
-          { id: 3, name: `Estate gray`, price: 0 },
-          { id: 4, name: `Colonial slate`, price: 0 },
-          { id: 5, name: `Chateau green `, price: 0 },
+          { id: 3, name: `Estate Gray`, price: 0 },
+          { id: 4, name: `Colonial Slate`, price: 0 },
+          { id: 5, name: `Chateau Green `, price: 0 },
         ],
       },
       {
@@ -33,12 +30,12 @@ const customizationGroup = [
         name: `Siding`,
         active: null,
         options: [
-          { id: 1, name: `Harbor stone`, price: 0 },
+          { id: 1, name: `Harbor Stone`, price: 0 },
           { id: 2, name: `White`, price: 0 },
-          { id: 3, name: `Pebble clay`, price: 0 },
-          { id: 4, name: `Warm sandlewood`, price: 0 },
-          { id: 5, name: `Graphite gray`, price: 0 },
-          { id: 6, name: `Mountain pine`, price: 2000 },
+          { id: 3, name: `Pebble Clay`, price: 0 },
+          { id: 4, name: `Warm Sandlewood`, price: 0 },
+          { id: 5, name: `Graphite Gray`, price: 0 },
+          { id: 6, name: `Mountain Pine`, price: 2000 },
           { id: 7, name: `Blueridge`, price: 2000 },
           { id: 8, name: `Cypress`, price: 2000 },
         ],
@@ -63,10 +60,10 @@ const customizationGroup = [
         name: `Doors`,
         active: null,
         options: [
-          { id: 1, name: `Std white`, price: 0 },
-          { id: 2, name: `Arch door 38x82`, price: 400 },
-          { id: 3, name: `9 light rear`, price: 275 },
-          { id: 4, name: `Patio slider`, price: 1200 },
+          { id: 1, name: `Standard White`, price: 0 },
+          { id: 2, name: `Arch Door 38x82`, price: 400 },
+          { id: 3, name: `9 Light Rear`, price: 275 },
+          { id: 4, name: `Patio Slider`, price: 1200 },
         ],
       },
       // {
@@ -84,12 +81,12 @@ const customizationGroup = [
       // },
       {
         id: 7,
-        name: `Light`,
+        name: `Outdoor Lighting`,
         active: null,
         options: [
-          { id: 1, name: `Std white`, price: 0 },
-          { id: 2, name: `White coach`, price: 40 },
-          { id: 3, name: `Oiled bronze light`, price: 125 },
+          { id: 1, name: `Standard White`, price: 0 },
+          { id: 2, name: `White Coach`, price: 40 },
+          { id: 3, name: `Oiled Bronze Light`, price: 125 },
         ],
       },
     ],
@@ -104,9 +101,9 @@ const customizationGroup = [
         name: `Countertop`,
         active: null,
         options: [
-          { id: 1, name: `Summer carnival`, price: 0 },
-          { id: 2, name: `Typhone ice`, price: 0 },
-          { id: 3, name: `Tumbled roca`, price: 0 },
+          { id: 1, name: `Summer Сarnival`, price: 0 },
+          { id: 2, name: `Typhone Ice`, price: 0 },
+          { id: 3, name: `Tumbled Roca`, price: 0 },
           { id: 4, name: `Toffee`, price: 0 },
         ],
       },
@@ -115,9 +112,9 @@ const customizationGroup = [
         name: `Backsplash`,
         active: null,
         options: [
-          { id: 1, name: `Graphite (one row)`, price: 0 },
-          { id: 2, name: `Arrowwood (one row)`, price: 0 },
-          { id: 3, name: `Dark gray (one row)`, price: 0 },
+          { id: 1, name: `Graphite (One Row)`, price: 0 },
+          { id: 2, name: `Arrowwood (One Row)`, price: 0 },
+          { id: 3, name: `Dark gray (One Row)`, price: 0 },
         ],
       },
       {
@@ -135,8 +132,8 @@ const customizationGroup = [
         name: `Cabinets size`,
         active: null,
         options: [
-          { id: 1, name: `30 " cabinet`, price: 0 },
-          { id: 2, name: `40" cabinet`, price: 1500 },
+          { id: 1, name: `30 " Сabinet`, price: 0 },
+          { id: 2, name: `40" Сabinet`, price: 1500 },
         ],
       },
       {
@@ -145,9 +142,9 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Chefs island 4'x7'`, price: 450 },
-          { id: 3, name: `Ultimate table 84x42`, price: 500 },
-          { id: 4, name: `Grand island with pull out shelves`, price: 700 },
+          { id: 2, name: `Chef's Island 4'x7'`, price: 450 },
+          { id: 3, name: `Ultimate Table 84x42`, price: 500 },
+          { id: 4, name: `Grand Island With Pull Out Shelves`, price: 700 },
         ],
       },
       {
@@ -156,7 +153,7 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `Standard`, price: 0 },
-          { id: 2, name: `Arch sprayer kitchen faucet `, price: 450 },
+          { id: 2, name: `Arch Sprayer Kitchen Faucet `, price: 450 },
         ],
       },
     ],
@@ -171,12 +168,12 @@ const customizationGroup = [
         name: `Shower/Tub (per room)`,
         active: null,
         options: [
-          { id: 1, name: `Tub/shower combo`, price: 0 },
-          { id: 2, name: `Whirlpool tub drop`, price: 650 },
+          { id: 1, name: `Tub/Shower Combo`, price: 0 },
+          { id: 2, name: `Whirlpool Tub Drop`, price: 650 },
           { id: 3, name: `Shower 32x34`, price: 225 },
-          { id: 4, name: `60x30 shower with glass door`, price: 730 },
-          { id: 5, name: `Shower 60x43 with glass door`, price: 800 },
-          { id: 6, name: `Ceramic shower`, price: 1750 },
+          { id: 4, name: `60x30 Shower With Glass Door`, price: 730 },
+          { id: 5, name: `Shower 60x43 With Glass Door`, price: 800 },
+          { id: 6, name: `Ceramic Shower`, price: 1750 },
         ],
       },
       {
@@ -184,9 +181,9 @@ const customizationGroup = [
         name: `Bath Vanity`,
         active: null,
         options: [
-          { id: 1, name: `Std vanity w cubbies`, price: 0 },
-          { id: 2, name: `Single vanity w drawers`, price: 450 },
-          { id: 3, name: `DoubLe bowl vanity w drawers`, price: 1000 },
+          { id: 1, name: `Standard Vanity With Cubbies`, price: 0 },
+          { id: 2, name: `Single Vanity With Drawers`, price: 450 },
+          { id: 3, name: `DoubLe Bowl Vanity With Drawers`, price: 1000 },
         ],
       },
       {
@@ -195,7 +192,7 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Chrome 4" laundry sink `, price: 400 },
+          { id: 2, name: `Chrome 4" Laundry Sink `, price: 400 },
         ],
       },
     ],
@@ -213,8 +210,8 @@ const customizationGroup = [
           { id: 1, name: `White`, price: 0 },
           { id: 2, name: `Oak`, price: 0 },
           { id: 3, name: `Cherry`, price: 0 },
-          { id: 4, name: `White wood cove`, price: 1000 },
-          { id: 5, name: `Oak wood cove`, price: 1575 },
+          { id: 4, name: `White Wood Cove`, price: 1000 },
+          { id: 5, name: `Oak Wood Cove`, price: 1575 },
         ],
       },
       // {
@@ -247,11 +244,11 @@ const customizationGroup = [
         name: `Appliances`,
         active: null,
         options: [
-          { id: 1, name: `Black standard`, price: 0 },
-          { id: 2, name: `White standard`, price: 0 },
-          { id: 3, name: `Stainless package`, price: 1900 },
-          { id: 4, name: `Black side-by-side w ice maker`, price: 600 },
-          { id: 5, name: `White side-by-side w ice maker`, price: 600 },
+          { id: 1, name: `Black Standard`, price: 0 },
+          { id: 2, name: `White Standard`, price: 0 },
+          { id: 3, name: `Stainless Package`, price: 1900 },
+          { id: 4, name: `Black Side-By-Side With Ice Maker`, price: 600 },
+          { id: 5, name: `White Side-By-Side With Ice Maker`, price: 600 },
         ],
       },
       {
@@ -260,10 +257,10 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Half stone gas`, price: 2800 },
-          { id: 3, name: `Half stonne wood burning`, price: 1900 },
-          { id: 4, name: `Full stone gas`, price: 3000 },
-          { id: 5, name: `Full stone wood burning `, price: 1500 },
+          { id: 2, name: `Half Stone Gas`, price: 2800 },
+          { id: 3, name: `Half Stone Wood Burning`, price: 1900 },
+          { id: 4, name: `Full Stone Gas`, price: 3000 },
+          { id: 5, name: `Full Stone Wood Burning `, price: 1500 },
         ],
       },
       {
@@ -272,7 +269,7 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `Standard`, price: 0 },
-          { id: 2, name: `Lux upgrade`, price: 200 },
+          { id: 2, name: `Lux Upgrade`, price: 200 },
         ],
       },
       {
@@ -281,7 +278,7 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 2, name: `None`, price: 0 },
-          { id: 1, name: `Std washer/dryer`, price: 895 },
+          { id: 1, name: `Standard Washer/Dryer`, price: 895 },
         ],
       },
       {
@@ -289,8 +286,8 @@ const customizationGroup = [
         name: `Hot Water Heater`,
         active: null,
         options: [
-          { id: 1, name: `40 gallon`, price: 0 },
-          { id: 2, name: `50 gallon`, price: 850 },
+          { id: 1, name: `40 Gallon`, price: 0 },
+          { id: 2, name: `50 Gallon`, price: 850 },
         ],
       },
     ],
@@ -304,7 +301,15 @@ const customizationGroup = [
         id: 1,
         name: `Flooring`,
         active: null,
-        options: [{ id: 1, name: `inputName`, price: 0, value: "" }],
+        options: [
+          {
+            id: 1,
+            name: `inputName`,
+            active: 1,
+            price: 0,
+            value: " ",
+          },
+        ],
       },
     ],
   },
