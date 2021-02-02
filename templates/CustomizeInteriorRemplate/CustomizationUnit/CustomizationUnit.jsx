@@ -59,6 +59,8 @@ const CustomizationUnit = ({
                     </div>
                 } */}
                 {optionGroups?.map(og => {
+
+
                     let optionGroup = null;
                     if (categoryName === "Flooring") optionGroup = (
                         <div className={styles.body__card}>
@@ -67,7 +69,7 @@ const CustomizationUnit = ({
                                 className={styles.body__card_textArea}
                                 name="flooring"
                                 onChange={(event) => onChange({ inputAnswer: event.target.value })}
-                                value={og.options.find(o => o.id == og.active)?.value}
+                                value={og.options.find(o => o.id === og.active)?.value}
                             />
                             <p className={styles.body__card__disclaimer}>*Flooring customization will be coming soon. A representative will reach out to you to discuss flooring options.</p>
                         </div>
