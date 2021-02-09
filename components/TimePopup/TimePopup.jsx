@@ -18,13 +18,11 @@ const TimePopup = () => {
 
 
     useEffect(() => {
-        console.log(timer, 'timer')
         let sec = 60;
         const bodyInterval = () => {
 
             if (sec > 0) {
                 setTimer(sec--);
-                console.log(sec, 'sec')
             } else {
                 dispatch(isPopup(false));
                 Router.replace('/');

@@ -53,7 +53,6 @@ const Apply = () => {
             html += `<h3>${c.name}</h3>`
             html += '<ul>';
             c.underCategories.forEach(cc => {
-                console.log(cc);
                 const option = cc.options.find(o => o.id === cc.active);
 
                 price += typeof option?.price !== 'string' ? '' : option?.price

@@ -72,7 +72,7 @@ const Item = ({ noButton, data }) => {
                             {
                                 !noButton && (
                                     <Button
-                                        text='Select This Lot'
+                                        text='View this Floorplan'
                                         style={{ width: '100%', height: '50px' }}
                                         onclick={() => selectPlan()}
                                     />

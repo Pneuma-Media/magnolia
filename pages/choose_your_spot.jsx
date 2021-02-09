@@ -12,8 +12,6 @@ const ChooseYourSpot = () => {
     const [slotId, setSlotId] = useState(null);
     const selectorPopup = useSelector(state => state.popup.popup);
 
-    console.log(activeSlots);
-
     useTimeout();
 
     return (

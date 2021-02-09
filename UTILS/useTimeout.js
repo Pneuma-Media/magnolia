@@ -14,11 +14,11 @@ const useTimeout = () => {
         }
 
         let timer = null;
-        timer = setTimeout(timeoutBody, 60000);
+        timer = setTimeout(timeoutBody, 600000);
 
         const mouseListener = () => {
             clearTimeout(timer);
-            timer = setTimeout(timeoutBody, 180000);
+            timer = setTimeout(timeoutBody, 600000);
         }
 
         window.addEventListener('mousemove', mouseListener);
