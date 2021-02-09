@@ -10,7 +10,6 @@ const useTimeout = () => {
 
     useEffect(() => {
         const timeoutBody = () => {
-            console.log('start')
             dispatch(isPopup(true));
         }
 
@@ -19,7 +18,6 @@ const useTimeout = () => {
 
         const mouseListener = () => {
             clearTimeout(timer);
-            console.log('start - event')
             timer = setTimeout(timeoutBody, 600000);
         }
 
