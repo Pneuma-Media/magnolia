@@ -10,15 +10,17 @@ const useTimeout = () => {
 
     useEffect(() => {
         const timeoutBody = () => {
+            console.log('start')
             dispatch(isPopup(true));
         }
 
         let timer = null;
-        timer = setTimeout(timeoutBody, 60000);
+        timer = setTimeout(timeoutBody, 600000);
 
         const mouseListener = () => {
             clearTimeout(timer);
-            timer = setTimeout(timeoutBody, 180000);
+            console.log('start - event')
+            timer = setTimeout(timeoutBody, 600000);
         }
 
         window.addEventListener('mousemove', mouseListener);
