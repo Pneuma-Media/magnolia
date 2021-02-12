@@ -8,6 +8,7 @@ import BartonMhe2 from '../assets/img/plans/barton-mhe/img2.webp';
 import Barton2Mhe1 from '../assets/img/plans/barton2-mhe/img1.webp';
 import Barton2Mhe2 from '../assets/img/plans/barton2-mhe/img2.webp';
 
+import GlennCreekMhe1 from '../assets/img/plans/glenn-creek-mhe/img1.webp';
 import GlennCreekMhe2 from '../assets/img/plans/glenn-creek-mhe/img2.webp';
 
 import HazlenutMhe2 from '../assets/img/plans/hazlenut-mhe/img2.webp';
@@ -64,7 +65,7 @@ const plans = [
   },
   {
     id: 3,
-    img: GlennCreekMhe2,
+    img: GlennCreekMhe1,
     rums: 2,
     toilet: 2,
     kitchenSize: 8,
@@ -72,7 +73,7 @@ const plans = [
     bathrooms: 2,
     ceil: 2.8,
     s: 1500,
-    images: [GlennCreekMhe2],
+    images: [GlennCreekMhe2, GlennCreekMhe1],
     price: 78061.1,
     title: "Glenn Creek - MHE",
     manufacturer: "MHE",
