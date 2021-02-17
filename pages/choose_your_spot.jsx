@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 import SlotPopup from '../templates/ChooseYourSpotTemplate/SlotPopup/SlotPopup';
 import useTimeout from '../UTILS/useTimeout';
 import { useSelector } from 'react-redux';
-import activeSlots from '../db/activeSlots';
+import { slotState } from '../db/activeSlots';
 
 
 const ChooseYourSpot = () => {
@@ -18,7 +18,7 @@ const ChooseYourSpot = () => {
         <Layout noPadding >
             <ChooseYourSpotTemplate
                 setIsPopup={setSlotId}
-                activeSlots={activeSlots}
+                slotState={slotState}
             />
             {
                 slotId && !selectorPopup && (

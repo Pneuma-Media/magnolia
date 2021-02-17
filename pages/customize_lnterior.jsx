@@ -99,7 +99,7 @@ const CustomizeInterior = () => {
             // console.log(c, 'ccccccccccccccccccc')
             // console.log('categoryIndex' , categoryIndex)
             if (i === categoryIndex) {
-                console.log(c, 'c')
+             //   console.log(c, 'c')
                 return {
                     ...c,
                     active : true,

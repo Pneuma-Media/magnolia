@@ -308,7 +308,7 @@ const customizationGroup = [
           { id: 1, name: `None`, price: 0 },
           { id: 2, name: `Charleston Stack Full Stone Gas`, price: 1600 },
           { id: 3, name: `Charleston Stack Half Stone Gas`, price: 1200 },
-          { id: 4, name: `Charleston Stack Half Stone Electric`, price: 1600 },
+          { id: 4, name: `Charleston Stack Full Stone Electric`, price: 1600 },
           { id: 5, name: `Charleston Stack Half Stone Electric`, price: 1200 },
         ],
       },

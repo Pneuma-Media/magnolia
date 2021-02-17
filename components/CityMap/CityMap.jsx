@@ -6,7 +6,40 @@ import InitMap from '../../UTILS/MapLabel';
 import PlanImg from '../../assets/plan.png';
 
 
-const CityMap = ({ activeSlots, setIsPopup }) => {
+const CityMap = ({slotState, setIsPopup }) => {
+
+    const handlerSlotsStroke = (slotID) =>{
+        const slot = slotState.find(s => s.id === slotID);
+        let colorStroke = '';
+
+        if(slot.type === 'homes'){
+            slot.active ? colorStroke = '#25D1A0' : colorStroke = '#a3a0a0';
+        }
+        if(slot.type === 'model_homes'){
+            slot.active ? colorStroke = '#ac000e' : colorStroke = '#ac000e'; 
+        }
+
+        return  colorStroke;
+    }
+
+    const handlerFillColor = (slotID) => {
+        const slot = slotState.find(s => s.id === slotID);
+        let fillColor = '';
+
+        if(slot.type === 'homes'){
+            slot.active ? fillColor = "#ffffff" : fillColor = "#aaaaaa";
+        }
+        if(slot.type === 'model_homes'){
+            slot.active ? fillColor = "#aaaaaa" : fillColor = "#ffffff"; 
+        }
+
+      return fillColor;
+    }
+
+    const handlerListener = (slotID) => {
+        const slot = slotState.find(s => s.id === slotID);
+        return slot.active ? true : false
+    }
 
     const onGoogleApiLoaded = (map, maps) => {
 
@@ -15,10 +48,10 @@ const CityMap = ({ activeSlots, setIsPopup }) => {
             console.log(s.id)
             const miamiArea = new maps.Polygon({
                 paths: [s.coordinates],
-                strokeColor: activeSlots.some(e => e === s.id) ? "#d1253d" : "#a3a0a0",
+                strokeColor: handlerSlotsStroke(s.id),  //обводка
                 // strokeOpacity: 0.1,
                 strokeWeight: 2,
-                fillColor: activeSlots.some(e => e === s.id) ? "#ffffff" : "#aaaaaa",
+                fillColor: handlerFillColor(s.id), //заливка
                 fillOpacity: 1,
                 geodesic: true,
                 zIndex: 50,
@@ -35,7 +68,7 @@ const CityMap = ({ activeSlots, setIsPopup }) => {
                 zIndex: 100,
             });
 
-            miamiArea.addListener("click", () => activeSlots.some(e => e === s.id) && setIsPopup(s.id));
+            miamiArea.addListener("click", () => handlerListener(s.id) && setIsPopup(s.id));
             // miamiArea.addListener("mouseover", () => {
             //     marker.setPosition(event.latLng);
             //     marker.setVisible(true);
