@@ -164,8 +164,8 @@ const customizationGroup = [
     name: "Bath",
     underCategories: [
       {
-        id: 1,
-        name: `Shower/Tub (per room)`,
+        id: `1-master-bath-shower`,
+        name: `Master Bath: Shower/Tub`,
         active: null,
         options: [
           { id: 1, name: `Tub/Shower Combo`, price: 0 },
@@ -177,8 +177,8 @@ const customizationGroup = [
         ],
       },
       {
-        id: 2,
-        name: `Bath Vanity`,
+        id: `2-master-bath-vanity`,
+        name: `Master Bath: Bath Vanity`,
         active: null,
         options: [
           { id: 1, name: `Standard Vanity With Cubbies`, price: 0 },
@@ -187,14 +187,27 @@ const customizationGroup = [
         ],
       },
       {
-        id: 3,
-        name: `Utility sink`,
+        id: `3-guest-bath-shower`,
+        name: `Guest Bathroom: Shower/Tub`,
         active: null,
         options: [
-          { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Chrome 4" Laundry Sink `, price: 400 },
+          { id: 1, name: `Tub/Shower Combo`, price: 0 },
+          { id: 3, name: `Shower 32x34`, price: 225 },
+          { id: 4, name: `60x30 Shower With Glass Door`, price: 730 },
+          { id: 5, name: `Shower 60x43 With Glass Door`, price: 800 },
         ],
       },
+      {
+        id: `4-guest-bath-vanity`,
+        name: `Guest Bathroom: Bath Vanity`,
+        active: null,
+        options: [
+          { id: 1, name: `Standard Vanity With Cubbies`, price: 0 },
+          { id: 2, name: `Single Vanity With Drawers`, price: 450 },
+        ],
+      },
+
+
     ],
   },
   {
@@ -288,6 +301,15 @@ const customizationGroup = [
         options: [
           { id: 1, name: `40 Gallon`, price: 0 },
           { id: 2, name: `50 Gallon`, price: 850 },
+        ],
+      },
+      {
+        id: '8-utility-sink',
+        name: `Utility Sink (Laundry Room)`,
+        active: null,
+        options: [
+          { id: 1, name: `None`, price: 0 },
+          { id: 2, name: `Chrome 4" Laundry Sink `, price: 400 },
         ],
       },
     ],

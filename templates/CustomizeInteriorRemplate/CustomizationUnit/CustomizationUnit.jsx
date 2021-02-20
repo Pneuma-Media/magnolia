@@ -94,10 +94,9 @@ const CustomizationUnit = ({
 
     if (isAllStepsCompleted) body = (
         <div className={styles.summary}>
-            <div className={styles.summary__total}>Total: ${formatPrice(selectedPlan?.price + totalCustomizationPrice + 21000)}</div>
+            <div className={styles.summary__total}>Total: ${formatPrice(selectedPlan?.price + totalCustomizationPrice)}</div>
             <div className={styles.summary__item}>Base price:  ${formatPrice(selectedPlan?.price)}</div>
             <div className={styles.summary__item}>Customizations: ${formatPrice(totalCustomizationPrice)}</div>
-            <div className={styles.summary__item}>Site preparation: $21,000</div>
             <div className={styles.summary__action}>
                 <Button text="Apply" disabled={currentCategory !== totalCategories} style={{ width: "100%", height: 50 }} onclick={() => Router.replace('/apply')} />
             </div>

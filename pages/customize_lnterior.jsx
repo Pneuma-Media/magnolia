@@ -99,26 +99,26 @@ const CustomizeInterior = () => {
             // console.log(c, 'ccccccccccccccccccc')
             // console.log('categoryIndex' , categoryIndex)
             if (i === categoryIndex) {
-             //   console.log(c, 'c')
+                //   console.log(c, 'c')
                 return {
                     ...c,
-                    active : true,
+                    active: true,
                     underCategories: [
                         ...c.underCategories.map(el => {
-                                if (el.name === `Flooring`) {
-                                    return {
-                                        ...el,
-                                        active: 1
-                                    }
+                            if (el.name === `Flooring`) {
+                                return {
+                                    ...el,
+                                    active: 1
                                 }
+                            }
                             return {
                                 ...el
                             }
-                            })
-                        ]
-                    }
+                        })
+                    ]
                 }
-            
+            }
+
 
             return {
                 ...c,
@@ -138,7 +138,7 @@ const CustomizeInterior = () => {
     const numberCompletedGroupsInStep = activeCustomizationCategory?.underCategories.filter(uc => uc.active !== null).length;
 
     return (
-        <Layout showDisclaimer={!isAllStepsCompleted}>
+        <Layout>
             <CustomizeInteriorRemplate
                 activeCustomizationCategory={activeCustomizationCategory}
                 onCustomizationChange={handleCustomizationChange}
