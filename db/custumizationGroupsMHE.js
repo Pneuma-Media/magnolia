@@ -165,7 +165,7 @@ const customizationGroup = [
     underCategories: [
       {
         id: `1-master-bath-shower`,
-        name: `Master Bath: Shower/Tub`,
+        name: `Master Bathroom: Shower/Tub`,
         active: null,
         options: [
           { id: 1, name: `Tub/Shower Combo`, price: 0 },
@@ -178,7 +178,7 @@ const customizationGroup = [
       },
       {
         id: `2-master-bath-vanity`,
-        name: `Master Bath: Bath Vanity`,
+        name: `Master Bathroom: Bath Vanity`,
         active: null,
         options: [
           { id: 1, name: `Standard Vanity With Cubbies`, price: 0 },

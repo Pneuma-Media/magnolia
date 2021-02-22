@@ -200,7 +200,7 @@ const customizationGroup = [
     underCategories: [
       {
         id: 1,
-        name: `Master Bath: Shower/Tub`,
+        name: `Master Bathroom: Shower/Tub`,
         active: null,
         options: [
           { id: 1, name: `1 Pc Tub With Shower`, price: 0 },
