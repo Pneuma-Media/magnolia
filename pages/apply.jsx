@@ -8,6 +8,8 @@ import ReactGA from 'react-ga';
 import emailjs from 'emailjs-com';
 import { useSelector } from 'react-redux';
 import { format } from 'number-currency-format';
+import { getLetter } from '../assets/letter';
+import imgToBase64 from '../UTILS/imgToBase64';
 
 const formatPrice = (price) => {
     return format(price, {
@@ -43,8 +45,6 @@ const Apply = () => {
 
 
     useTimeout();
-
-
 
     async function sendEmail(e) {
         let html = ``;
@@ -82,9 +82,10 @@ const Apply = () => {
         // console.log(lot);
         // console.log(Plan);
 
-        await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
-
+        //TODO: Uncomment
+        // await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
         await emailjs.send("gmail", "user_report", {
+            preview: getLetter(Plan.images),
             first_name: e.FirstName,
             lot_id: lot.id,
             lot_area: lot.length * lot.width,
