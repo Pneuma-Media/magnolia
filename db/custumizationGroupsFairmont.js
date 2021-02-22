@@ -200,7 +200,7 @@ const customizationGroup = [
     underCategories: [
       {
         id: 1,
-        name: `Shower/Tub (per room)`,
+        name: `Master Bathroom: Shower/Tub`,
         active: null,
         options: [
           { id: 1, name: `1 Pc Tub With Shower`, price: 0 },
@@ -209,38 +209,21 @@ const customizationGroup = [
           { id: 4, name: `Corner Shower`, price: 250 },
           { id: 5, name: `Ceramic Tile Shower`, price: 3000 },
           { id: 6, name: `1 Pc Corner Tub`, price: 750 },
-          { id: 7, name: `Whirpool Tub`, price: 1000 },
+          { id: 7, name: `Whirlpool Tub`, price: 1000 },
           { id: 8, name: `Stand Alone Tub`, price: 350 },
         ],
       },
       {
-        id: 2,
-        name: `Utility Sink`,
+        id: `guest-shower-tub`,
+        name: `Guest Bathroom: Shower/Tub`,
         active: null,
         options: [
-          { id: 5, name: `None`, price: 0 },
-          { id: 1, name: `Deep Sink SB-30`, price: 1100 },
-          { id: 2, name: `51" Deep Sink CB-790`, price: 1300 },
-          { id: 3, name: `60" Deep Sink CB-772`, price: 1500 },
-          { id: 4, name: `51" Deep Sink With Overhead Cab`, price: 1700 },
-        ],
-      },
-      {
-        id: 3,
-        name: `Hot Water Heater`,
-        active: null,
-        options: [
-          { id: 1, name: `40 Gallon Gas`, price: 0 },
-          { id: 2, name: `50 Gallon Gas`, price: 650 },
-        ],
-      },
-      {
-        id: 4,
-        name: `Washer/dryer`,
-        active: null,
-        options: [
-          { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Include`, price: 1200 },
+          { id: 1, name: `1 Pc Tub With Shower`, price: 0 },
+          { id: 2, name: `Bench Shower`, price: 1200 },
+          { id: 3, name: `48" 2 Seat Shower`, price: 400 },
+          { id: 4, name: `Corner Shower`, price: 250 },
+          { id: 6, name: `1 Pc Corner Tub`, price: 750 },
+          { id: 8, name: `Stand Alone Tub`, price: 350 },
         ],
       },
     ],
@@ -346,6 +329,36 @@ const customizationGroup = [
           { id: 1, name: `Interior Trim - Java Wrapped`, price: 0 },
           { id: 2, name: `Interior Trim - Ibis Wrapped`, price: 0 },
           { id: 3, name: `Interior Trim - Wrapped - White`, price: 0 },
+        ],
+      },
+      {
+        id: `4-washer-dryer`,
+        name: `Washer/dryer`,
+        active: null,
+        options: [
+          { id: 1, name: `None`, price: 0 },
+          { id: 2, name: `Include`, price: 1200 },
+        ],
+      },
+      {
+        id: `5-hot-water-heater`,
+        name: `Hot Water Heater`,
+        active: null,
+        options: [
+          { id: 1, name: `40 Gallon Gas`, price: 0 },
+          { id: 2, name: `50 Gallon Gas`, price: 650 },
+        ],
+      },
+      {
+        id: `9-utility-sink`,
+        name: `Utility Sink (Laundry Room)`,
+        active: null,
+        options: [
+          { id: 5, name: `None`, price: 0 },
+          { id: 1, name: `Deep Sink SB-30`, price: 1100 },
+          { id: 2, name: `51" Deep Sink CB-790`, price: 1300 },
+          { id: 3, name: `60" Deep Sink CB-772`, price: 1500 },
+          { id: 4, name: `51" Deep Sink With Overhead Cab`, price: 1700 },
         ],
       },
     ],

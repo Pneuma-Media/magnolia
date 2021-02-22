@@ -8,6 +8,8 @@ import ReactGA from 'react-ga';
 import emailjs from 'emailjs-com';
 import { useSelector } from 'react-redux';
 import { format } from 'number-currency-format';
+import { getLetter } from '../assets/letter';
+import imgToBase64 from '../UTILS/imgToBase64';
 
 const formatPrice = (price) => {
     return format(price, {
@@ -44,30 +46,28 @@ const Apply = () => {
 
     useTimeout();
 
-
-
     async function sendEmail(e) {
         let html = ``;
         let price = 0;
         сustomizations?.forEach(c => {
-            html += `<h3>${c.name}</h3>`
-            html += '<ul>';
+            html += `<h3 style="text-align: center;">${c.name}</h3>`
+            html += '<ul style="list-style: none; text-align: center;  padding-left: 0;">';
             c.underCategories.forEach(cc => {
                 const option = cc.options.find(o => o.id === cc.active);
 
                 price += typeof option?.price !== 'string' ? '' : option?.price
 
-                let shownFieldToUser = `<span><b>${option?.name}($${formatPrice(option?.price)})</b></span>`
-                if (option?.value) shownFieldToUser = `<span>${option.value}</span>`;
+                let shownFieldToUser = `<span>${option?.name} ($${formatPrice(option?.price)})</span>`
+                if (option?.value) shownFieldToUser = `<span>${option.value ? option?.value : 'not specified'}</span>`;
 
-                html += '<li>';
+                html += '<li style="text-align: center; margin-left: 0;">';
                 html += `<span>${cc.name}</span>: ${shownFieldToUser}`;
                 html += '</li>';
 
             });
             html += '</ul>';
         })
-        // console.log('html >>', html);
+        console.log('html >>', html);
 
         let lotName = `№${lot.id} ${lot.usp} (${lot.width}x${lot.length})`;
         let planName = `${Plan.title}`;
@@ -82,10 +82,12 @@ const Apply = () => {
         // console.log(lot);
         // console.log(Plan);
 
-        await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
-
+        //TODO: Uncomment
+        // await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
         await emailjs.send("gmail", "user_report", {
+            preview: getLetter(Plan.images.map(i => `https://rrc-home-configurator-git-dev-vpilip.vercel.app${i}`)),
             first_name: e.FirstName,
+            last_name: e.LastName,
             lot_id: lot.id,
             lot_area: lot.length * lot.width,
             lot_width: lot.width,
@@ -96,19 +98,18 @@ const Apply = () => {
             floorplan_bathrooms: Plan.bathrooms,
             floorplan_price: formatPrice(Plan.price),
             customizations_price: formatPrice(price),
-            site_prep_price: formatPrice(21000),
-            total_price: formatPrice(Plan.price + price + 21000),
+            total_price: formatPrice(Plan.price + price),
             customizatoins: html,
             to: e.Email,
         }, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
 
-        reset({
-            FirstName: '',
-            LastName: '',
-            Email: '',
-            Description: '',
-        });
-        setCompleted(true);
+        // reset({
+        //     FirstName: '',
+        //     LastName: '',
+        //     Email: '',
+        //     Description: '',
+        // });
+        // setCompleted(true);
         window && window.dataLayer && window.dataLayer.push({ event: 'ApplyFormSubmitted' });
     }
 

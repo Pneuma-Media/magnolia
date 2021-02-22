@@ -11,7 +11,7 @@ const DetailedFloorPlan = () => {
     useTimeout();
 
     return (
-        <Layout showDisclaimer>
+        <Layout>
             <DetailedFloorPlanTemplate
                 selectorPlan={selectorPlan}
             />
