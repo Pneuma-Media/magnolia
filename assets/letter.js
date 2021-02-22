@@ -3,12 +3,12 @@ const twoColumnPreview = (img1, img2) => `
   <tbody>
     <tr style="height: 253px;">
     <!-- ||||||||||| --> <!-- LEFT COLUMN --> <!-- ||||||||||| -->
-    <td class="templateColumnContainer" style="padding: 10px; height: 253px;" align="center" valign="top">
-        <img class="columnImage" style="width: 100%;" src="${img1}" />
+    <td class="templateColumnContainer" style="padding: 10px; height: 300px;" align="right" valign="top">
+        <img class="columnImage" style="height: 100%;" src="${img1}" />
     </td>
     <!-- |||||||||||| --> <!-- RIGHT COLUMN --> <!-- |||||||||||| -->
-    <td class="templateColumnContainer" style="padding: 10px; height: 253px;" align="center" valign="top">
-        <img class="columnImage" style="width: 100%;" src="${img2}" />
+    <td class="templateColumnContainer" style="padding: 10px; height: 300px;" align="left" valign="top">
+        <img class="columnImage" style="height: 100%; " src="${img2}" />
     </td>
     </tr>
   </tbody>
@@ -20,8 +20,8 @@ const oneColumnPreview = (img) => `
   <tbody>
     <tr style="height: 253px;">
     <!-- ||||||||||| --> <!-- LEFT COLUMN --> <!-- ||||||||||| -->
-    <td class="templateColumnContainer" style="padding: 10px; height: 253px;" align="center" valign="top">
-        <img class="columnImage" style="width: 100%;" src="${img}" />
+    <td class="templateColumnContainer" style="padding: 10px; height: 300px;" align="center" valign="top">
+        <img class="columnImage" style="height: 100%;" src="${img}" />
     </td>
     </tr>
   </tbody>
