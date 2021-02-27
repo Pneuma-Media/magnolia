@@ -4,7 +4,7 @@ import Button from '../../../components/UI/Button/Button';
 import Router from 'next/router';
 
 
-const Form = ({ errors, register, submit }) => {
+const Form = ({ errors, register, submit, isLoading }) => {
     return (
         <div className={styles.Form}>
 
@@ -12,30 +12,40 @@ const Form = ({ errors, register, submit }) => {
                 <p className={styles.Form__title}>
                     Please Fill Out The Form Below To Apply
             </p>
+                <div className={styles.row}>
 
 
+                    <div className={styles.wrap}>
+                        <span className={styles.label}>First Name<span className={styles.asterisk}>*</span></span>
+                        <input
+                            type="text"
+                            name='FirstName'
+                            ref={register}
+                        />
+                        <span className={styles.errors}>{errors.FirstName?.message}</span>
+                    </div>
+
+                    <div className={styles.wrap}>
+                        <span className={styles.label}>Last Name<span className={styles.asterisk}>*</span></span>
+                        <input
+                            type="text"
+                            name='LastName'
+                            ref={register}
+                        />
+                        <span className={styles.errors}>{errors.LastName?.message}</span>
+                    </div>
+                </div>
                 <div className={styles.wrap}>
-                    <span className={styles.label}>First Name</span>
+                    <span className={styles.label}>Phone Number<span className={styles.asterisk}>*</span></span>
                     <input
-                        type="text"
-                        name='FirstName'
+                        type="tel"
+                        name='phone'
                         ref={register}
                     />
-                    <span className={styles.errors}>{errors.FirstName?.message}</span>
+                    <span className={styles.errors}>{errors.phone?.message}</span>
                 </div>
-
                 <div className={styles.wrap}>
-                    <span className={styles.label}>Last Name</span>
-                    <input
-                        type="text"
-                        name='LastName'
-                        ref={register}
-                    />
-                    <span className={styles.errors}>{errors.LastName?.message}</span>
-                </div>
-
-                <div className={styles.wrap}>
-                    <span className={styles.label}>Email</span>
+                    <span className={styles.label}>Email<span className={styles.asterisk}>*</span></span>
                     <input
                         type="Email"
                         name='Email'
@@ -57,6 +67,7 @@ const Form = ({ errors, register, submit }) => {
                 <Button
                     text='Click here to apply for new home'
                     style={{ height: '50px', width: '100%', marginBottom: '20px' }}
+                    isLoading={isLoading}
                     //theme2
                     onclick={submit}
                 />
