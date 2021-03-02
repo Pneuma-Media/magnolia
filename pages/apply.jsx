@@ -20,6 +20,7 @@ const formatPrice = (price) => {
 const schema = yup.object().shape({
     FirstName: yup.string().required('Please enter your first name'),
     LastName: yup.string().required('Please enter your last name'),
+    phone: yup.string().required('Please enter your phone number'),
     Email: yup.string().email('Please check your email').required('Please enter your email'),
     Description: yup.string().optional(),
 });
@@ -29,6 +30,7 @@ const Apply = () => {
 
 
     const [isCompleted, setCompleted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const { handleSubmit, register, errors, reset } = useForm({
         resolver: yupResolver(schema)
     });
@@ -47,6 +49,7 @@ const Apply = () => {
     useTimeout();
 
     async function sendEmail(e) {
+        setIsLoading(true);
         let html = ``;
         let price = 0;
         сustomizations?.forEach(c => {
@@ -55,10 +58,10 @@ const Apply = () => {
             c.underCategories.forEach(cc => {
                 const option = cc.options.find(o => o.id === cc.active);
 
-                price += typeof option?.price !== 'string' ? '' : option?.price
+                price += option?.price
 
                 let shownFieldToUser = `<span>${option?.name} ($${formatPrice(option?.price)})</span>`
-                if (option?.value) shownFieldToUser = `<span>${option.value ? option?.value : 'not specified'}</span>`;
+                if (option?.type === 'textarea') shownFieldToUser = `<span>${option.value ? option?.value : 'not specified'}</span>`;
 
                 html += '<li style="text-align: center; margin-left: 0;">';
                 html += `<span>${cc.name}</span>: ${shownFieldToUser}`;
@@ -67,7 +70,15 @@ const Apply = () => {
             });
             html += '</ul>';
         })
-        console.log('html >>', html);
+
+        if (e.Description) {
+            html += `<h3 style="text-align: center;">Misc Notes</h3>`;
+            html += '<ul style="list-style: none; text-align: center;  padding-left: 0;">';
+            html += '<li style="text-align: center; margin-left: 0;">';
+            html += `${e.Description}`;
+            html += '</li>';
+            html += '</ul>';
+        }
 
         let lotName = `№${lot.id} ${lot.usp} (${lot.width}x${lot.length})`;
         let planName = `${Plan.title}`;
@@ -82,9 +93,8 @@ const Apply = () => {
         // console.log(lot);
         // console.log(Plan);
 
-        //TODO: Uncomment
-        // await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
-        await emailjs.send("gmail", "user_report", {
+        await emailjs.send('service_pb301o9', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
+        await emailjs.send("service_pb301o9", "user_report", {
             preview: getLetter(Plan.images.map(i => `https://rrc-home-configurator-git-dev-vpilip.vercel.app${i}`)),
             first_name: e.FirstName,
             last_name: e.LastName,
@@ -103,13 +113,14 @@ const Apply = () => {
             to: e.Email,
         }, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
 
-        // reset({
-        //     FirstName: '',
-        //     LastName: '',
-        //     Email: '',
-        //     Description: '',
-        // });
-        // setCompleted(true);
+        reset({
+            FirstName: '',
+            LastName: '',
+            Email: '',
+            phone: '',
+            Description: '',
+        });
+        setCompleted(true);
         window && window.dataLayer && window.dataLayer.push({ event: 'ApplyFormSubmitted' });
     }
 
@@ -120,6 +131,7 @@ const Apply = () => {
                 submit={handleSubmit(sendEmail)}
                 errors={errors}
                 isCompleted={isCompleted}
+                isLoading={isLoading}
             />
         </>
     );

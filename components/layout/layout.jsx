@@ -14,8 +14,7 @@ const Layout = ({ showDisclaimer, noPadding, ...props }) => {
             <div className={styles.disclaimer}>
                 <img src={InformationIcon} alt="information" />
                 <div>
-                    Price does not include set-up, finishes, or hook-ups.
-            </div>
+                    All price estimates shown include the base price of the home and all site prep. Please note: site prep includes lot prep, set-up, delivery, footers, skirting, HVAC, Gutters, interior and exterior finish work, all utility hook-ups, cleaning, and a treated lumber front porch.                </div>
             </div>
         </Container>
     );
