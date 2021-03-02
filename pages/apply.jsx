@@ -61,7 +61,7 @@ const Apply = () => {
                 price += option?.price
 
                 let shownFieldToUser = `<span>${option?.name} ($${formatPrice(option?.price)})</span>`
-                if (option?.value) shownFieldToUser = `<span>${option.value ? option?.value : 'not specified'}</span>`;
+                if (option?.type === 'textarea') shownFieldToUser = `<span>${option.value ? option?.value : 'not specified'}</span>`;
 
                 html += '<li style="text-align: center; margin-left: 0;">';
                 html += `<span>${cc.name}</span>: ${shownFieldToUser}`;
@@ -70,7 +70,15 @@ const Apply = () => {
             });
             html += '</ul>';
         })
-        console.log('html >>', html);
+
+        if (e.Description) {
+            html += `<h3 style="text-align: center;">Misc Notes</h3>`;
+            html += '<ul style="list-style: none; text-align: center;  padding-left: 0;">';
+            html += '<li style="text-align: center; margin-left: 0;">';
+            html += `${e.Description}`;
+            html += '</li>';
+            html += '</ul>';
+        }
 
         let lotName = `№${lot.id} ${lot.usp} (${lot.width}x${lot.length})`;
         let planName = `${Plan.title}`;
