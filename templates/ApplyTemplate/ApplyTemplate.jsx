@@ -50,9 +50,9 @@ const ApplyTemplate = ({ errors, register, submit, isCompleted, isLoading }) => 
                         Once your home selections are finalized we will get you connected to a lender to apply for financing.
                     </p>
 
-                    <h3>STEP 4: Build, Deliver, & Move In</h3>
+                    <h3>STEP 4: Build, Deliver, & Move-In</h3>
                     <p>
-                        We will get you home built, delivered, and you’ll be moved in before you know it.
+                        We will get your home built, delivered, and you’ll be moved in before you know it.
                     </p>
                 </div>
 
