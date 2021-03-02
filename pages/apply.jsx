@@ -85,8 +85,8 @@ const Apply = () => {
         // console.log(lot);
         // console.log(Plan);
 
-        await emailjs.send('gmail', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
-        await emailjs.send("gmail", "user_report", {
+        await emailjs.send('service_pb301o9', 'applicatoin', obj, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
+        await emailjs.send("service_pb301o9", "user_report", {
             preview: getLetter(Plan.images.map(i => `https://rrc-home-configurator-git-dev-vpilip.vercel.app${i}`)),
             first_name: e.FirstName,
             last_name: e.LastName,
