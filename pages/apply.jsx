@@ -58,7 +58,7 @@ const Apply = () => {
             c.underCategories.forEach(cc => {
                 const option = cc.options.find(o => o.id === cc.active);
 
-                price += typeof option?.price !== 'string' ? '' : option?.price
+                price += option?.price
 
                 let shownFieldToUser = `<span>${option?.name} ($${formatPrice(option?.price)})</span>`
                 if (option?.value) shownFieldToUser = `<span>${option.value ? option?.value : 'not specified'}</span>`;
