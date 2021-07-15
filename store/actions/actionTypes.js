@@ -16,4 +16,5 @@ export const SET_PLAN = 'SET_PLAN';
 export const IS_POPUP = 'IS_POPUP';
 
 export const CUSTOMIZATION = 'CUSTOMIZATION';
+export const FLOORPLAN = 'FLOORPLAN';
 

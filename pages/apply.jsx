@@ -38,9 +38,7 @@ const Apply = () => {
 
     const selectorLot = useSelector(state => state.lot);
     const сustomizations = useSelector(state => state.customization.customization);
-
-
-
+    const floorplan = useSelector(state => state.floorplan.floorplan);
 
     const lot = selectorLot.lotData;
     const Plan = selectorLot.planData;
@@ -80,9 +78,28 @@ const Apply = () => {
             html += '</ul>';
         }
 
-        let lotName = `№${lot.id} ${lot.usp} (${lot.width}x${lot.length})`;
+        let financeBlock = ``;
+        if(floorplan.manufacturer === 'Fairmont') {
+            financeBlock += `<h3 style="text-align: center;">Fairmont Homes, LLC</h3>`;
+            financeBlock += '<ul style="list-style: none; text-align: center;  padding-left: 0;">';
+            financeBlock += '<li style="text-align: center; margin-left: 0;">'
+            financeBlock += `Your new 2021 ${floorplan.title} <b>${floorplan.width} x ${floorplan.length} Fairmont Builder</b>`;
+            financeBlock += '</li>';
+            financeBlock += '<li style="text-align: center; margin-left: 0;">Courtyard Communities: 510 N. Range St. Westport, IN 47283</li>';
+            financeBlock += '</ul>';
+        }else if (floorplan.manufacturer === 'MHE') {
+            financeBlock += `<h3 style="text-align: center;">Manufactured Housing Enterprises, Inc</h3>`;
+            financeBlock += '<ul style="list-style: none; text-align: center;  padding-left: 0;">';
+            financeBlock += '<li style="text-align: center; margin-left: 0;">'
+            financeBlock += `Your new 2021 ${floorplan.title} ${floorplan.width} x ${floorplan.length} <b>MHE Builder</b>`;
+            financeBlock += '</li>';
+            financeBlock += '<li style="text-align: center; margin-left: 0;">Courtyard Communities: 510 N. Range St. Westport, IN 47283</li>';
+            financeBlock += '</ul>';
+        }
+
+        let lotName = `№${lot.id}`;
         let planName = `${Plan.title}`;
-        const obj = { ...e, lot: lotName, Plan: planName, customization: html }
+        const obj = { ...e, lot: lotName, Plan: planName, customization: html, financeBlock: financeBlock }
 
 
         // ReactGA.event({
@@ -110,6 +127,7 @@ const Apply = () => {
             customizations_price: formatPrice(price),
             total_price: formatPrice(Plan.price + price),
             customizatoins: html,
+            financeBlock: financeBlock,
             to: e.Email,
         }, 'user_2Bq5Rvgr1IGkLbUwbjy7z');
 

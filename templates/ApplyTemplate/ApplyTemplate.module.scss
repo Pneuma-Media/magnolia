@@ -37,7 +37,7 @@
         }
 
         .wrapTitle {
-            max-width: 430px;
+            max-width: 500px;
             position: relative;
             z-index: 3;
             margin: auto;
@@ -51,6 +51,11 @@
                 padding: 0;
             }
 
+            p {
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+
             h2 {
                 font-style: normal;
                 font-weight: 500;
@@ -61,7 +66,7 @@
                 margin-bottom: 30px;
             }
             h3 {
-                font-size: 18px;
+                font-size: 22px;
             }
         }
     }

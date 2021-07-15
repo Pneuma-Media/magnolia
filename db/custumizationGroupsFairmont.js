@@ -70,27 +70,27 @@ const customizationGroup = [
           { id: 4, name: `Pine`, price: 100 },
         ],
       },
-      {
-        id: 5,
-        name: "Doors",
-        active: null,
-        options: [
-          { id: 1, name: `Regular White 34x82`, price: 0 },
-          {
-            id: 2,
-            name: `52"x82" Round Top Etch Glass With / Sidelight`,
-            price: 2000,
-          },
-          {
-            id: 3,
-            name: `66.5"x82" Round Top Etch Glass With / Double Sidelight`,
-            price: 2500,
-          },
-          { id: 4, name: `Fire Rated Door`, price: 500 },
-          { id: 5, name: `72"x80" Glass Slider`, price: 1100 },
-          { id: 6, name: `75.5"x82" Swing French Doors`, price: 2500 },
-        ],
-      },
+      // {
+      //   id: 5,
+      //   name: "Doors",
+      //   active: null,
+      //   options: [
+      //     { id: 1, name: `Regular White 34x82`, price: 0 },
+      //     {
+      //       id: 2,
+      //       name: `Round Top Etch Glass With / Sidelight (52x82 in.)`,
+      //       price: 2000,
+      //     },
+      //     {
+      //       id: 3,
+      //       name: `Round Top Etch Glass With / Double Sidelight (66.5x82 in.)`,
+      //       price: 2500,
+      //     },
+      //     { id: 4, name: `Fire Rated Door`, price: 500 },
+      //     { id: 5, name: `Glass Slider (72x80 in.)`, price: 1100 },
+      //     { id: 6, name: `Swing French Doors (75.5x82 in.)`, price: 2500 },
+      //   ],
+      // },
       // {
       //     id: 6,
       //     name: 'Windows',
@@ -165,8 +165,8 @@ const customizationGroup = [
         name: `Cabinets size`,
         active: null,
         options: [
-          { id: 1, name: `30" Cabinets`, price: 0 },
-          { id: 2, name: `40" Cabinets`, price: 2250 },
+          { id: 1, name: `Cabinets (30 in.)`, price: 0 },
+          { id: 2, name: `Cabinets (40 in.)`, price: 2250 },
         ],
       },
       {
@@ -175,9 +175,10 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 4, name: `None`, price: 0 },
+          { id: 3, name: `28 x 40 CE 1248`, price: 300 },
           { id: 1, name: `38 x 59 CE-1374`, price: 500 },
           { id: 2, name: `36 x 96 CE-1277`, price: 800 },
-          { id: 3, name: `28 x 40 CE 1248`, price: 300 },
+          
         ],
       },
       {
@@ -187,7 +188,7 @@ const customizationGroup = [
         options: [
           { id: 1, name: `No Upgrade`, price: 0 },
           { id: 2, name: `Farm Sink With Moen Faucet`, price: 500 },
-          { id: 3, name: `9" Deep Steel Sink`, price: 500 },
+          { id: 3, name: `Deep Steel Sink (9 in.)`, price: 500 },
           { id: 4, name: `Moen Kitchen Faucet With Sprayer`, price: 500 },
         ],
       },
@@ -204,13 +205,13 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `1 Pc Tub With Shower`, price: 0 },
-          { id: 2, name: `Bench Shower`, price: 1200 },
-          { id: 3, name: `48" 2 Seat Shower`, price: 400 },
           { id: 4, name: `Corner Shower`, price: 250 },
-          { id: 5, name: `Ceramic Tile Shower`, price: 3000 },
+          { id: 8, name: `Stand Alone Tub`, price: 350 },
+          { id: 3, name: `2 Seat Shower (48 in.)`, price: 400 },
           { id: 6, name: `1 Pc Corner Tub`, price: 750 },
           { id: 7, name: `Whirlpool Tub`, price: 1000 },
-          { id: 8, name: `Stand Alone Tub`, price: 350 },
+          { id: 2, name: `Bench Shower`, price: 1200 },
+          { id: 5, name: `Ceramic Tile Shower`, price: 3000 },
         ],
       },
       {
@@ -219,11 +220,11 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `1 Pc Tub With Shower`, price: 0 },
-          { id: 2, name: `Bench Shower`, price: 1200 },
-          { id: 3, name: `48" 2 Seat Shower`, price: 400 },
           { id: 4, name: `Corner Shower`, price: 250 },
-          { id: 6, name: `1 Pc Corner Tub`, price: 750 },
           { id: 8, name: `Stand Alone Tub`, price: 350 },
+          { id: 3, name: `2 Seat Shower (48 in.)`, price: 400 },
+          { id: 6, name: `1 Pc Corner Tub`, price: 750 },
+          { id: 2, name: `Bench Shower`, price: 1200 },
         ],
       },
     ],
@@ -263,16 +264,16 @@ const customizationGroup = [
       //         { id: 3, name: `Cookies and Cream`, price: 300 },
       //     ],
       // },
-      {
-        id: 3,
-        name: `Doors additional`,
-        active: null,
-        options: [
-          { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `36" 6 Panel White`, price: 150 },
-          { id: 3, name: `White Sliding Barn Door`, price: 1500 },
-        ],
-      },
+      // {
+      //   id: 3,
+      //   name: `Doors additional`,
+      //   active: null,
+      //   options: [
+      //     { id: 1, name: `None`, price: 0 },
+      //     { id: 2, name: `6 Panel White (36 in.)`, price: 150 },
+      //     { id: 3, name: `White Sliding Barn Door`, price: 1500 },
+      //   ],
+      // },
       {
         id: 4,
         name: `Appliances`,
@@ -289,10 +290,11 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Charleston Stack Full Stone Gas`, price: 1600 },
           { id: 3, name: `Charleston Stack Half Stone Gas`, price: 1200 },
-          { id: 4, name: `Charleston Stack Full Stone Electric`, price: 1600 },
           { id: 5, name: `Charleston Stack Half Stone Electric`, price: 1200 },
+          { id: 2, name: `Charleston Stack Full Stone Gas`, price: 1600 },
+          { id: 4, name: `Charleston Stack Full Stone Electric`, price: 1600 },
+          
         ],
       },
       {
@@ -301,10 +303,10 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 5, name: `None`, price: 0 },
-          { id: 1, name: `90" Floating FEC901616 (No Bookcase)`, price: 1200 },
-          { id: 2, name: `90" Floating BC429418 With Bookcase`, price: 1700 },
-          { id: 3, name: `48x42 CE - 2006`, price: 500 },
-          { id: 4, name: `48" CE-2036`, price: 500 },
+          { id: 3, name: `CE - 2006 (48x42 in.)`, price: 500 },
+          { id: 4, name: `CE-2036 (48 in.)`, price: 500 },
+          { id: 1, name: `Floating FEC901616 (No Bookcase) (90 in.)`, price: 1200 },
+          { id: 2, name: `Floating BC429418 With Bookcase (90 in.)`, price: 1700 },
         ],
       },
       {
@@ -356,9 +358,9 @@ const customizationGroup = [
         options: [
           { id: 5, name: `None`, price: 0 },
           { id: 1, name: `Deep Sink SB-30`, price: 1100 },
-          { id: 2, name: `51" Deep Sink CB-790`, price: 1300 },
-          { id: 3, name: `60" Deep Sink CB-772`, price: 1500 },
-          { id: 4, name: `51" Deep Sink With Overhead Cab`, price: 1700 },
+          { id: 2, name: `Deep Sink CB-790 (51 in.)`, price: 1300 },
+          { id: 3, name: `Deep Sink CB-772 (60 in.)`, price: 1500 },
+          { id: 4, name: `Deep Sink With Overhead Cab (51 in.)`, price: 1700 },
         ],
       },
     ],

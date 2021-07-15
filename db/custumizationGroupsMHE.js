@@ -55,17 +55,17 @@ const customizationGroup = [
           { id: 7, name: `Green`, price: 150 },
         ],
       },
-      {
-        id: 5,
-        name: `Doors`,
-        active: null,
-        options: [
-          { id: 1, name: `Standard White`, price: 0 },
-          { id: 2, name: `Arch Door 38x82`, price: 400 },
-          { id: 3, name: `9 Light Rear`, price: 275 },
-          { id: 4, name: `Patio Slider`, price: 1200 },
-        ],
-      },
+      // {
+      //   id: 5,
+      //   name: `Doors`,
+      //   active: null,
+      //   options: [
+      //     { id: 1, name: `Standard White`, price: 0 },
+      //     { id: 2, name: `Arch Door 38x82`, price: 400 },
+      //     { id: 3, name: `9 Light Rear`, price: 275 },
+      //     { id: 4, name: `Patio Slider`, price: 1200 },
+      //   ],
+      // },
       // {
       //     id: 6,
       //     name: `Windows`,
@@ -169,8 +169,8 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `Tub/Shower Combo`, price: 0 },
-          { id: 2, name: `Whirlpool Tub Drop`, price: 650 },
           { id: 3, name: `Shower 32x34`, price: 225 },
+          { id: 2, name: `Whirlpool Tub Drop`, price: 650 },
           { id: 4, name: `60x30 Shower With Glass Door`, price: 730 },
           { id: 5, name: `Shower 60x43 With Glass Door`, price: 800 },
           { id: 6, name: `Ceramic Shower`, price: 1750 },
@@ -183,7 +183,7 @@ const customizationGroup = [
         options: [
           { id: 1, name: `Standard Vanity With Cubbies`, price: 0 },
           { id: 2, name: `Single Vanity With Drawers`, price: 450 },
-          { id: 3, name: `DoubLe Bowl Vanity With Drawers`, price: 1000 },
+          { id: 3, name: `Double Bowl Vanity With Drawers`, price: 1000 },
         ],
       },
       {
@@ -259,9 +259,10 @@ const customizationGroup = [
         options: [
           { id: 1, name: `Black Standard`, price: 0 },
           { id: 2, name: `White Standard`, price: 0 },
-          { id: 3, name: `Stainless Package`, price: 1900 },
           { id: 4, name: `Black Side-By-Side With Ice Maker`, price: 600 },
           { id: 5, name: `White Side-By-Side With Ice Maker`, price: 600 },
+          { id: 3, name: `Stainless Package`, price: 1900 },
+          
         ],
       },
       {
@@ -270,10 +271,11 @@ const customizationGroup = [
         active: null,
         options: [
           { id: 1, name: `None`, price: 0 },
-          { id: 2, name: `Half Stone Gas`, price: 2800 },
-          { id: 3, name: `Half Stone Wood Burning`, price: 1900 },
-          { id: 4, name: `Full Stone Gas`, price: 3000 },
           { id: 5, name: `Full Stone Wood Burning `, price: 1500 },
+          { id: 3, name: `Half Stone Wood Burning`, price: 1900 },
+          { id: 2, name: `Half Stone Gas`, price: 2800 },
+          { id: 4, name: `Full Stone Gas`, price: 3000 },
+          
         ],
       },
       {

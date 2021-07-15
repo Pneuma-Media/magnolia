@@ -48,7 +48,7 @@ const CustomizationUnit = ({
             <div className={styles.body__list}>
                 {/* {categoryName === "Flooring" &&
                     <div className={styles.body__card}>
-                        <p className={styles.body__card_text}>Feel free to note any carpet or vinyl flooring selections you’re interested in within the text box below</p>
+                        <p className={styles.body__card_text}>Please note one carpet and one vinyl selection below.</p>
                         <textarea
                             className={styles.body__card_textArea}
                             name="flooring"
@@ -64,7 +64,7 @@ const CustomizationUnit = ({
                     let optionGroup = null;
                     if (categoryName === "Flooring") optionGroup = (
                         <div className={styles.body__card}>
-                            <p className={styles.body__card_text}>Feel free to note any carpet or vinyl flooring selections you’re interested in within the text box below</p>
+                            <p className={styles.body__card_text}>Please note one carpet and one vinyl selection below.</p>
                             <textarea
                                 className={styles.body__card_textArea}
                                 name="flooring"
@@ -99,6 +99,9 @@ const CustomizationUnit = ({
             <div className={styles.summary__item}>Customizations: ${formatPrice(totalCustomizationPrice)}</div>
             <div className={styles.summary__action}>
                 <Button text="Apply" disabled={currentCategory !== totalCategories} style={{ width: "100%", height: 50 }} onclick={() => Router.replace('/apply')} />
+            </div>
+            <div className={styles.summary__disclaimer}>
+                Please note: site prep includes lot prep, set-up, delivery, footers, skirting, HVAC, Gutters, interior and exterior finish work, all utility hook-ups, cleaning, and a treated lumber front porch.
             </div>
         </div>
     );

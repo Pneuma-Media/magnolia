@@ -9,19 +9,30 @@ import bathImg from '../../assets/img/icons/bath.svg';
 import PlanImg from '../../assets/img/icons/blueprint.svg';
 import cx from 'classnames';
 import { format } from 'number-currency-format';
+import { floorplanAction } from '../../store/actions/floorplan';
 import { customizationAction } from '../../store/actions/customization';
 import customizationGroupFairmont from '../../db/custumizationGroupsFairmont';
 import customizationGroupMHE from '../../db/custumizationGroupsMHE';
+import { useSelector } from 'react-redux';
 
 
 const Item = ({ noButton, data }) => {
 
     const dispatch = useDispatch();
+    console.log(data)
+    const floorplan = useSelector(state => state.floorplan.floorplan);
 
     const selectPlan = () => {
         dispatch(setPlan(data));
-        if (data.manufacturer === 'MHE') dispatch(customizationAction(customizationGroupMHE));
-        if (data.manufacturer === 'Fairmont') dispatch(customizationAction(customizationGroupFairmont));
+        const { manufacturer, title, s } = data;
+        if (data.manufacturer === 'MHE') {
+            dispatch(customizationAction(customizationGroupMHE));
+            dispatch(floorplanAction({...floorplan, manufacturer: manufacturer, title: title}));
+        }
+        if (data.manufacturer === 'Fairmont') {
+            dispatch(customizationAction(customizationGroupFairmont));
+            dispatch(floorplanAction({...floorplan, manufacturer: manufacturer, title: title}));
+        }
         Router.replace('/detailed_floorplan')
     }
 

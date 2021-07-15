@@ -35,7 +35,7 @@ const MyApp = ({ Component, pageProps }) => {
   let content = (
     <>
       <Head>
-        <title>Build your home | Red Roof Capital</title>
+        <title>Build your home | Red Roots Capital</title>
       </Head>
       {selectorPopup && (
         <Popup TimePopup>

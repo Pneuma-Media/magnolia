@@ -6,6 +6,7 @@ import Router from 'next/router';
 import slots from '../../../db/slots';
 import plans from '../../../db/plans';
 import { setLot } from '../../../store/actions/lotAction';
+import { floorplanAction } from '../../../store/actions/floorplan';
 import { useDispatch } from 'react-redux';
 import closeImg from '../../../assets/img/icons/close.svg';
 import { format } from 'number-currency-format';
@@ -27,6 +28,7 @@ const SlotPopup = ({ id, setSlotId }) => {
 
     const nextStep = () => {
         dispatch(setLot(slotData));
+        dispatch(floorplanAction({ width: slotData.width, length: slotData.length }));
         Router.replace('/select_floorplan');
     }
 

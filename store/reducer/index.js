@@ -5,6 +5,7 @@ import popupUniversal from './popupUniversal';
 import lot from './lot';
 import popup from './popup';
 import customization from './customization';
+import floorplan from './floorplan';
 
 const rootReducer = combineReducers({
     counter: counterReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     lot,
     popup,
     customization,
+    floorplan
 });
 
 export default rootReducer;
