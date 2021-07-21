@@ -1,0 +1,23 @@
+@import '../../assets/styles/variables.scss';
+
+.TabsCategory {
+    border-bottom: 1px solid $grey1;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: $text;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .active{
+        border-bottom: 2px solid $text;
+    }
+}

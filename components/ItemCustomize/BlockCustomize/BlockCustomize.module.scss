@@ -1,0 +1,51 @@
+@import "../../../assets/styles/variables.scss";
+
+.BlockCustomize {
+    &__blockIcon {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 15px;
+        cursor: pointer;
+    }
+
+    &__icon {
+        border-radius: 5px;
+        overflow: hidden;
+        height: 90px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__nameBlock {
+        display: flex;
+        flex-direction: column;
+
+        :first-child {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            color: $text;
+        }
+        :last-child {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            color: $text;
+            opacity: .5;
+        }
+
+        .active2{
+            color: $green;
+        }
+    }
+    .active {
+        border: 3px solid $green;
+    }
+    
+}

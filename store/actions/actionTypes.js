@@ -1,0 +1,20 @@
+export const COUNTER_INCRIMENT = 'COUNTER_INCRIMENT'; //Will add one to counter
+export const COUNTER_DECRIMENT = 'COUNTER_DECRIMENT'; //Will subscruct one from counter
+
+
+export const USER_AUTHORIZATION_START = 'USER_AUTHORIZATION_START';
+export const USER_AUTHORIZATION_SUCCESS = 'USER_AUTHORIZATION_SUCCESS';
+export const USER_AUTHORIZATION_FAIL = 'USER_AUTHORIZATION_FAIL';
+export const USER_LOG_OUT = 'USER_LOG_OUT';
+
+export const POPUP_UNIVERSAL_SWITCH = 'POPUP_UNIVERSAL_SWITCH';
+
+
+export const SET_LOT = 'SET_LOT';
+export const SET_PLAN = 'SET_PLAN';
+
+export const IS_POPUP = 'IS_POPUP';
+
+export const CUSTOMIZATION = 'CUSTOMIZATION';
+export const FLOORPLAN = 'FLOORPLAN';
+

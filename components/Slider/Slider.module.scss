@@ -1,0 +1,44 @@
+@import '../../assets/styles/variables.scss';
+
+.PopupCase__arrow {
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    right: 0;
+    width: 50px;
+    top: 0;
+    height: calc(100%);
+    border: none;
+    outline: none !important;
+    transition: background 300ms ease-in;
+    background: transparent;
+
+    &:hover {
+        background: linear-gradient(-89.6deg, rgba(0, 0, 0, 0.6) 11.52%, rgba(0, 0, 0, 0) 78.27%);
+    }
+
+    img {
+        width: 30px;
+    }
+}
+
+.leftArrow {
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: 0;
+    position: absolute;
+    width: 50px;
+    height: calc(100%);
+    top: 0;
+    border: none;
+    outline: none !important;
+    transition: background 300ms ease-in;
+    background: transparent;
+
+    &:hover {
+        background: linear-gradient(89.6deg, rgba(0, 0, 0, 0.6) 11.52%, rgba(0, 0, 0, 0) 78.27%);
+    }
+
+    img {
+        width: 30px;
+    }
+}

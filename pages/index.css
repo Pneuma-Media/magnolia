@@ -1,0 +1,45 @@
+body,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Next Cyr';
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+
+.containerMasters_PopupCase {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    /* padding: 15px; */
+}
+
+.itemClass {
+    /* width: 100%;
+    height: 100%; */
+}
+.react-multi-carousel-track {
+    /* height: 65vh; */
+}
+.react-multi-carousel-item {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dotListClass_PopupCase {
+    bottom: 19px;
+}
+
+.dotListClass_PopupCase .react-multi-carousel-dot button {
+    width: 8px;
+    height: 8px;
+    border: none;
+    margin-right: 15px;
+}

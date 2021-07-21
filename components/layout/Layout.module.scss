@@ -1,0 +1,29 @@
+@import '../../assets/styles/variables.scss';
+
+.disclaimer {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid#25D1A0;
+    margin-bottom: 30px;
+    background: white;
+    display: grid;
+    grid-template-columns: 24px auto;
+    column-gap: 15px;
+    font-weight: 600;
+
+    img {
+        height: 24px;
+    }
+}
+
+.content {
+    height: calc(100vh - 70px);
+    position: relative;
+    overflow: auto;
+    background: $grey2;
+    padding: 30px 0;
+
+    &_nopadding {
+        padding: 0;
+    }
+}

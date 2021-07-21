@@ -1,0 +1,95 @@
+@import '../../../assets/styles/variables.scss';
+
+.Heder {
+    height: 70px;
+    display: grid;
+    grid-template-columns: 100px auto auto auto auto auto;
+    align-items: center;
+    background: $white;
+
+    &__back {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        color: black;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        cursor: pointer;
+
+        img {
+            margin-right: 10px;
+        }
+    }
+
+    .tab {
+        position: relative;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 0 15px;
+        color: $text;
+        opacity: 0.5;
+        width: max-content;
+        justify-self: center;
+    }
+
+    .active {
+        cursor: pointer;
+        opacity: 1;
+
+        &::before {
+            position: absolute;
+            content: '';
+            height: 3px;
+            width: 100%;
+            background: $text;
+            bottom: -21px;
+            left: 0;
+        }
+    }
+    .visit {
+        color: $green;
+        cursor: pointer;
+        opacity: 1;
+
+        &::before {
+            position: absolute;
+            content: '';
+            height: 20px;
+            width: 20px;
+            border-radius: 100px;
+            background: $green;
+            bottom: 2px;
+            left: -15px;
+            z-index: 0;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            height: 12px;
+            width: 7px;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+            bottom: 7px;
+            left: -9px;
+            z-index: 1;
+            transform: rotate(50grad);
+        }
+    }
+    .apply {
+        color: $white;
+        background: $red1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 1;
+
+        &::before {
+            display: none;
+        }
+    }
+}
